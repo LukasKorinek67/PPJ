@@ -1,0 +1,31 @@
+Garbage Collector
+
+Typy Garbage Collectorů:
+- Serial GC
+- Parallel GC
+- CMS
+- G1 (garbage first
+
+
+Parallel Garbage Collector
+
+Parallel GC je jedním z typů GC v Javě. Důležitou vlastností je, že narozdíl od Serial GC používá více vláken pro správu paměti. Bohužel neřeší problém blokace aplikace během provádění svojí práce, což znamená, že když provádí svojí činnost, tak zablokuje všechna vlákna aplikace. Díky použití více vláken ale sníží potřebnou dobu pro správu paměti, tudíž je rozhodně užitečnější ve více vláknových aplikacích.
+
+
+Princip fungování:
+Když je potřeba uvolnit paměť, Parallel GC začne proces skenování paměti. Toto skenování se provádí v rámci  více vláken a výsledkem je, že GC identifikuje všechny objekty, které již nejsou potřebné. Identifikované objekty jsou označeny jako "neplatné". Tyto objekty jsou následně vymazány a paměť, kterou zabíraly, je poté znovu k dispozici pro použití. Proces mazání objektů se provádí už pouze v jednom vlákně.
+
+
+Použití Parallel GC:
+Když chceme použít Parallel GC, tak je třeba použít následující argument:
+java -XX:+UseParallelGC -jar Application.java
+
+
+Nastavení Parallel GC:
+Lze nastavit maximální počet vláken, dobu pauzy, propustnost a velikost haldy.
+- Maximální počet vláken GC lze nastavit pomocí -XX:ParallelGCThreads=<N>
+- Maximální dobu pauzy: -XX:MaxGCPauseMillis=<N>
+- Propustnost(Čas strávený shromažďováním paměti versus čas strávený mimo shromažďování paměti): -XX:GCTimeRatio=<N>
+- Maximální velikost haldy (množství paměti haldy, kterou program vyžaduje při běhu): -Xmx<N>
+
+

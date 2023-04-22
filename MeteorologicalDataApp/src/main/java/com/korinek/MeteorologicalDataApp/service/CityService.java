@@ -8,6 +8,7 @@ import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CityService {
@@ -29,7 +30,12 @@ public class CityService {
 
     public City getCity(int id) {
         if(this.cityRepository.existsById(id)){
-            return this.cityRepository.getReferenceById(id);
+            Optional<City> cityOptional = this.cityRepository.findById(id);
+            if (cityOptional.isPresent()) {
+                return cityOptional.get();
+            } else {
+                throw new EntityNotFoundException();
+            }
         } else {
             throw new EntityNotFoundException();
         }

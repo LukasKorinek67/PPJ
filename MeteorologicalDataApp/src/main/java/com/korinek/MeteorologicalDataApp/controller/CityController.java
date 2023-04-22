@@ -23,14 +23,17 @@ public class CityController {
     }
 
     @PostMapping
-    public ResponseEntity<City> addNewCity(@RequestBody City city){
+    public ResponseEntity<City> addNewCity(@RequestBody newCityRequest newCity){
         try {
+            City city = new City(newCity.name());
             this.cityService.addNewCity(city);
             return new ResponseEntity<>(HttpStatus.CREATED);
         } catch(DuplicateKeyException e){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }
+
+    record newCityRequest(String name){}
 
     @GetMapping(path="{cityId}")
     public ResponseEntity<City> getCity(@PathVariable("cityId") int id){
@@ -48,8 +51,10 @@ public class CityController {
     }
 
     @PatchMapping(path="{cityId}")
-    public ResponseEntity<City> updateCity(@PathVariable("cityId") int id, @RequestBody City city){
+    public ResponseEntity<City> updateCity(@PathVariable("cityId") int id, @RequestBody newCityRequest newCity){
         try{
+            City city = new City(newCity.name());
+            city.setId(id);
             this.cityService.updateCity(id, city);
             return new ResponseEntity<>(HttpStatus.OK);
         } catch (EntityNotFoundException e) {
@@ -69,6 +74,7 @@ public class CityController {
 
     @DeleteMapping
     public ResponseEntity<City> deleteAllCities(){
+        this.cityService.deleteAllCities();
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }

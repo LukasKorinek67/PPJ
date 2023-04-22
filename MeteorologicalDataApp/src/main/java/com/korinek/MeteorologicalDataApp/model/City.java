@@ -8,4 +8,8 @@ public class City {
 
     @Id
     private int id;
+
+    public int getId() {
+        return id;
+    }
 }

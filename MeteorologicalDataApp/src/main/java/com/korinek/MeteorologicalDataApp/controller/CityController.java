@@ -23,7 +23,7 @@ public class CityController {
     }
 
     @PostMapping
-    public ResponseEntity<City> addNewCity(@RequestBody newCityRequest newCity){
+    public ResponseEntity<City> addNewCity(@RequestBody NewCityRequest newCity){
         try {
             City city = new City(newCity.name());
             this.cityService.addNewCity(city);
@@ -33,7 +33,7 @@ public class CityController {
         }
     }
 
-    record newCityRequest(String name){}
+    record NewCityRequest(String name){}
 
     @GetMapping(path="{cityId}")
     public ResponseEntity<City> getCity(@PathVariable("cityId") int id){
@@ -51,7 +51,7 @@ public class CityController {
     }
 
     @PatchMapping(path="{cityId}")
-    public ResponseEntity<City> updateCity(@PathVariable("cityId") int id, @RequestBody newCityRequest newCity){
+    public ResponseEntity<City> updateCity(@PathVariable("cityId") int id, @RequestBody NewCityRequest newCity){
         try{
             City city = new City(newCity.name());
             city.setId(id);

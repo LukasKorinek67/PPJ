@@ -1,0 +1,68 @@
+@import "./components/mainPage.css";
+@import "./components/cards.css";
+
+header {
+    padding: 15px 0px 15px 0px;
+    background-color: black;
+}
+
+#logo {
+    background-color: white;
+    background: url("../../public/weather-white.png") no-repeat;
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+#header_dropdown {
+    margin-top: 10px;
+}
+
+footer {
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+.main_content {   
+    padding: 0 20px;
+    background-color: white;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#main_title {
+    padding-bottom: 25px;
+    padding-top: 20px;
+}
+
+h2 {
+    padding-bottom: 25px;
+    padding-top: 20px;
+}
+
+.add_button {
+    margin-top: 15px;
+}
+
+.task_text {
+    margin-top: 3px;
+}
+
+.task_button {
+    margin-right: 5px;
+}
+
+#filter {
+    margin-bottom: 16px;
+}
+
+#page404_title {
+    margin-top: 25px;
+}
+
+@media (max-width: 768px) {
+    .text-sm-center {
+        text-align: center;
+    } 
+}

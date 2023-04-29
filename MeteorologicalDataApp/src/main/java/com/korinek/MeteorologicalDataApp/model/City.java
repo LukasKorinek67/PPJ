@@ -1,18 +1,24 @@
 package com.korinek.MeteorologicalDataApp.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.persistence.*;
 
 @Entity
 public class City {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_city")
     private int id;
 
+    @Column(unique = true)
     private String name;
+
+    @ManyToOne
+    @JoinColumn(name="id_state")
+    @JsonBackReference
+    private State state;
 
 
     public City() {}
@@ -34,5 +40,13 @@ public class City {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public State getState() {
+        return state;
+    }
+
+    public void setState(State state) {
+        this.state = state;
     }
 }

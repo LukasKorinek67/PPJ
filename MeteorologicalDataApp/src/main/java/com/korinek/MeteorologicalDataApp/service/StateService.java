@@ -7,8 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 @Service
 public class StateService {
@@ -22,10 +25,19 @@ public class StateService {
 
 
     public void addNewState(State state) {
-        if(this.stateRepository.existsById(state.getId())){
+        if(this.stateRepository.existsById(state.getId()) || this.stateRepository.existsByName(state.getName())){
             throw new DuplicateKeyException("Already exists!");
         } else {
             this.stateRepository.save(state);
+            System.out.println("--------------------");
+            System.out.println(state.getCities().size());
+            System.out.println("--------------------");
+        }
+    }
+
+    public void addNewStates(List<State> states) {
+        for (State state:states) {
+            this.addNewState(state);
         }
     }
 
@@ -43,11 +55,14 @@ public class StateService {
     }
 
     public List<State> getAllStates() {
-        return this.stateRepository.findAll();
+        return StreamSupport.stream(stateRepository.findAll().spliterator(), false)
+                .collect(Collectors.toList());
+        //return this.stateRepository.findAll();
     }
 
     public void updateState(int id, State state) {
         if(this.stateRepository.existsById(id)){
+            state.setId(id);
             this.stateRepository.save(state);
         } else {
             throw new EntityNotFoundException();

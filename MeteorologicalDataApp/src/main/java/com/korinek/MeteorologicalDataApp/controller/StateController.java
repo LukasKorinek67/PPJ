@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -24,9 +25,8 @@ public class StateController {
 
 
     @PostMapping
-    public ResponseEntity<State> addNewState(@RequestBody NewStateRequest newState){
+    public ResponseEntity<State> addNewState(@RequestBody State state){
         try {
-            State state = new State(newState.name());
             this.stateService.addNewState(state);
             return new ResponseEntity<>(HttpStatus.CREATED);
         } catch(DuplicateKeyException e){
@@ -34,7 +34,15 @@ public class StateController {
         }
     }
 
-    record NewStateRequest(String name){}
+    @PostMapping(path="/fill")
+    public ResponseEntity<State> addNewStates(@RequestBody List<State> states){
+        try {
+            this.stateService.addNewStates(states);
+            return new ResponseEntity<>(HttpStatus.CREATED);
+        } catch(DuplicateKeyException e){
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
 
     @GetMapping(path="{stateId}")
     public ResponseEntity<State> getState(@PathVariable("stateId") int id){
@@ -52,10 +60,8 @@ public class StateController {
     }
 
     @PatchMapping(path="{stateId}")
-    public ResponseEntity<State> updateState(@PathVariable("stateId") int id, @RequestBody NewStateRequest newState){
+    public ResponseEntity<State> updateState(@PathVariable("stateId") int id, @RequestBody State state){
         try{
-            State state = new State(newState.name());
-            state.setId(id);
             this.stateService.updateState(id, state);
             return new ResponseEntity<>(HttpStatus.OK);
         } catch (EntityNotFoundException e) {

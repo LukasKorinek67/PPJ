@@ -9,7 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.*;
 
 @RestController
 @RequestMapping(path="api/city")
@@ -23,9 +23,8 @@ public class CityController {
     }
 
     @PostMapping
-    public ResponseEntity<City> addNewCity(@RequestBody NewCityRequest newCity){
+    public ResponseEntity<City> addNewCity(@RequestBody City city){
         try {
-            City city = new City(newCity.name());
             this.cityService.addNewCity(city);
             return new ResponseEntity<>(HttpStatus.CREATED);
         } catch(DuplicateKeyException e){
@@ -33,7 +32,15 @@ public class CityController {
         }
     }
 
-    record NewCityRequest(String name){}
+    @PostMapping(path="/fill")
+    public ResponseEntity<City> addNewCities(@RequestBody List<City> cities){
+        try {
+            this.cityService.addNewCities(cities);
+            return new ResponseEntity<>(HttpStatus.CREATED);
+        } catch(DuplicateKeyException e){
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
 
     @GetMapping(path="{cityId}")
     public ResponseEntity<City> getCity(@PathVariable("cityId") int id){
@@ -51,11 +58,9 @@ public class CityController {
     }
 
     @PatchMapping(path="{cityId}")
-    public ResponseEntity<City> updateCity(@PathVariable("cityId") int id, @RequestBody NewCityRequest newCity){
+    public ResponseEntity<City> updateCity(@PathVariable("cityId") int id, @RequestBody City newCity){
         try{
-            City city = new City(newCity.name());
-            city.setId(id);
-            this.cityService.updateCity(id, city);
+            this.cityService.updateCity(id, newCity);
             return new ResponseEntity<>(HttpStatus.OK);
         } catch (EntityNotFoundException e) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);

@@ -1,19 +1,26 @@
 package com.korinek.MeteorologicalDataApp.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.persistence.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class State {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_state")
     private int id;
 
+    @Column(unique = true)
     private String name;
 
+    @OneToMany(mappedBy = "state", cascade = CascadeType.ALL, orphanRemoval = true)
+    @Column
+    @JsonManagedReference
+    private List<City> cities = new ArrayList<>();
 
     public State() {}
     public State(String name) {
@@ -34,5 +41,18 @@ public class State {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<City> getCities() {
+        return cities;
+    }
+
+    public void setCities(List<City> cities) {
+        this.cities = cities;
+    }
+
+    public void addCity(City city) {
+        cities.add(city);
+        city.setState(this);
     }
 }

@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping(path="api/state")
+@RequestMapping(path="api")
 public class StateController {
 
     private final StateService stateService;
@@ -24,7 +24,7 @@ public class StateController {
     }
 
 
-    @PostMapping
+    @PostMapping(path=AppPaths.STATE_PATH)
     public ResponseEntity<State> addNewState(@RequestBody State state){
         try {
             this.stateService.addNewState(state);
@@ -34,7 +34,7 @@ public class StateController {
         }
     }
 
-    @PostMapping(path="/fill")
+    @PostMapping(path=AppPaths.STATES_PATH)
     public ResponseEntity<State> addNewStates(@RequestBody List<State> states){
         try {
             this.stateService.addNewStates(states);
@@ -44,8 +44,8 @@ public class StateController {
         }
     }
 
-    @GetMapping(path="{stateId}")
-    public ResponseEntity<State> getState(@PathVariable("stateId") int id){
+    @GetMapping(path=AppPaths.STATE_ID_PATH)
+    public ResponseEntity<State> getState(@PathVariable("id") int id){
         try{
             State state = this.stateService.getState(id);
             return new ResponseEntity<>(state, HttpStatus.OK);
@@ -54,13 +54,13 @@ public class StateController {
         }
     }
 
-    @GetMapping
+    @GetMapping(path=AppPaths.STATES_PATH)
     public ResponseEntity<List<State>> getAllStates(){
         return new ResponseEntity<>(this.stateService.getAllStates(), HttpStatus.OK);
     }
 
-    @PatchMapping(path="{stateId}")
-    public ResponseEntity<State> updateState(@PathVariable("stateId") int id, @RequestBody State state){
+    @PatchMapping(path=AppPaths.STATE_ID_PATH)
+    public ResponseEntity<State> updateState(@PathVariable("id") int id, @RequestBody State state){
         try{
             this.stateService.updateState(id, state);
             return new ResponseEntity<>(HttpStatus.OK);
@@ -69,8 +69,8 @@ public class StateController {
         }
     }
 
-    @DeleteMapping(path="{stateId}")
-    public ResponseEntity<State> deleteState(@PathVariable("stateId") int id){
+    @DeleteMapping(path=AppPaths.STATE_ID_PATH)
+    public ResponseEntity<State> deleteState(@PathVariable("id") int id){
         try{
             this.stateService.deleteState(id);
             return new ResponseEntity<>(HttpStatus.OK);
@@ -79,7 +79,7 @@ public class StateController {
         }
     }
 
-    @DeleteMapping
+    @DeleteMapping(path=AppPaths.STATES_PATH)
     public ResponseEntity<State> deleteAllStates(){
         this.stateService.deleteAllStates();
         return new ResponseEntity<>(HttpStatus.OK);

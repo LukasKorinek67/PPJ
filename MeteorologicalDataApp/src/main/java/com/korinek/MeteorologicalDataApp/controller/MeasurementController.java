@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(path="api/measurement")
+@RequestMapping(path="api")
 public class MeasurementController {
 
     private final MeasurementService measurementService;
@@ -22,7 +22,7 @@ public class MeasurementController {
         this.measurementService = measurementService;
     }
 
-    @PostMapping
+    @PostMapping(path=AppPaths.MEASUREMENT_PATH)
     public ResponseEntity<Measurement> addNewMeasurement(@RequestBody Measurement measurement){
         try {
             this.measurementService.addNewMeasurement(measurement);
@@ -32,7 +32,7 @@ public class MeasurementController {
         }
     }
 
-    @PostMapping(path="/fill")
+    @PostMapping(path=AppPaths.MEASUREMENTS_PATH)
     public ResponseEntity<Measurement> addNewMeasurements(@RequestBody List<Measurement> measurements){
         try {
             this.measurementService.addNewMeasurements(measurements);
@@ -42,8 +42,8 @@ public class MeasurementController {
         }
     }
 
-    @GetMapping(path="{measurementId}")
-    public ResponseEntity<Measurement> getCity(@PathVariable("measurementId") int id){
+    @GetMapping(path=AppPaths.MEASUREMENT_ID_PATH)
+    public ResponseEntity<Measurement> getMeasurement(@PathVariable("id") int id){
         try{
             Measurement measurement = this.measurementService.getMeasurement(id);
             return new ResponseEntity<>(measurement, HttpStatus.OK);
@@ -52,13 +52,13 @@ public class MeasurementController {
         }
     }
 
-    @GetMapping
+    @GetMapping(path=AppPaths.MEASUREMENTS_PATH)
     public ResponseEntity<List<Measurement>> getAllMeasurements(){
         return new ResponseEntity<>(this.measurementService.getAllMeasurements(), HttpStatus.OK);
     }
 
-    @PatchMapping(path="{measurementId}")
-    public ResponseEntity<Measurement> updateMeasurement(@PathVariable("measurementId") int id, @RequestBody Measurement newMeasurement){
+    @PatchMapping(path=AppPaths.MEASUREMENT_ID_PATH)
+    public ResponseEntity<Measurement> updateMeasurement(@PathVariable("id") int id, @RequestBody Measurement newMeasurement){
         try{
             this.measurementService.updateMeasurement(id, newMeasurement);
             return new ResponseEntity<>(HttpStatus.OK);
@@ -67,8 +67,8 @@ public class MeasurementController {
         }
     }
 
-    @DeleteMapping(path="{measurement}")
-    public ResponseEntity<Measurement> deleteMeasurement(@PathVariable("measurementId") int id){
+    @DeleteMapping(path=AppPaths.MEASUREMENT_ID_PATH)
+    public ResponseEntity<Measurement> deleteMeasurement(@PathVariable("id") int id){
         try{
             this.measurementService.deleteMeasurement(id);
             return new ResponseEntity<>(HttpStatus.OK);
@@ -77,7 +77,7 @@ public class MeasurementController {
         }
     }
 
-    @DeleteMapping
+    @DeleteMapping(path=AppPaths.MEASUREMENTS_PATH)
     public ResponseEntity<Measurement> deleteAllMeasurements(){
         this.measurementService.deleteAllMeasurements();
         return new ResponseEntity<>(HttpStatus.OK);

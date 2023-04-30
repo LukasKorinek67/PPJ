@@ -5,6 +5,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import Accordion from 'react-bootstrap/Accordion';
 import AddModal from "./modals/AddModal";
 import Cities from "./Cities";
+import StateService from "../services/StateService";
 
 export default class States extends React.Component {
 
@@ -32,7 +33,19 @@ export default class States extends React.Component {
     }
     
     componentDidMount() {
-        fetch("/api/state", {
+      StateService.getStates().then(response => response.json())
+      .then(data => {
+        if(data){
+          data = data.sort((a, b) => (a.name > b.name) ? 1 : -1)
+          this.setState((prevState) => ({
+            states: data,
+          }))
+        }
+      }).catch((error) => {
+        console.error('Error: ', error);
+      });
+      
+      /*fetch("/api/state", {
           method: 'GET',
           credentials: 'include',
           headers: {
@@ -48,7 +61,7 @@ export default class States extends React.Component {
           }
         }).catch((error) => {
           console.error('Error: ', error);
-        });
+        });*/
       }
 
     handleModalOptionSave(text) {
@@ -77,7 +90,13 @@ export default class States extends React.Component {
         };
 
     fetchNewState(stateName) {
-        const newState = {
+      StateService.addNewState(stateName).then(response => response.json())
+      .then(this.handleSuccessfulSave())
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+      
+      /*const newState = {
             name: stateName,
           }
         fetch("/api/state", {
@@ -91,7 +110,7 @@ export default class States extends React.Component {
           .then(this.handleSuccessfulSave())
           .catch((error) => {
             console.error('Error:', error);
-          });
+          });*/
     }
 
     handleSuccessfulSave() {

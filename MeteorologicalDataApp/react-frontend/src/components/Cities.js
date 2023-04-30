@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import ListGroup from 'react-bootstrap/ListGroup';
 import AddModal from "./modals/AddModal";
 import history from "../history/history";
+import CityService from "../services/CityService";
 
 export default class Cities extends React.Component {
 
@@ -64,7 +65,15 @@ export default class Cities extends React.Component {
     };
 
     fetchNewCity(cityName) {
-        const newCity = {
+      CityService.addNewCity(cityName, this.state.state_id, this.state.state_name)
+      .then(response => response.json())
+      .then(this.handleSuccessfulSave())
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+      
+      /*
+      const newCity = {
             name: cityName,
             state: {
                 id: this.state.state_id,
@@ -82,7 +91,7 @@ export default class Cities extends React.Component {
           .then(this.handleSuccessfulSave())
           .catch((error) => {
             console.error('Error:', error);
-          });
+          });*/
     }
 
     handleSuccessfulSave() {

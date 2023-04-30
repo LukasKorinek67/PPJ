@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.*;
 
 @RestController
-@RequestMapping(path="api/city")
+@RequestMapping(path="api")
 public class CityController {
 
     private final CityService cityService;
@@ -22,7 +22,7 @@ public class CityController {
         this.cityService = cityService;
     }
 
-    @PostMapping
+    @PostMapping(path=AppPaths.CITY_PATH)
     public ResponseEntity<City> addNewCity(@RequestBody City city){
         try {
             this.cityService.addNewCity(city);
@@ -32,7 +32,7 @@ public class CityController {
         }
     }
 
-    @PostMapping(path="/fill")
+    @PostMapping(path=AppPaths.CITIES_PATH)
     public ResponseEntity<City> addNewCities(@RequestBody List<City> cities){
         try {
             this.cityService.addNewCities(cities);
@@ -42,8 +42,8 @@ public class CityController {
         }
     }
 
-    @GetMapping(path="{cityId}")
-    public ResponseEntity<City> getCity(@PathVariable("cityId") int id){
+    @GetMapping(path=AppPaths.CITY_ID_PATH)
+    public ResponseEntity<City> getCity(@PathVariable("id") int id){
         try{
             City city = this.cityService.getCity(id);
             return new ResponseEntity<>(city, HttpStatus.OK);
@@ -52,13 +52,13 @@ public class CityController {
         }
     }
 
-    @GetMapping
+    @GetMapping(path=AppPaths.CITIES_PATH)
     public ResponseEntity<List<City>> getAllCities(){
         return new ResponseEntity<>(this.cityService.getAllCities(), HttpStatus.OK);
     }
 
-    @PatchMapping(path="{cityId}")
-    public ResponseEntity<City> updateCity(@PathVariable("cityId") int id, @RequestBody City newCity){
+    @PatchMapping(path=AppPaths.CITY_ID_PATH)
+    public ResponseEntity<City> updateCity(@PathVariable("id") int id, @RequestBody City newCity){
         try{
             this.cityService.updateCity(id, newCity);
             return new ResponseEntity<>(HttpStatus.OK);
@@ -67,8 +67,8 @@ public class CityController {
         }
     }
 
-    @DeleteMapping(path="{cityId}")
-    public ResponseEntity<City> deleteCity(@PathVariable("cityId") int id){
+    @DeleteMapping(path=AppPaths.CITY_ID_PATH)
+    public ResponseEntity<City> deleteCity(@PathVariable("id") int id){
         try{
             this.cityService.deleteCity(id);
             return new ResponseEntity<>(HttpStatus.OK);
@@ -77,7 +77,7 @@ public class CityController {
         }
     }
 
-    @DeleteMapping
+    @DeleteMapping(path=AppPaths.CITIES_PATH)
     public ResponseEntity<City> deleteAllCities(){
         this.cityService.deleteAllCities();
         return new ResponseEntity<>(HttpStatus.OK);

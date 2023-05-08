@@ -1,0 +1,38 @@
+
+spring:
+  # PostgreSQL
+  datasource:
+    url: jdbc:postgresql://localhost:5432/meteo_app
+    username:
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+  # Cassandra
+  cassandra:
+    keyspace-name: city_measurements
+    username: jDcWwTGZdQHGfzjPjIHUzcCO
+    password: x8QHdUDorQGWEA-TddXlaT_5iaNoUj2mFGNEkyst3yDwNh-50_XhBZD7PHUzhPrewIfMqTmEvwGEeGDS6D5sKD_pk347khQfpItzx3ZpEedD8bFHLvMgI1bMsiqi-hND
+    contact-points: 125d2991-52ca-4673-a792-eb7555afb002-europe-west1.db.astra.datastax.com:29042
+    schema-action: create_if_not_exists
+    request:
+      timeout: 10s
+    connection:
+      connect-timeout: 10s
+      init-query-timeout: 10s
+
+# DataStax Astra Cassandra Database
+datastax.astra:
+  secure-connect-bundle: secure-connect-meteorologicaldataapp.zip
+
+astra:
+  api:
+    database-id: 125d2991-52ca-4673-a792-eb7555afb002
+    database-region: europe-west1
+    application-token: AstraCS:jDcWwTGZdQHGfzjPjIHUzcCO:55de90ee239ea3422090969449dd5082fc19f5978c48a93756f4da3a096aeaf9
+

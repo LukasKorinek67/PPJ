@@ -50,13 +50,13 @@ spring:
     username: jDcWwTGZdQHGfzjPjIHUzcCO
     password: x8QHdUDorQGWEA-TddXlaT_5iaNoUj2mFGNEkyst3yDwNh-50_XhBZD7PHUzhPrewIfMqTmEvwGEeGDS6D5sKD_pk347khQfpItzx3ZpEedD8bFHLvMgI1bMsiqi-hND
     contact-points: 125d2991-52ca-4673-a792-eb7555afb002-europe-west1.db.astra.datastax.com:29042
-    #schema-action: create_if_not_exists
+    schema-action: create_if_not_exists
+    #schema-action: recreate
     request:
       timeout: 10s
     connection:
       connect-timeout: 10s
       init-query-timeout: 10s
-    schema-action: create_if_not_exists
 
 # DataStax Astra Cassandra Database
 datastax.astra:

@@ -1,19 +1,28 @@
 package com.korinek.MeteorologicalDataApp.repository;
 
+import com.datastax.oss.driver.api.core.CqlSession;
+import com.datastax.oss.driver.api.core.cql.*;
 import com.datastax.oss.driver.api.querybuilder.QueryBuilder;
 import com.datastax.oss.driver.api.querybuilder.select.Select;
 import com.korinek.MeteorologicalDataApp.model.Measurement;
+import com.korinek.MeteorologicalDataApp.model.WeatherAverages;
+import com.korinek.MeteorologicalDataApp.utils.Timestamp;
+import jakarta.persistence.criteria.CriteriaQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.cassandra.core.CassandraTemplate;
-import org.springframework.data.cassandra.core.query.Criteria;
-import org.springframework.data.cassandra.core.query.CriteriaDefinition;
-import org.springframework.data.cassandra.core.query.Query;
+import org.springframework.data.cassandra.core.cql.PreparedStatementBinder;
+import org.springframework.data.cassandra.core.cql.PreparedStatementCreator;
+import org.springframework.data.cassandra.core.cql.QueryOptions;
+import org.springframework.data.cassandra.core.query.*;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Order;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.UUID;
+
+import static org.springframework.data.cassandra.core.query.Criteria.where;
+import static org.springframework.data.cassandra.core.query.Query.query;
 
 @Repository
 public class MeasurementRepository {
@@ -60,7 +69,32 @@ public class MeasurementRepository {
     }
 
     public Measurement getLatestMeasurement(String city_name) {
-        Query query = Query.query(Criteria.where("city").is(city_name)).limit(1);
+        Query query = query(where("city").is(city_name)).limit(1);
         return cassandraTemplate.selectOne(query, Measurement.class);
+    }
+
+    public WeatherAverages getAverageWeatherFrom(String cityName, long timestampFrom) {
+
+        cassandraTemplate.setUsePreparedStatements(true);
+
+        ResultSet resultSet = cassandraTemplate.execute(SimpleStatement.newInstance("SELECT AVG(temperature) AS avgTemperature, " +
+                "AVG(feels_like_temperature) AS avgFeelsLikeTemperature, " +
+                "AVG(pressure) AS avgPressure, " +
+                "AVG(humidity) AS avgHumidity, " +
+                "AVG(visibility) AS avgVisibility, " +
+                "AVG(wind_speed) AS avgWindSpeed, " +
+                "AVG(cloudiness) AS avgCloudiness " +
+                "FROM measurements WHERE city = ? AND timestamp >= ?", cityName, timestampFrom));
+
+        Row row = resultSet.one();
+        double avgTemperature = row.getDouble("avgTemperature");
+        double avgFeelsLikeTemperature = row.getDouble("avgFeelsLikeTemperature");
+        int avgPressure = row.getInt("avgPressure");
+        int avgHumidity = row.getInt("avgHumidity");
+        int avgVisibility = row.getInt("avgVisibility");
+        double avgWindSpeed = row.getDouble("avgWindSpeed");
+        int avgCloudiness = row.getInt("avgCloudiness");
+        WeatherAverages averages = new WeatherAverages(cityName, avgTemperature, avgFeelsLikeTemperature, avgPressure, avgHumidity, avgVisibility, avgWindSpeed, avgCloudiness);
+        return averages;
     }
 }

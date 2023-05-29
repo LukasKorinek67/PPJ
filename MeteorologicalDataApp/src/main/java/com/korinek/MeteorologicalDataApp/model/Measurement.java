@@ -8,7 +8,6 @@ import org.springframework.data.cassandra.core.mapping.*;
 import java.util.UUID;
 
 @Table("measurements")
-//@Table(value = "\"${city_name}\"")
 public class Measurement {
 
     //@Column("timestamp")
@@ -19,11 +18,11 @@ public class Measurement {
     private UUID id;
     @Column("weather")
     private String weather;
-    @Column("weatherDescription")
+    @Column("weather_description")
     private String weatherDescription;
     @Column("temperature")
     private double temperature;
-    @Column("feelsLikeTemperature")
+    @Column("feels_like_temperature")
     private double feelsLikeTemperature;
     @Column("pressure")
     private int pressure;
@@ -31,7 +30,7 @@ public class Measurement {
     private int humidity;
     @Column("visibility")
     private int visibility;
-    @Column("windSpeed")
+    @Column("wind_speed")
     private double windSpeed;
     @Column("cloudiness")
     private int cloudiness;

@@ -70,9 +70,9 @@ public class OpenWeatherService {
         Measurement measurement = JSONParser.getMeasurementFromResponse(responseWeather);
         measurement.setCity(city.getName());
         measurementService.addNewMeasurement(measurement);
-        System.out.println(responseWeather);
-        System.out.println(measurement.toString());
-        System.out.println();
+        //System.out.println(responseWeather);
+        //System.out.println(measurement.toString());
+        //System.out.println();
     }
 
     private String getGeocodingUrl(String cityName) {

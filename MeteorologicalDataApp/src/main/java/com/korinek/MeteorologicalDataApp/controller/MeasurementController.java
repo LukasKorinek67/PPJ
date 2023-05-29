@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping(path="api")
@@ -43,7 +44,7 @@ public class MeasurementController {
     }
 
     @GetMapping(path=AppPaths.MEASUREMENT_ID_PATH)
-    public ResponseEntity<Measurement> getMeasurement(@PathVariable("id") int id){
+    public ResponseEntity<Measurement> getMeasurement(@PathVariable("id") UUID id){
         try{
             Measurement measurement = this.measurementService.getMeasurement(id);
             return new ResponseEntity<>(measurement, HttpStatus.OK);
@@ -58,7 +59,7 @@ public class MeasurementController {
     }
 
     @PatchMapping(path=AppPaths.MEASUREMENT_ID_PATH)
-    public ResponseEntity<Measurement> updateMeasurement(@PathVariable("id") int id, @RequestBody Measurement newMeasurement){
+    public ResponseEntity<Measurement> updateMeasurement(@PathVariable("id") UUID id, @RequestBody Measurement newMeasurement){
         try{
             this.measurementService.updateMeasurement(id, newMeasurement);
             return new ResponseEntity<>(HttpStatus.OK);
@@ -68,7 +69,7 @@ public class MeasurementController {
     }
 
     @DeleteMapping(path=AppPaths.MEASUREMENT_ID_PATH)
-    public ResponseEntity<Measurement> deleteMeasurement(@PathVariable("id") int id){
+    public ResponseEntity<Measurement> deleteMeasurement(@PathVariable("id") UUID id){
         try{
             this.measurementService.deleteMeasurement(id);
             return new ResponseEntity<>(HttpStatus.OK);

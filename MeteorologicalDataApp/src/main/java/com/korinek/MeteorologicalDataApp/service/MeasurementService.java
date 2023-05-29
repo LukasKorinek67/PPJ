@@ -1,14 +1,15 @@
 package com.korinek.MeteorologicalDataApp.service;
 
+import com.korinek.MeteorologicalDataApp.model.City;
 import com.korinek.MeteorologicalDataApp.model.Measurement;
 import com.korinek.MeteorologicalDataApp.repository.MeasurementRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
@@ -23,11 +24,12 @@ public class MeasurementService {
     }
 
     public void addNewMeasurement(Measurement measurement) {
-        if(this.measurementRepository.existsById(measurement.getId())){
+        this.measurementRepository.save(measurement);
+        /*if(this.measurementRepository.existsById(measurement.getId())){
             throw new DuplicateKeyException("Already exists!");
         } else {
             this.measurementRepository.save(measurement);
-        }
+        }*/
     }
 
     public void addNewMeasurements(List<Measurement> measurements) {
@@ -36,7 +38,7 @@ public class MeasurementService {
         }
     }
 
-    public Measurement getMeasurement(int id) {
+    public Measurement getMeasurement(UUID id) {
         if(this.measurementRepository.existsById(id)){
             return this.measurementRepository.findById(id);
             /*Optional<Measurement> measurementOptional = this.measurementRepository.findById(id);
@@ -55,7 +57,7 @@ public class MeasurementService {
         return StreamSupport.stream(measurementRepository.findAll().spliterator(), false).collect(Collectors.toList());
     }
 
-    public void updateMeasurement(int id, Measurement measurement) {
+    public void updateMeasurement(UUID id, Measurement measurement) {
         if(this.measurementRepository.existsById(id)){
             measurement.setId(id);
             this.measurementRepository.save(measurement);
@@ -64,7 +66,7 @@ public class MeasurementService {
         }
     }
 
-    public void deleteMeasurement(int id) {
+    public void deleteMeasurement(UUID id) {
         if(this.measurementRepository.existsById(id)){
             this.measurementRepository.deleteById(id);
         } else {
@@ -74,5 +76,9 @@ public class MeasurementService {
 
     public void deleteAllMeasurements() {
         this.measurementRepository.deleteAll();
+    }
+
+    public Measurement getLatestMeasurement(City city) {
+        return this.measurementRepository.getLatestMeasurement(city.getName());
     }
 }

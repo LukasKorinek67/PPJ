@@ -1,5 +1,6 @@
 package com.korinek.MeteorologicalDataApp;
 
+import com.korinek.MeteorologicalDataApp.configuration.DataSourceConfiguration;
 import com.korinek.MeteorologicalDataApp.configuration.DataStaxAstraProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,7 +15,7 @@ import java.nio.file.Path;
 
 @SpringBootApplication
 @RestController
-@EnableConfigurationProperties(DataStaxAstraProperties.class)
+@EnableConfigurationProperties({DataStaxAstraProperties.class, DataSourceConfiguration.class})
 public class MeteorologicalDataAppApplication {
 
 	public static void main(String[] args) {

@@ -5,6 +5,8 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import AddModal from "./modals/AddModal";
 import history from "../history/history";
 import CityService from "../services/CityService";
+import BootstrapIcons from "../utils/BootstrapIcons";
+import Stack from 'react-bootstrap/Stack';
 
 export default class Cities extends React.Component {
 
@@ -105,7 +107,12 @@ export default class Cities extends React.Component {
                 <ListGroup variant="flush">
                     {(this.state.cities) && this.state.cities.map((city, index) => (
                         <div key={index}>
-                        <ListGroup.Item key={index} action onClick={() => this.showCity(city.id)}>📍 {city.name}</ListGroup.Item>
+                        <ListGroup.Item key={index} action onClick={() => this.showCity(city.id)}>
+                          <Stack direction="horizontal" gap={2}>
+                            {BootstrapIcons.buildings(20,20)}
+                            {city.name}
+                          </Stack>
+                        </ListGroup.Item>
                         </div>
                     ))}
                     <div>

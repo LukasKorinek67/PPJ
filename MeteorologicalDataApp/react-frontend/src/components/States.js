@@ -1,11 +1,12 @@
 import React from "react";
 
 import Button from "react-bootstrap/Button";
-import ListGroup from 'react-bootstrap/ListGroup';
 import Accordion from 'react-bootstrap/Accordion';
 import AddModal from "./modals/AddModal";
 import Cities from "./Cities";
 import StateService from "../services/StateService";
+import BootstrapIcons from "../utils/BootstrapIcons";
+import Stack from 'react-bootstrap/Stack';
 
 export default class States extends React.Component {
 
@@ -127,7 +128,12 @@ export default class States extends React.Component {
                 {(this.state.states) && this.state.states.map((state, index) => (
                     <div key={index}>
                         <Accordion.Item eventKey={index} key={index}>
-                            <Accordion.Header>🌎 {state.name}</Accordion.Header>
+                            <Accordion.Header>
+                              <Stack direction="horizontal" gap={2}>
+                                {BootstrapIcons.globe(20,20)}
+                                {state.name}
+                              </Stack>
+                            </Accordion.Header>
                             <Accordion.Body>
                             <Cities cities={state.cities} state_name={state.name} state_id={state.id}/>
                             </Accordion.Body>

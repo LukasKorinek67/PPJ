@@ -30,5 +30,6 @@ class StateService{
         })
     }
 }
-
-export default new StateService();
+const stateService = new StateService();
+export default stateService;
+//export default new StateService();

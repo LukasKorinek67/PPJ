@@ -21,6 +21,63 @@ class CityService{
             body: JSON.stringify(newCity),
         })
     }
-}
 
-export default new CityService();
+    getCity(cityId) {
+        const url = "/api/city/" + cityId
+        return fetch(url, {
+          method: 'GET',
+          credentials: 'include',
+          headers: {
+            Accept: 'application/json'
+          }
+        })
+    }
+
+    getLatestWeatherForCity(cityId) {
+        const url = "/api/latest/" + cityId
+        return fetch(url, {
+            method: 'GET',
+            credentials: 'include',
+            headers: {
+              Accept: 'application/json'
+            }
+        })
+    }
+
+    getAverageWeatherLastDay(cityId) {
+        const url = "/api/average/day/" + cityId
+        return fetch(url, {
+            method: 'GET',
+            credentials: 'include',
+            headers: {
+              Accept: 'application/json'
+            }
+        })
+    }
+
+    getAverageWeatherLastWeek(cityId) {
+        const url = "/api/average/week/" + cityId
+        return fetch(url, {
+            method: 'GET',
+            credentials: 'include',
+            headers: {
+              Accept: 'application/json'
+            }
+        })
+    }
+
+    getAverageWeatherLast14days(cityId) {
+        const url = "/api/average/14days/" + cityId
+        return fetch(url, {
+            method: 'GET',
+            credentials: 'include',
+            headers: {
+              Accept: 'application/json'
+            }
+        })
+    }
+
+}
+const cityService = new CityService();
+export default cityService;
+//export default new CityService();

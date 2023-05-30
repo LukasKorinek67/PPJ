@@ -5,7 +5,6 @@ import Footer from "./components/Footer";
 import MainPage from "./components/pages/MainPage";
 import CityPage from "./components/pages/CityPage";
 import NotFoundPage from "./components/pages/NotFoundPage";
-import history from "./history/history";
 
 export default class App extends React.Component {
 

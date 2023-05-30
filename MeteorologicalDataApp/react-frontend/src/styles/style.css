@@ -14,6 +14,10 @@ header {
     float: left;
 }
 
+#main_h {
+    text-decoration: none;
+}
+
 #header_dropdown {
     margin-top: 10px;
 }
@@ -45,20 +49,32 @@ h2 {
     margin-top: 15px;
 }
 
-.task_text {
-    margin-top: 3px;
-}
-
-.task_button {
-    margin-right: 5px;
-}
-
 #filter {
     margin-bottom: 16px;
 }
 
 #page404_title {
     margin-top: 25px;
+}
+
+.actual_weather {   
+    padding: 20px 100px 20px 100px;
+}
+
+.average_weather {   
+    padding: 30px 100px 30px 100px;
+}
+
+.content {   
+    padding: 20px 100px 20px 100px;
+}
+
+.accordion-header {   
+    padding: 1px;
+}
+
+.temperature {   
+    margin: 0px;
 }
 
 @media (max-width: 768px) {

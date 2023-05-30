@@ -1,33 +1,3 @@
-
-#spring:
-#  # PostgreSQL
-#  datasource:
-#    driver-class-name: org.postgresql.Driver
-#    url: jdbc:postgresql:///meteo_app
-#    username:
-#    password: ppj_meteo_app_01
-#    hikari:
-#      data-source-properties:
-#        socketFactory: com.google.cloud.sql.postgres.SocketFactory
-#        cloudSqlInstance: fiery-odyssey-388119:europe-west3:meteo-app
-#  cloud:
-#    gcp:
-#      sql:
-#        database-name:
-#        instance-connection-name: fiery-odyssey-388119:europe-west3:meteo-app
-
-
-#  jpa:
-#    hibernate:
-#      #ddl-auto: update
-#      ddl-auto: create-drop
-#    show-sql: true
-#    properties:
-#      hibernate:
-#        dialect: org.hibernate.dialect.PostgreSQLDialect
-#        format_sql: true
-
-
 spring:
   # PostgreSQL
   datasource:
@@ -76,5 +46,9 @@ weather:
     api-key: 3c0d26cf6bca6d964c433c9a8dce85bd
     update-rate: 10
     max-calls: 50
+  data:
+    #expiration 14 days - in seconds:
+    expiration: 1209600
 
-
+app:
+  read-only-mode: true

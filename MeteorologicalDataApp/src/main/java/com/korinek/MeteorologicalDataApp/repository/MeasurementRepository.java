@@ -4,6 +4,7 @@ import com.datastax.oss.driver.api.core.CqlSession;
 import com.datastax.oss.driver.api.core.cql.*;
 import com.datastax.oss.driver.api.querybuilder.QueryBuilder;
 import com.datastax.oss.driver.api.querybuilder.select.Select;
+import com.korinek.MeteorologicalDataApp.model.City;
 import com.korinek.MeteorologicalDataApp.model.Measurement;
 import com.korinek.MeteorologicalDataApp.model.WeatherAverages;
 import com.korinek.MeteorologicalDataApp.utils.Timestamp;
@@ -57,6 +58,12 @@ public class MeasurementRepository {
 
     public Iterable<Measurement> findAll() {
         List<Measurement> allMeasurements = cassandraTemplate.select("SELECT * FROM Measurements", Measurement.class);
+        return allMeasurements;
+    }
+
+    public Iterable<Measurement> findAllByCity(City city) {
+        //List<Measurement> allMeasurements = cassandraTemplate.select("SELECT * FROM Measurements", Measurement.class);
+        List<Measurement> allMeasurements = cassandraTemplate.select(Query.query(Criteria.where("city").is(city.getName())), Measurement.class);
         return allMeasurements;
     }
 

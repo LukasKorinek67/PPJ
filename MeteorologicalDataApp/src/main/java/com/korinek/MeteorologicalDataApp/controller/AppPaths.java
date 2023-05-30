@@ -20,4 +20,8 @@ public interface AppPaths {
     String AVERAGE_WEATHER_LAST_DAY = AVERAGE_WEATHER + "/day/{id}";
     String AVERAGE_WEATHER_LAST_WEEK = AVERAGE_WEATHER + "/week/{id}";
     String AVERAGE_WEATHER_LAST_14_DAYS = AVERAGE_WEATHER + "/14days/{id}";
+
+    String EXPORT_FILE = "/export/{id}";
+
+    String IMPORT_FILE = "/import/{id}";
 }

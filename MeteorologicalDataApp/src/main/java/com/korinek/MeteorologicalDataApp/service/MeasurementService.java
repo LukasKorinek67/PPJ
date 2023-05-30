@@ -64,6 +64,10 @@ public class MeasurementService {
         return StreamSupport.stream(measurementRepository.findAll().spliterator(), false).collect(Collectors.toList());
     }
 
+    public List<Measurement> getAllMeasurementsByCity(City city) {
+        return StreamSupport.stream(measurementRepository.findAllByCity(city).spliterator(), false).collect(Collectors.toList());
+    }
+
     public void updateMeasurement(UUID id, Measurement measurement) {
         if(this.measurementRepository.existsById(id)){
             measurement.setId(id);

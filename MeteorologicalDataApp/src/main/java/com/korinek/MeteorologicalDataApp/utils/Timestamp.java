@@ -1,5 +1,6 @@
 package com.korinek.MeteorologicalDataApp.utils;
 
+import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 
@@ -26,5 +27,12 @@ public class Timestamp {
         Instant instant = Instant.ofEpochSecond(timestamp);
         Instant minus14days = instant.minus(14, ChronoUnit.DAYS);
         return minus14days.getEpochSecond();
+    }
+
+    public static String getDateFromTimestamp(long timestamp) {
+        System.out.println(timestamp);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
+        System.out.println(dateFormat.format(timestamp*1000));
+        return dateFormat.format(timestamp*1000);
     }
 }

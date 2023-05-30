@@ -3,6 +3,8 @@ package com.korinek.MeteorologicalDataApp.service;
 import com.korinek.MeteorologicalDataApp.model.State;
 import com.korinek.MeteorologicalDataApp.repository.StateRepository;
 import jakarta.persistence.EntityNotFoundException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
@@ -18,6 +20,8 @@ public class StateService {
 
     private final StateRepository stateRepository;
 
+    private static final Logger log = LoggerFactory.getLogger(StateService.class);
+
     @Autowired
     public StateService(StateRepository stateRepository) {
         this.stateRepository = stateRepository;
@@ -26,6 +30,7 @@ public class StateService {
 
     public void addNewState(State state) {
         if(this.stateRepository.existsById(state.getId()) || this.stateRepository.existsByName(state.getName())){
+            log.error("Chyba při ukládání státu do databáze - stát již existuje!");
             throw new DuplicateKeyException("Already exists!");
         } else {
             this.stateRepository.save(state);
@@ -47,9 +52,11 @@ public class StateService {
             if (stateOptional.isPresent()) {
                 return stateOptional.get();
             } else {
+                log.error("Chyba při získávání státu z databáze - stát není v databázi!");
                 throw new EntityNotFoundException();
             }
         } else {
+            log.error("Chyba při získávání státu z databáze - stát není v databázi!");
             throw new EntityNotFoundException();
         }
     }
@@ -65,6 +72,7 @@ public class StateService {
             state.setId(id);
             this.stateRepository.save(state);
         } else {
+            log.error("Chyba při updatu státu - stát není v databázi!");
             throw new EntityNotFoundException();
         }
     }
@@ -73,6 +81,7 @@ public class StateService {
         if(this.stateRepository.existsById(id)){
             this.stateRepository.deleteById(id);
         } else {
+            log.error("Chyba při pokusu o smazání státu z databáze - stát není v databázi!");
             throw new EntityNotFoundException();
         }
     }

@@ -6,6 +6,8 @@ import com.korinek.MeteorologicalDataApp.model.WeatherAverages;
 import com.korinek.MeteorologicalDataApp.repository.MeasurementRepository;
 import com.korinek.MeteorologicalDataApp.utils.Timestamp;
 import jakarta.persistence.EntityNotFoundException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,6 +21,8 @@ import java.util.stream.StreamSupport;
 public class MeasurementService {
 
     private final MeasurementRepository measurementRepository;
+
+    private static final Logger log = LoggerFactory.getLogger(MeasurementService.class);
 
     @Autowired
     public MeasurementService(MeasurementRepository measurementRepository) {
@@ -50,6 +54,7 @@ public class MeasurementService {
                 throw new EntityNotFoundException();
             }*/
         } else {
+            log.error("Chyba při získávání měření z databáze - měření není v databázi!");
             throw new EntityNotFoundException();
         }
     }
@@ -64,6 +69,7 @@ public class MeasurementService {
             measurement.setId(id);
             this.measurementRepository.save(measurement);
         } else {
+            log.error("Chyba při updatu měření - měření není v databázi!");
             throw new EntityNotFoundException();
         }
     }
@@ -72,6 +78,7 @@ public class MeasurementService {
         if(this.measurementRepository.existsById(id)){
             this.measurementRepository.deleteById(id);
         } else {
+            log.error("Chyba při pokusu o smazání měření - měření není v databázi!");
             throw new EntityNotFoundException();
         }
     }

@@ -1,0 +1,934 @@
+[2023-05-29 19:49:40] - Adding converter from interface com.datastax.oss.driver.api.core.cql.Row to class java.time.LocalDate as reading converter
+[2023-05-29 19:49:40] - Adding converter from interface com.datastax.oss.driver.api.core.cql.Row to class java.lang.Boolean as reading converter
+[2023-05-29 19:49:40] - Adding converter from interface com.datastax.oss.driver.api.core.cql.Row to class java.time.Instant as reading converter
+[2023-05-29 19:49:40] - Adding converter from interface com.datastax.oss.driver.api.core.cql.Row to class java.util.Date as reading converter
+[2023-05-29 19:49:40] - Adding converter from interface com.datastax.oss.driver.api.core.cql.Row to class java.net.InetAddress as reading converter
+[2023-05-29 19:49:40] - Adding converter from interface com.datastax.oss.driver.api.core.cql.Row to interface java.util.List as reading converter
+[2023-05-29 19:49:40] - Adding converter from interface com.datastax.oss.driver.api.core.cql.Row to interface java.util.Map as reading converter
+[2023-05-29 19:49:40] - Adding converter from interface com.datastax.oss.driver.api.core.cql.Row to class java.lang.Number as reading converter
+[2023-05-29 19:49:40] - Adding converter from interface com.datastax.oss.driver.api.core.cql.Row to class java.lang.String as reading converter
+[2023-05-29 19:49:40] - Adding converter from interface com.datastax.oss.driver.api.core.cql.Row to class java.util.UUID as reading converter
+[2023-05-29 19:49:40] - Adding converter from class java.lang.Long to class java.time.LocalTime as reading converter
+[2023-05-29 19:49:40] - Adding converter from class java.time.LocalTime to class java.lang.Long as reading converter
+[2023-05-29 19:49:40] - Adding converter from class java.util.Date to class java.time.Instant as writing converter
+[2023-05-29 19:49:40] - Adding converter from class java.time.Instant to class java.util.Date as reading converter
+[2023-05-29 19:49:40] - Adding converter from class java.time.LocalDateTime to class java.time.Instant as writing converter
+[2023-05-29 19:49:40] - Adding converter from class java.util.Date to class java.time.LocalDateTime as reading converter
+[2023-05-29 19:49:40] - Adding converter from class java.time.LocalDateTime to class java.util.Date as writing converter
+[2023-05-29 19:49:40] - Adding converter from class java.util.Date to class java.time.LocalDate as reading converter
+[2023-05-29 19:49:40] - Adding converter from class java.time.LocalDate to class java.util.Date as writing converter
+[2023-05-29 19:49:40] - Adding converter from class java.util.Date to class java.time.LocalTime as reading converter
+[2023-05-29 19:49:40] - Adding converter from class java.time.LocalTime to class java.util.Date as writing converter
+[2023-05-29 19:49:40] - Adding converter from class java.util.Date to class java.time.Instant as reading converter
+[2023-05-29 19:49:40] - Adding converter from class java.time.Instant to class java.util.Date as writing converter
+[2023-05-29 19:49:40] - Adding converter from class java.time.LocalDateTime to class java.time.Instant as reading converter
+[2023-05-29 19:49:40] - Adding converter from class java.time.Instant to class java.time.LocalDateTime as reading converter
+[2023-05-29 19:49:40] - Adding converter from class java.time.ZoneId to class java.lang.String as writing converter
+[2023-05-29 19:49:40] - Adding converter from class java.lang.String to class java.time.ZoneId as reading converter
+[2023-05-29 19:49:40] - Adding converter from class java.time.Duration to class java.lang.String as writing converter
+[2023-05-29 19:49:40] - Adding converter from class java.lang.String to class java.time.Duration as reading converter
+[2023-05-29 19:49:40] - Adding converter from class java.time.Period to class java.lang.String as writing converter
+[2023-05-29 19:49:40] - Adding converter from class java.lang.String to class java.time.Period as reading converter
+[2023-05-29 19:49:40] - Adding converter from class java.lang.String to class java.time.LocalDate as reading converter
+[2023-05-29 19:49:40] - Adding converter from class java.lang.String to class java.time.LocalDateTime as reading converter
+[2023-05-29 19:49:40] - Adding converter from class java.lang.String to class java.time.Instant as reading converter
+[2023-05-29 19:49:40] - Creating shared instance of singleton bean 'startupTimeMetrics'
+[2023-05-29 19:49:40] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.metrics.startup.StartupTimeMetricsListenerAutoConfiguration'
+[2023-05-29 19:49:40] - Autowiring by type from bean name 'startupTimeMetrics' via factory method to bean named 'simpleMeterRegistry'
+[2023-05-29 19:49:40] - Creating shared instance of singleton bean 'springApplicationAdminRegistrar'
+[2023-05-29 19:49:40] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration'
+[2023-05-29 19:49:40] - Autowiring by type from bean name 'springApplicationAdminRegistrar' via factory method to bean named 'environment'
+[2023-05-29 19:49:40] - Creating shared instance of singleton bean 'mbeanExporter'
+[2023-05-29 19:49:40] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration'
+[2023-05-29 19:49:40] - Creating shared instance of singleton bean 'spring.jmx-org.springframework.boot.autoconfigure.jmx.JmxProperties'
+[2023-05-29 19:49:40] - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' via constructor to bean named 'spring.jmx-org.springframework.boot.autoconfigure.jmx.JmxProperties'
+[2023-05-29 19:49:40] - Creating shared instance of singleton bean 'objectNamingStrategy'
+[2023-05-29 19:49:40] - Autowiring by type from bean name 'mbeanExporter' via factory method to bean named 'objectNamingStrategy'
+[2023-05-29 19:49:40] - Autowiring by type from bean name 'mbeanExporter' via factory method to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@61a5b4ae'
+[2023-05-29 19:49:40] - Creating shared instance of singleton bean 'mbeanServer'
+[2023-05-29 19:49:40] - Found MBeanServer: com.sun.jmx.mbeanserver.JmxMBeanServer@19bb089b
+[2023-05-29 19:49:40] - Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
+[2023-05-29 19:49:40] - Autowiring by type from bean name 'cassandraConverter' via factory method to bean named 'cassandraMappingContext'
+[2023-05-29 19:49:40] - Autowiring by type from bean name 'cassandraConverter' via factory method to bean named 'cassandraCustomConversions'
+[2023-05-29 19:49:40] - Adding converter from interface com.datastax.oss.driver.api.core.cql.Row to class java.time.LocalDate as reading converter
+[2023-05-29 19:49:40] - Adding converter from interface com.datastax.oss.driver.api.core.cql.Row to class java.lang.Boolean as reading converter
+[2023-05-29 19:49:40] - Adding converter from interface com.datastax.oss.driver.api.core.cql.Row to class java.time.Instant as reading converter
+[2023-05-29 19:49:40] - Adding converter from interface com.datastax.oss.driver.api.core.cql.Row to class java.util.Date as reading converter
+[2023-05-29 19:49:40] - Adding converter from interface com.datastax.oss.driver.api.core.cql.Row to class java.net.InetAddress as reading converter
+[2023-05-29 19:49:40] - Adding converter from interface com.datastax.oss.driver.api.core.cql.Row to interface java.util.List as reading converter
+[2023-05-29 19:49:40] - Adding converter from interface com.datastax.oss.driver.api.core.cql.Row to interface java.util.Map as reading converter
+[2023-05-29 19:49:40] - Adding converter from interface com.datastax.oss.driver.api.core.cql.Row to class java.lang.Number as reading converter
+[2023-05-29 19:49:40] - Adding converter from interface com.datastax.oss.driver.api.core.cql.Row to class java.lang.String as reading converter
+[2023-05-29 19:49:40] - Adding converter from interface com.datastax.oss.driver.api.core.cql.Row to class java.util.UUID as reading converter
+[2023-05-29 19:49:40] - Adding converter from class java.lang.Long to class java.time.LocalTime as reading converter
+[2023-05-29 19:49:40] - Adding converter from class java.time.LocalTime to class java.lang.Long as reading converter
+[2023-05-29 19:49:40] - Adding converter from class java.util.Date to class java.time.Instant as writing converter
+[2023-05-29 19:49:40] - Adding converter from class java.time.Instant to class java.util.Date as reading converter
+[2023-05-29 19:49:40] - Adding converter from class java.time.LocalDateTime to class java.time.Instant as writing converter
+[2023-05-29 19:49:40] - Adding converter from class java.util.Date to class java.time.LocalDateTime as reading converter
+[2023-05-29 19:49:40] - Adding converter from class java.time.LocalDateTime to class java.util.Date as writing converter
+[2023-05-29 19:49:40] - Adding converter from class java.util.Date to class java.time.LocalDate as reading converter
+[2023-05-29 19:49:40] - Adding converter from class java.time.LocalDate to class java.util.Date as writing converter
+[2023-05-29 19:49:40] - Adding converter from class java.util.Date to class java.time.LocalTime as reading converter
+[2023-05-29 19:49:40] - Adding converter from class java.time.LocalTime to class java.util.Date as writing converter
+[2023-05-29 19:49:40] - Adding converter from class java.util.Date to class java.time.Instant as reading converter
+[2023-05-29 19:49:40] - Adding converter from class java.time.Instant to class java.util.Date as writing converter
+[2023-05-29 19:49:40] - Adding converter from class java.time.LocalDateTime to class java.time.Instant as reading converter
+[2023-05-29 19:49:40] - Adding converter from class java.time.Instant to class java.time.LocalDateTime as reading converter
+[2023-05-29 19:49:40] - Adding converter from class java.time.ZoneId to class java.lang.String as writing converter
+[2023-05-29 19:49:40] - Adding converter from class java.lang.String to class java.time.ZoneId as reading converter
+[2023-05-29 19:49:40] - Adding converter from class java.time.Duration to class java.lang.String as writing converter
+[2023-05-29 19:49:40] - Adding converter from class java.lang.String to class java.time.Duration as reading converter
+[2023-05-29 19:49:40] - Adding converter from class java.time.Period to class java.lang.String as writing converter
+[2023-05-29 19:49:40] - Adding converter from class java.lang.String to class java.time.Period as reading converter
+[2023-05-29 19:49:40] - Adding converter from class java.lang.String to class java.time.LocalDate as reading converter
+[2023-05-29 19:49:40] - Adding converter from class java.lang.String to class java.time.LocalDateTime as reading converter
+[2023-05-29 19:49:40] - Adding converter from class java.lang.String to class java.time.Instant as reading converter
+[2023-05-29 19:49:40] - Autowiring by type from bean name 'cassandraSessionFactory' via factory method to bean named 'environment'
+[2023-05-29 19:49:40] - Autowiring by type from bean name 'cassandraSessionFactory' via factory method to bean named 'cassandraConverter'
+[2023-05-29 19:49:41] - Executing CQL statement [CREATE TABLE IF NOT EXISTS measurements (city text, timestamp bigint, id uuid, cloudiness int, feels_like_temperature double, humidity int, pressure int, temperature double, visibility int, weather text, weather_description text, wind_speed double, PRIMARY KEY (city, timestamp, id)) WITH CLUSTERING ORDER BY (timestamp DESC, id ASC);]
+[2023-05-29 19:49:41] - [s0|id: 0x2c2d4f2d, L:/192.168.0.102:59515 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.79.236.16:29042] Got last response on in-flight stream id 0, completing and releasing
+[2023-05-29 19:49:41] - [s0|metadata debouncer] Received java.util.concurrent.CompletableFuture@6e958138[Not completed], scheduling next flush in PT1S
+[2023-05-29 19:49:41] - [s0|metadata debouncer] Flushing now
+[2023-05-29 19:49:41] - [s0|metadata debouncer] Cancelled existing scheduled flush
+[2023-05-29 19:49:41] - [s0] Starting schema refresh
+[2023-05-29 19:49:41] - [s0] Checking schema agreement
+[2023-05-29 19:49:41] - [s0] Executing query 'SELECT schema_version FROM system.local WHERE key='local''
+[2023-05-29 19:49:41] - [s0] Executing query 'SELECT * FROM system.peers'
+[2023-05-29 19:49:41] - [s0] Successfully wrote query 'SELECT schema_version FROM system.local WHERE key='local'', waiting for response
+[2023-05-29 19:49:41] - [s0] Successfully wrote query 'SELECT * FROM system.peers', waiting for response
+[2023-05-29 19:49:41] - [s0|control|id: 0x4a5e2f59, L:/192.168.0.102:59512 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.76.6.140:29042] Got last response on in-flight stream id 0, completing and releasing
+[2023-05-29 19:49:41] - [s0] Got response ROWS(1 x 1 columns)
+[2023-05-29 19:49:41] - [s0|control|id: 0x4a5e2f59, L:/192.168.0.102:59512 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.76.6.140:29042] Got last response on in-flight stream id 1, completing and releasing
+[2023-05-29 19:49:41] - [s0] Got response ROWS(2 x 20 columns)
+[2023-05-29 19:49:41] - [s0] Schema agreement reached (fc4e102b-3d9b-33cb-839c-12c4dd171dcd), completing
+[2023-05-29 19:49:41] - [s0] Sending schema queries to Node(endPoint=4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/<unresolved>:29042:2eb0cf1c-2e92-4927-95b5-d4cec2a8d4a7, hostId=2eb0cf1c-2e92-4927-95b5-d4cec2a8d4a7, hashCode=412ac84a) with version 4.0.0.6816
+[2023-05-29 19:49:41] - [s0] No server-side filtering
+[2023-05-29 19:49:41] - [s0] Executing query 'SELECT * FROM system_schema.keyspaces'
+[2023-05-29 19:49:41] - [s0] Executing query 'SELECT * FROM system_schema.types'
+[2023-05-29 19:49:41] - [s0] Executing query 'SELECT * FROM system_schema.tables'
+[2023-05-29 19:49:41] - [s0] Executing query 'SELECT * FROM system_schema.columns'
+[2023-05-29 19:49:41] - [s0] Executing query 'SELECT * FROM system_schema.indexes'
+[2023-05-29 19:49:41] - [s0] Executing query 'SELECT * FROM system_schema.views'
+[2023-05-29 19:49:41] - [s0] Executing query 'SELECT * FROM system_schema.functions'
+[2023-05-29 19:49:41] - [s0] Executing query 'SELECT * FROM system_schema.aggregates'
+[2023-05-29 19:49:41] - [s0] Executing query 'SELECT * FROM system_virtual_schema.keyspaces'
+[2023-05-29 19:49:41] - [s0] Executing query 'SELECT * FROM system_virtual_schema.tables'
+[2023-05-29 19:49:41] - [s0] Executing query 'SELECT * FROM system_virtual_schema.columns'
+[2023-05-29 19:49:41] - [s0] Successfully wrote query 'SELECT * FROM system_schema.keyspaces', waiting for response
+[2023-05-29 19:49:41] - [s0] Successfully wrote query 'SELECT * FROM system_schema.types', waiting for response
+[2023-05-29 19:49:41] - [s0] Successfully wrote query 'SELECT * FROM system_schema.tables', waiting for response
+[2023-05-29 19:49:41] - [s0] Successfully wrote query 'SELECT * FROM system_schema.columns', waiting for response
+[2023-05-29 19:49:41] - [s0] Successfully wrote query 'SELECT * FROM system_schema.indexes', waiting for response
+[2023-05-29 19:49:41] - [s0] Successfully wrote query 'SELECT * FROM system_schema.views', waiting for response
+[2023-05-29 19:49:41] - [s0] Successfully wrote query 'SELECT * FROM system_schema.functions', waiting for response
+[2023-05-29 19:49:41] - [s0] Successfully wrote query 'SELECT * FROM system_schema.aggregates', waiting for response
+[2023-05-29 19:49:41] - [s0] Successfully wrote query 'SELECT * FROM system_virtual_schema.keyspaces', waiting for response
+[2023-05-29 19:49:41] - [s0] Successfully wrote query 'SELECT * FROM system_virtual_schema.tables', waiting for response
+[2023-05-29 19:49:41] - [s0] Successfully wrote query 'SELECT * FROM system_virtual_schema.columns', waiting for response
+[2023-05-29 19:49:41] - [s0|control|id: 0x4a5e2f59, L:/192.168.0.102:59512 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.76.6.140:29042] Got last response on in-flight stream id 8, completing and releasing
+[2023-05-29 19:49:41] - [s0] Got response ROWS(2 x 1 columns)
+[2023-05-29 19:49:41] - [s0|control|id: 0x4a5e2f59, L:/192.168.0.102:59512 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.76.6.140:29042] Got last response on in-flight stream id 9, completing and releasing
+[2023-05-29 19:49:41] - [s0] Got response ROWS(7 x 3 columns)
+[2023-05-29 19:49:41] - [s0|control|id: 0x4a5e2f59, L:/192.168.0.102:59512 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.76.6.140:29042] Got last response on in-flight stream id 10, completing and releasing
+[2023-05-29 19:49:41] - [s0] Got response ROWS(110 x 8 columns)
+[2023-05-29 19:49:41] - [s0|control|id: 0x4a5e2f59, L:/192.168.0.102:59512 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.76.6.140:29042] Got last response on in-flight stream id 6, completing and releasing
+[2023-05-29 19:49:41] - [s0] Got response ROWS(0 x 11 columns)
+[2023-05-29 19:49:41] - [s0|control|id: 0x4a5e2f59, L:/192.168.0.102:59512 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.76.6.140:29042] Got last response on in-flight stream id 5, completing and releasing
+[2023-05-29 19:49:41] - [s0] Got response ROWS(0 x 27 columns)
+[2023-05-29 19:49:41] - [s0|control|id: 0x4a5e2f59, L:/192.168.0.102:59512 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.76.6.140:29042] Got last response on in-flight stream id 1, completing and releasing
+[2023-05-29 19:49:41] - [s0] Got response ROWS(0 x 4 columns)
+[2023-05-29 19:49:41] - [s0|control|id: 0x4a5e2f59, L:/192.168.0.102:59512 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.76.6.140:29042] Got last response on in-flight stream id 7, completing and releasing
+[2023-05-29 19:49:41] - [s0] Got response ROWS(0 x 9 columns)
+[2023-05-29 19:49:41] - [s0|control|id: 0x4a5e2f59, L:/192.168.0.102:59512 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.76.6.140:29042] Got last response on in-flight stream id 4, completing and releasing
+[2023-05-29 19:49:41] - [s0] Got response ROWS(0 x 5 columns)
+[2023-05-29 19:49:41] - [s0] Filtering out 'system_virtual_schema' because it matches at least one regex exclude
+[2023-05-29 19:49:41] - [s0] Filtering out 'system_views' because it matches at least one regex exclude
+[2023-05-29 19:49:41] - [s0|control|id: 0x4a5e2f59, L:/192.168.0.102:59512 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.76.6.140:29042] Got last response on in-flight stream id 0, completing and releasing
+[2023-05-29 19:49:41] - [s0] Got response ROWS(7 x 4 columns)
+[2023-05-29 19:49:41] - [s0] Filtering out 'system_auth' because it matches at least one regex exclude
+[2023-05-29 19:49:41] - [s0] Filtering in 'data_endpoint_auth' because it does not match any regex exclude
+[2023-05-29 19:49:41] - [s0] Filtering out 'system_schema' because it matches at least one regex exclude
+[2023-05-29 19:49:41] - [s0] Filtering in 'city_measurements' because it does not match any regex exclude
+[2023-05-29 19:49:41] - [s0] Filtering out 'system' because it is excluded by name
+[2023-05-29 19:49:41] - [s0] Filtering out 'system_traces' because it matches at least one regex exclude
+[2023-05-29 19:49:41] - [s0] Filtering in 'datastax_sla' because it does not match any regex exclude
+[2023-05-29 19:49:41] - [s0|control|id: 0x4a5e2f59, L:/192.168.0.102:59512 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.76.6.140:29042] Got last response on in-flight stream id 3, completing and releasing
+[2023-05-29 19:49:41] - [s0] Got response ROWS(283 x 9 columns)
+[2023-05-29 19:49:41] - [s0|control|id: 0x4a5e2f59, L:/192.168.0.102:59512 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.76.6.140:29042] Got last response on in-flight stream id 2, completing and releasing
+[2023-05-29 19:49:41] - [s0] Got response ROWS(38 x 23 columns)
+[2023-05-29 19:49:41] - [s0] Schema queries took 98 ms
+[2023-05-29 19:49:41] - [s0] Schema parsing took 1 ms
+[2023-05-29 19:49:41] - [s0] Refreshing token map (only schema has changed)
+[2023-05-29 19:49:41] - [s0] Computing keyspace-level data for {data_endpoint_auth={class=org.apache.cassandra.locator.NetworkTopologyStrategy, europe-west1=3}, city_measurements={class=org.apache.cassandra.locator.NetworkTopologyStrategy, europe-west1=3}, datastax_sla={class=org.apache.cassandra.locator.NetworkTopologyStrategy, europe-west1=3}}
+[2023-05-29 19:49:41] - [s0] Schema changes do not impact the token map, no refresh needed
+[2023-05-29 19:49:41] - [s0] Rebuilding token map took 935 us
+[2023-05-29 19:49:41] - [s0] Applying schema refresh took 12 ms
+[2023-05-29 19:49:41] - Autowiring by type from bean name 'cassandraTemplate' via factory method to bean named 'cassandraSessionFactory'
+[2023-05-29 19:49:41] - Autowiring by type from bean name 'cassandraTemplate' via factory method to bean named 'cassandraConverter'
+[2023-05-29 19:49:41] - Autowiring by type from bean name 'measurementRepository' via constructor to bean named 'cassandraTemplate'
+[2023-05-29 19:49:41] - Autowiring by type from bean name 'measurementService' via constructor to bean named 'measurementRepository'
+[2023-05-29 19:49:41] - Autowiring by type from bean name 'averageWeatherController' via constructor to bean named 'cityService'
+[2023-05-29 19:49:41] - Autowiring by type from bean name 'averageWeatherController' via constructor to bean named 'measurementService'
+[2023-05-29 19:49:41] - Creating shared instance of singleton bean 'cityController'
+[2023-05-29 19:49:41] - Autowiring by type from bean name 'cityController' via constructor to bean named 'cityService'
+[2023-05-29 19:49:41] - Creating shared instance of singleton bean 'latestWeatherController'
+[2023-05-29 19:49:41] - Autowiring by type from bean name 'latestWeatherController' via constructor to bean named 'cityService'
+[2023-05-29 19:49:41] - Autowiring by type from bean name 'latestWeatherController' via constructor to bean named 'measurementService'
+[2023-05-29 19:49:41] - Creating shared instance of singleton bean 'measurementController'
+[2023-05-29 19:49:41] - Autowiring by type from bean name 'measurementController' via constructor to bean named 'measurementService'
+[2023-05-29 19:49:41] - Creating shared instance of singleton bean 'stateController'
+[2023-05-29 19:49:41] - Creating shared instance of singleton bean 'stateService'
+[2023-05-29 19:49:41] - Creating shared instance of singleton bean 'stateRepository'
+[2023-05-29 19:49:41] - Creating shared instance of singleton bean 'jpa.named-queries#0'
+[2023-05-29 19:49:41] - Creating shared instance of singleton bean 'jpa.StateRepository.fragments#0'
+[2023-05-29 19:49:41] - Creating new EntityManager for shared EntityManager invocation
+[2023-05-29 19:49:41] - Creating new EntityManager for shared EntityManager invocation
+[2023-05-29 19:49:41] - Initializing repository instance for com.korinek.MeteorologicalDataApp.repository.StateRepository…
+[2023-05-29 19:49:42] - Creating new EntityManager for shared EntityManager invocation
+[2023-05-29 19:49:42] - Looking up named query State.existsByName
+[2023-05-29 19:49:42] - JDBC transaction marked for rollback-only (exception provided for stack trace)
+java.lang.Exception: exception just for purpose of providing stack trace
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.markRollbackOnly(JdbcResourceLocalTransactionCoordinatorImpl.java:324)
+	at org.hibernate.internal.AbstractSharedSessionContract.buildNamedQuery(AbstractSharedSessionContract.java:1003)
+	at org.hibernate.internal.AbstractSharedSessionContract.createNamedQuery(AbstractSharedSessionContract.java:866)
+	at org.hibernate.internal.AbstractSharedSessionContract.createNamedQuery(AbstractSharedSessionContract.java:126)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:360)
+	at jdk.proxy2/jdk.proxy2.$Proxy135.createNamedQuery(Unknown Source)
+	at org.springframework.data.jpa.repository.query.NamedQuery.hasNamedQuery(NamedQuery.java:115)
+	at org.springframework.data.jpa.repository.query.NamedQuery.lookupFrom(NamedQuery.java:144)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$DeclaredQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:180)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:252)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:95)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:111)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:99)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:88)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:88)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:357)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:279)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:245)
+	at org.springframework.data.util.Lazy.get(Lazy.java:114)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:285)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:245)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1189)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:245)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1189)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.korinek.MeteorologicalDataApp.MeteorologicalDataAppApplication.main(MeteorologicalDataAppApplication.java:22)
+[2023-05-29 19:49:42] - Did not find named query State.existsByName
+[2023-05-29 19:49:42] - Creating new EntityManager for shared EntityManager invocation
+[2023-05-29 19:49:42] - Looking up named query State.findByName
+[2023-05-29 19:49:42] - JDBC transaction marked for rollback-only (exception provided for stack trace)
+java.lang.Exception: exception just for purpose of providing stack trace
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.markRollbackOnly(JdbcResourceLocalTransactionCoordinatorImpl.java:324)
+	at org.hibernate.internal.AbstractSharedSessionContract.buildNamedQuery(AbstractSharedSessionContract.java:1003)
+	at org.hibernate.internal.AbstractSharedSessionContract.createNamedQuery(AbstractSharedSessionContract.java:866)
+	at org.hibernate.internal.AbstractSharedSessionContract.createNamedQuery(AbstractSharedSessionContract.java:126)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:360)
+	at jdk.proxy2/jdk.proxy2.$Proxy135.createNamedQuery(Unknown Source)
+	at org.springframework.data.jpa.repository.query.NamedQuery.hasNamedQuery(NamedQuery.java:115)
+	at org.springframework.data.jpa.repository.query.NamedQuery.lookupFrom(NamedQuery.java:144)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$DeclaredQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:180)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:252)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:95)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:111)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:99)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:88)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:88)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:357)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:279)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:245)
+	at org.springframework.data.util.Lazy.get(Lazy.java:114)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:285)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:245)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1189)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:245)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1189)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.korinek.MeteorologicalDataApp.MeteorologicalDataAppApplication.main(MeteorologicalDataAppApplication.java:22)
+[2023-05-29 19:49:42] - Did not find named query State.findByName
+[2023-05-29 19:49:42] - Creating new EntityManager for shared EntityManager invocation
+[2023-05-29 19:49:42] - Finished creation of repository instance for com.korinek.MeteorologicalDataApp.repository.StateRepository.
+[2023-05-29 19:49:42] - Autowiring by type from bean name 'stateService' via constructor to bean named 'stateRepository'
+[2023-05-29 19:49:42] - Autowiring by type from bean name 'stateController' via constructor to bean named 'stateService'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'openWeatherService'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'weather.source-com.korinek.MeteorologicalDataApp.configuration.DataSourceConfiguration'
+[2023-05-29 19:49:42] - Found key 'weather.source.url' in PropertySource 'environmentProperties' with value of type String
+[2023-05-29 19:49:42] - Found key 'weather.source.url-geocoding' in PropertySource 'environmentProperties' with value of type String
+[2023-05-29 19:49:42] - Found key 'weather.source.api-key' in PropertySource 'environmentProperties' with value of type String
+[2023-05-29 19:49:42] - Found key 'weather.source.update-rate' in PropertySource 'environmentProperties' with value of type String
+[2023-05-29 19:49:42] - Found key 'weather.source.max-calls' in PropertySource 'environmentProperties' with value of type String
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'weatherThreadPoolTaskScheduler'
+[2023-05-29 19:49:42] - Initializing ExecutorService 'weatherThreadPoolTaskScheduler'
+[2023-05-29 19:49:42] - Autowiring by type from bean name 'openWeatherService' via constructor to bean named 'weather.source-com.korinek.MeteorologicalDataApp.configuration.DataSourceConfiguration'
+[2023-05-29 19:49:42] - Autowiring by type from bean name 'openWeatherService' via constructor to bean named 'weatherThreadPoolTaskScheduler'
+[2023-05-29 19:49:42] - Autowiring by type from bean name 'openWeatherService' via constructor to bean named 'cityService'
+[2023-05-29 19:49:42] - Autowiring by type from bean name 'openWeatherService' via constructor to bean named 'measurementService'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'org.springframework.boot.context.properties.EnableConfigurationPropertiesRegistrar.methodValidationExcludeFilter'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'transactionManager'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'platformTransactionManagerCustomizers'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'spring.transaction-org.springframework.boot.autoconfigure.transaction.TransactionProperties'
+[2023-05-29 19:49:42] - Creating new transaction with name [com.korinek.MeteorologicalDataApp.service.CityService.getAllCities]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+[2023-05-29 19:49:42] - Opened new EntityManager [SessionImpl(1840410635<open>)] for JPA transaction
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration'
+[2023-05-29 19:49:42] - Setting JDBC Connection [HikariProxyConnection@1907481922 wrapping org.postgresql.jdbc.PgConnection@5534e6f1] read-only
+[2023-05-29 19:49:42] - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+[2023-05-29 19:49:42] - begin
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration'
+[2023-05-29 19:49:42] - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@24c794d9]
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'taskExecutorBuilder'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties'
+[2023-05-29 19:49:42] - Found thread-bound EntityManager [SessionImpl(1840410635<open>)] for JPA transaction
+[2023-05-29 19:49:42] - Participating in existing transaction
+[2023-05-29 19:49:42] - Autowiring by type from bean name 'taskExecutorBuilder' via factory method to bean named 'spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'error'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'beanNameViewResolver'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'spring.web-org.springframework.boot.autoconfigure.web.WebProperties'
+[2023-05-29 19:49:42] - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration' via constructor to bean named 'org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71e5f61d'
+[2023-05-29 19:49:42] - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration' via constructor to bean named 'spring.web-org.springframework.boot.autoconfigure.web.WebProperties'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'conventionErrorViewResolver'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'errorAttributes'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'basicErrorController'
+[2023-05-29 19:49:42] - Autowiring by type from bean name 'basicErrorController' via factory method to bean named 'errorAttributes'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration'
+[2023-05-29 19:49:42] - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration' via constructor to bean named 'spring.mvc-org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties'
+[2023-05-29 19:49:42] - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration' via constructor to bean named 'spring.web-org.springframework.boot.autoconfigure.web.WebProperties'
+[2023-05-29 19:49:42] - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration' via constructor to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@61a5b4ae'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter'
+[2023-05-29 19:49:42] - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter' via constructor to bean named 'spring.web-org.springframework.boot.autoconfigure.web.WebProperties'
+[2023-05-29 19:49:42] - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter' via constructor to bean named 'spring.mvc-org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties'
+[2023-05-29 19:49:42] - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter' via constructor to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@61a5b4ae'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'openEntityManagerInViewInterceptorConfigurer'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration'
+[2023-05-29 19:49:42] - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration' via constructor to bean named 'spring.jpa-org.springframework.boot.autoconfigure.orm.jpa.JpaProperties'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'openEntityManagerInViewInterceptor'
+[2023-05-29 19:49:42] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-05-29 19:49:42] - Autowiring by type from bean name 'openEntityManagerInViewInterceptorConfigurer' via factory method to bean named 'openEntityManagerInViewInterceptor'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'org.springframework.data.web.config.SpringDataWebConfiguration'
+[2023-05-29 19:49:42] - Autowiring by type from bean name 'org.springframework.data.web.config.SpringDataWebConfiguration' via constructor to bean named 'org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71e5f61d'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'endpointObjectMapperWebMvcConfigurer'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'endpointObjectMapper'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.endpoint.jackson.JacksonEndpointAutoConfiguration'
+[2023-05-29 19:49:42] - Autowiring by type from bean name 'endpointObjectMapperWebMvcConfigurer' via factory method to bean named 'endpointObjectMapper'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'requestMappingHandlerAdapter'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'mvcContentNegotiationManager'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'mvcConversionService'
+[2023-05-29 19:49:42] - Created new SQL alias : c1_0
+[2023-05-29 19:49:42] - Registration of TableGroup [StandardTableGroup(com.korinek.MeteorologicalDataApp.model.City(148829970810421))] with identifierForTableGroup [com.korinek.MeteorologicalDataApp.model.City] for NavigablePath [com.korinek.MeteorologicalDataApp.model.City] 
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'mvcValidator'
+[2023-05-29 19:49:42] - Autowiring by type from bean name 'requestMappingHandlerAdapter' via factory method to bean named 'mvcContentNegotiationManager'
+[2023-05-29 19:49:42] - Autowiring by type from bean name 'requestMappingHandlerAdapter' via factory method to bean named 'mvcConversionService'
+[2023-05-29 19:49:42] - Autowiring by type from bean name 'requestMappingHandlerAdapter' via factory method to bean named 'mvcValidator'
+[2023-05-29 19:49:42] - DomainResult Graph:
+ \-EntityResultImpl [com.korinek.MeteorologicalDataApp.model.City(148829970810421)]
+ |  +-BasicFetch [com.korinek.MeteorologicalDataApp.model.City(148829970810421).name]
+ |  \-CircularFetchImpl [com.korinek.MeteorologicalDataApp.model.City(148829970810421).state]
+
+[2023-05-29 19:49:42] - SQL AST Tree:
+    SelectStatement {
+      FromClause {
+        StandardTableGroup (c1 : com.korinek.MeteorologicalDataApp.model.City(148829970810421)) {
+          primaryTableReference : city as c1_0
+        }
+      }
+    }
+
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'messageConverters'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'stringHttpMessageConverter'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration'
+[2023-05-29 19:49:42] - Autowiring by type from bean name 'stringHttpMessageConverter' via factory method to bean named 'environment'
+[2023-05-29 19:49:42] - Skipping reading Query result cache data: cache-enabled = false, cache-mode = NORMAL
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'mappingJackson2HttpMessageConverter'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'jacksonObjectMapper'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'standardJacksonObjectMapperBuilderCustomizer'
+[2023-05-29 19:49:42] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration'
+[2023-05-29 19:49:43] - Creating shared instance of singleton bean 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties'
+[2023-05-29 19:49:43] - Autowiring by type from bean name 'standardJacksonObjectMapperBuilderCustomizer' via factory method to bean named 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties'
+[2023-05-29 19:49:43] - Creating shared instance of singleton bean 'parameterNamesModule'
+[2023-05-29 19:49:43] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration'
+[2023-05-29 19:49:43] - Initializer list
+[2023-05-29 19:49:43] -     com.korinek.MeteorologicalDataApp.model.City(148829970810421).state -> EntitySelectFetchInitializer(com.korinek.MeteorologicalDataApp.model.City(148829970810421).state)@1090652951 (ToOneAttributeMapping(NavigableRole[com.korinek.MeteorologicalDataApp.model.City.state])@531301268)
+[2023-05-29 19:49:43] -     com.korinek.MeteorologicalDataApp.model.City(148829970810421) -> EntityResultInitializer(com.korinek.MeteorologicalDataApp.model.City(148829970810421))@1403291067 (SingleTableEntityPersister(com.korinek.MeteorologicalDataApp.model.City))
+[2023-05-29 19:49:43] - Creating shared instance of singleton bean 'jsonMixinModule'
+[2023-05-29 19:49:43] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonMixinConfiguration'
+[2023-05-29 19:49:43] - Creating shared instance of singleton bean 'jsonMixinModuleEntries'
+[2023-05-29 19:49:43] - Autowiring by type from bean name 'jsonMixinModuleEntries' via factory method to bean named 'org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71e5f61d'
+[2023-05-29 19:49:43] - 
+    select
+        c1_0.id_city,
+        c1_0.name,
+        c1_0.id_state 
+    from
+        city c1_0
+[2023-05-29 19:49:43] - Autowiring by type from bean name 'jsonMixinModule' via factory method to bean named 'org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71e5f61d'
+[2023-05-29 19:49:43] - Autowiring by type from bean name 'jsonMixinModule' via factory method to bean named 'jsonMixinModuleEntries'
+[2023-05-29 19:49:43] - Creating shared instance of singleton bean 'jsonComponentModule'
+[2023-05-29 19:49:43] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration'
+[2023-05-29 19:49:43] - Extracted JDBC value [0] - [1]
+[2023-05-29 19:49:43] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(148829970810421)): 1
+[2023-05-29 19:49:43] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(148829970810421)#1] : com.korinek.MeteorologicalDataApp.model.City@40673214
+[2023-05-29 19:49:43] - Extracted JDBC value [2] - [1]
+[2023-05-29 19:49:43] - (EntitySelectFetchInitializer) Invoking session#internalLoad for entity (com.korinek.MeteorologicalDataApp.model.City(148829970810421).state#1) : 1
+[2023-05-29 19:49:43] - Creating shared instance of singleton bean 'jacksonGeoModule'
+[2023-05-29 19:49:43] - Creating shared instance of singleton bean 'org.springframework.data.web.config.SpringDataJacksonConfiguration'
+[2023-05-29 19:49:43] - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
+[2023-05-29 19:49:43] - Initializer list
+[2023-05-29 19:49:43] -     com.korinek.MeteorologicalDataApp.model.State.cities -> DelayedCollectionInitializer(com.korinek.MeteorologicalDataApp.model.State.cities)@1123806396 (PluralAttribute(com.korinek.MeteorologicalDataApp.model.State.cities))
+[2023-05-29 19:49:43] -     com.korinek.MeteorologicalDataApp.model.State -> EntityResultInitializer(com.korinek.MeteorologicalDataApp.model.State)@572562976 (SingleTableEntityPersister(com.korinek.MeteorologicalDataApp.model.State))
+[2023-05-29 19:49:43] - 
+    select
+        s1_0.id_state,
+        s1_0.name 
+    from
+        state s1_0 
+    where
+        s1_0.id_state=?
+[2023-05-29 19:49:43] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.State): 1
+[2023-05-29 19:49:43] - Extracted JDBC value [0] - [1]
+[2023-05-29 19:49:43] - (DelayedCollectionInitializer) Current row collection key : com.korinek.MeteorologicalDataApp.model.State.cities#1
+[2023-05-29 19:49:43] - Autowiring by type from bean name 'jacksonObjectMapperBuilder' via factory method to bean named 'org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71e5f61d'
+[2023-05-29 19:49:43] - Autowiring by type from bean name 'jacksonObjectMapperBuilder' via factory method to bean named 'standardJacksonObjectMapperBuilderCustomizer'
+[2023-05-29 19:49:43] - Autowiring by type from bean name 'jacksonObjectMapper' via factory method to bean named 'jacksonObjectMapperBuilder'
+[2023-05-29 19:49:43] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.State#1] : com.korinek.MeteorologicalDataApp.model.State@7484b036
+[2023-05-29 19:49:43] - Extracted JDBC value [1] - [USA]
+[2023-05-29 19:49:43] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.State#1
+[2023-05-29 19:49:43] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@57e49324
+[2023-05-29 19:49:43] - (EntitySelectFetchInitializer) Entity [com.korinek.MeteorologicalDataApp.model.City(148829970810421).state#1] : 1 has being loaded by session.internalLoad.
+[2023-05-29 19:49:43] - Extracted JDBC value [1] - [Chicago]
+[2023-05-29 19:49:43] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(148829970810421)#1
+[2023-05-29 19:49:43] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@2aa30e10
+[2023-05-29 19:49:43] - Extracted JDBC value [0] - [2]
+[2023-05-29 19:49:43] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(148829970810421)): 2
+[2023-05-29 19:49:43] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(148829970810421)#2] : com.korinek.MeteorologicalDataApp.model.City@79875a21
+[2023-05-29 19:49:43] - Extracted JDBC value [2] - [3]
+[2023-05-29 19:49:43] - (EntitySelectFetchInitializer) Invoking session#internalLoad for entity (com.korinek.MeteorologicalDataApp.model.City(148829970810421).state#3) : 3
+[2023-05-29 19:49:43] - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
+[2023-05-29 19:49:43] - Initializer list
+[2023-05-29 19:49:43] -     com.korinek.MeteorologicalDataApp.model.State.cities -> DelayedCollectionInitializer(com.korinek.MeteorologicalDataApp.model.State.cities)@845391459 (PluralAttribute(com.korinek.MeteorologicalDataApp.model.State.cities))
+[2023-05-29 19:49:43] -     com.korinek.MeteorologicalDataApp.model.State -> EntityResultInitializer(com.korinek.MeteorologicalDataApp.model.State)@528231271 (SingleTableEntityPersister(com.korinek.MeteorologicalDataApp.model.State))
+[2023-05-29 19:49:43] - 
+    select
+        s1_0.id_state,
+        s1_0.name 
+    from
+        state s1_0 
+    where
+        s1_0.id_state=?
+[2023-05-29 19:49:43] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.State): 3
+[2023-05-29 19:49:43] - Extracted JDBC value [0] - [3]
+[2023-05-29 19:49:43] - (DelayedCollectionInitializer) Current row collection key : com.korinek.MeteorologicalDataApp.model.State.cities#3
+[2023-05-29 19:49:43] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.State#3] : com.korinek.MeteorologicalDataApp.model.State@3faeab90
+[2023-05-29 19:49:43] - Extracted JDBC value [1] - [Czech Republic]
+[2023-05-29 19:49:43] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.State#3
+[2023-05-29 19:49:43] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@795ddca6
+[2023-05-29 19:49:43] - (EntitySelectFetchInitializer) Entity [com.korinek.MeteorologicalDataApp.model.City(148829970810421).state#3] : 3 has being loaded by session.internalLoad.
+[2023-05-29 19:49:43] - Extracted JDBC value [1] - [Prague]
+[2023-05-29 19:49:43] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(148829970810421)#2
+[2023-05-29 19:49:43] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@2aa30e10
+[2023-05-29 19:49:43] - Extracted JDBC value [0] - [3]
+[2023-05-29 19:49:43] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(148829970810421)): 3
+[2023-05-29 19:49:43] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(148829970810421)#3] : com.korinek.MeteorologicalDataApp.model.City@54de299f
+[2023-05-29 19:49:43] - Extracted JDBC value [2] - [1]
+[2023-05-29 19:49:43] - Extracted JDBC value [1] - [New York]
+[2023-05-29 19:49:43] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(148829970810421)#3
+[2023-05-29 19:49:43] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@2aa30e10
+[2023-05-29 19:49:43] - Extracted JDBC value [0] - [4]
+[2023-05-29 19:49:43] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(148829970810421)): 4
+[2023-05-29 19:49:43] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(148829970810421)#4] : com.korinek.MeteorologicalDataApp.model.City@296abd89
+[2023-05-29 19:49:43] - Extracted JDBC value [2] - [6]
+[2023-05-29 19:49:43] - (EntitySelectFetchInitializer) Invoking session#internalLoad for entity (com.korinek.MeteorologicalDataApp.model.City(148829970810421).state#6) : 6
+[2023-05-29 19:49:43] - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
+[2023-05-29 19:49:43] - Initializer list
+[2023-05-29 19:49:43] -     com.korinek.MeteorologicalDataApp.model.State.cities -> DelayedCollectionInitializer(com.korinek.MeteorologicalDataApp.model.State.cities)@1666343199 (PluralAttribute(com.korinek.MeteorologicalDataApp.model.State.cities))
+[2023-05-29 19:49:43] -     com.korinek.MeteorologicalDataApp.model.State -> EntityResultInitializer(com.korinek.MeteorologicalDataApp.model.State)@1962748223 (SingleTableEntityPersister(com.korinek.MeteorologicalDataApp.model.State))
+[2023-05-29 19:49:43] - 
+    select
+        s1_0.id_state,
+        s1_0.name 
+    from
+        state s1_0 
+    where
+        s1_0.id_state=?
+[2023-05-29 19:49:43] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.State): 6
+[2023-05-29 19:49:43] - Extracted JDBC value [0] - [6]
+[2023-05-29 19:49:43] - (DelayedCollectionInitializer) Current row collection key : com.korinek.MeteorologicalDataApp.model.State.cities#6
+[2023-05-29 19:49:43] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.State#6] : com.korinek.MeteorologicalDataApp.model.State@40b3a5c6
+[2023-05-29 19:49:43] - Extracted JDBC value [1] - [Australia]
+[2023-05-29 19:49:43] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.State#6
+[2023-05-29 19:49:43] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@42dcc43a
+[2023-05-29 19:49:43] - (EntitySelectFetchInitializer) Entity [com.korinek.MeteorologicalDataApp.model.City(148829970810421).state#6] : 6 has being loaded by session.internalLoad.
+[2023-05-29 19:49:43] - Extracted JDBC value [1] - [Sydney]
+[2023-05-29 19:49:43] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(148829970810421)#4
+[2023-05-29 19:49:43] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@2aa30e10
+[2023-05-29 19:49:43] - Extracted JDBC value [0] - [5]
+[2023-05-29 19:49:43] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(148829970810421)): 5
+[2023-05-29 19:49:43] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(148829970810421)#5] : com.korinek.MeteorologicalDataApp.model.City@6f2cc49f
+[2023-05-29 19:49:43] - Extracted JDBC value [2] - [2]
+[2023-05-29 19:49:43] - (EntitySelectFetchInitializer) Invoking session#internalLoad for entity (com.korinek.MeteorologicalDataApp.model.City(148829970810421).state#2) : 2
+[2023-05-29 19:49:43] - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
+[2023-05-29 19:49:43] - Initializer list
+[2023-05-29 19:49:43] -     com.korinek.MeteorologicalDataApp.model.State.cities -> DelayedCollectionInitializer(com.korinek.MeteorologicalDataApp.model.State.cities)@1692470370 (PluralAttribute(com.korinek.MeteorologicalDataApp.model.State.cities))
+[2023-05-29 19:49:43] -     com.korinek.MeteorologicalDataApp.model.State -> EntityResultInitializer(com.korinek.MeteorologicalDataApp.model.State)@966854829 (SingleTableEntityPersister(com.korinek.MeteorologicalDataApp.model.State))
+[2023-05-29 19:49:43] - 
+    select
+        s1_0.id_state,
+        s1_0.name 
+    from
+        state s1_0 
+    where
+        s1_0.id_state=?
+[2023-05-29 19:49:43] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.State): 2
+[2023-05-29 19:49:43] - Extracted JDBC value [0] - [2]
+[2023-05-29 19:49:43] - (DelayedCollectionInitializer) Current row collection key : com.korinek.MeteorologicalDataApp.model.State.cities#2
+[2023-05-29 19:49:43] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.State#2] : com.korinek.MeteorologicalDataApp.model.State@49c2d685
+[2023-05-29 19:49:43] - Extracted JDBC value [1] - [Canada]
+[2023-05-29 19:49:43] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.State#2
+[2023-05-29 19:49:43] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@1355dc44
+[2023-05-29 19:49:43] - (EntitySelectFetchInitializer) Entity [com.korinek.MeteorologicalDataApp.model.City(148829970810421).state#2] : 2 has being loaded by session.internalLoad.
+[2023-05-29 19:49:43] - Extracted JDBC value [1] - [Toronto]
+[2023-05-29 19:49:43] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(148829970810421)#5
+[2023-05-29 19:49:43] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@2aa30e10
+[2023-05-29 19:49:43] - Extracted JDBC value [0] - [6]
+[2023-05-29 19:49:43] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(148829970810421)): 6
+[2023-05-29 19:49:43] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(148829970810421)#6] : com.korinek.MeteorologicalDataApp.model.City@497b231c
+[2023-05-29 19:49:43] - Extracted JDBC value [2] - [1]
+[2023-05-29 19:49:43] - Extracted JDBC value [1] - [Los Angeles]
+[2023-05-29 19:49:43] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(148829970810421)#6
+[2023-05-29 19:49:43] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@2aa30e10
+[2023-05-29 19:49:43] - Autowiring by type from bean name 'mappingJackson2HttpMessageConverter' via factory method to bean named 'jacksonObjectMapper'
+[2023-05-29 19:49:43] - Creating shared instance of singleton bean 'sortResolver'
+[2023-05-29 19:49:43] - Creating shared instance of singleton bean 'sortCustomizer'
+[2023-05-29 19:49:43] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration'
+[2023-05-29 19:49:43] - Creating shared instance of singleton bean 'spring.data.web-org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties'
+[2023-05-29 19:49:43] - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration' via constructor to bean named 'spring.data.web-org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties'
+[2023-05-29 19:49:43] - Creating shared instance of singleton bean 'pageableResolver'
+[2023-05-29 19:49:43] - Creating shared instance of singleton bean 'pageableCustomizer'
+[2023-05-29 19:49:43] - Initiating transaction commit
+[2023-05-29 19:49:43] - Committing JPA transaction on EntityManager [SessionImpl(1840410635<open>)]
+[2023-05-29 19:49:43] - committing
+[2023-05-29 19:49:43] - Resetting read-only flag of JDBC Connection [HikariProxyConnection@1907481922 wrapping org.postgresql.jdbc.PgConnection@5534e6f1]
+[2023-05-29 19:49:43] - Closing JPA EntityManager [SessionImpl(1840410635<open>)] after transaction
+[2023-05-29 19:49:43] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+[2023-05-29 19:49:43] - Creating shared instance of singleton bean 'welcomePageHandlerMapping'
+[2023-05-29 19:49:44] - Creating shared instance of singleton bean 'mvcResourceUrlProvider'
+[2023-05-29 19:49:44] - Autowiring by type from bean name 'welcomePageHandlerMapping' via factory method to bean named 'org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71e5f61d'
+[2023-05-29 19:49:44] - Autowiring by type from bean name 'welcomePageHandlerMapping' via factory method to bean named 'mvcConversionService'
+[2023-05-29 19:49:44] - Autowiring by type from bean name 'welcomePageHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
+[2023-05-29 19:49:44] - Creating shared instance of singleton bean 'localeResolver'
+[2023-05-29 19:49:44] - Creating shared instance of singleton bean 'themeResolver'
+[2023-05-29 19:49:44] - Creating shared instance of singleton bean 'flashMapManager'
+[2023-05-29 19:49:44] - Creating shared instance of singleton bean 'requestMappingHandlerMapping'
+[2023-05-29 19:49:44] - Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcContentNegotiationManager'
+[2023-05-29 19:49:44] - Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcConversionService'
+[2023-05-29 19:49:44] - Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
+[2023-05-29 19:49:44] - 
+	c.k.M.MeteorologicalDataAppApplication:
+	{GET [/]}: index()
+[2023-05-29 19:49:44] - 
+	c.k.M.c.AverageWeatherController:
+	{GET [/api/average/day/{id}]}: getAverageWeatherLastDay(int)
+	{GET [/api/average/week/{id}]}: getAverageWeatherLastWeek(int)
+	{GET [/api/average/14days/{id}]}: getAverageWeatherLast14Days(int)
+[2023-05-29 19:49:44] - 
+	c.k.M.c.CityController:
+	{GET [/api/city/{id}]}: getCity(int)
+	{POST [/api/city]}: addNewCity(City)
+	{PATCH [/api/city/{id}]}: updateCity(int,City)
+	{DELETE [/api/city/{id}]}: deleteCity(int)
+	{POST [/api/cities]}: addNewCities(List)
+	{GET [/api/cities]}: getAllCities()
+	{DELETE [/api/cities]}: deleteAllCities()
+[2023-05-29 19:49:44] - 
+	c.k.M.c.LatestWeatherController:
+	{GET [/api/latest/{id}]}: getLatestWeather(int)
+[2023-05-29 19:49:44] - 
+	c.k.M.c.MeasurementController:
+	{POST [/api/measurement]}: addNewMeasurement(Measurement)
+	{POST [/api/measurements]}: addNewMeasurements(List)
+	{GET [/api/measurement/{id}]}: getMeasurement(UUID)
+	{GET [/api/measurements]}: getAllMeasurements()
+	{PATCH [/api/measurement/{id}]}: updateMeasurement(UUID,Measurement)
+	{DELETE [/api/measurement/{id}]}: deleteMeasurement(UUID)
+	{DELETE [/api/measurements]}: deleteAllMeasurements()
+[2023-05-29 19:49:44] - 
+	c.k.M.c.StateController:
+	{GET [/api/state/{id}]}: getState(int)
+	{POST [/api/state]}: addNewState(State)
+	{POST [/api/states]}: addNewStates(List)
+	{GET [/api/states]}: getAllStates()
+	{DELETE [/api/state/{id}]}: deleteState(int)
+	{DELETE [/api/states]}: deleteAllStates()
+	{PATCH [/api/state/{id}]}: updateState(int,State)
+[2023-05-29 19:49:44] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+[2023-05-29 19:49:44] - 28 mappings in 'requestMappingHandlerMapping'
+[2023-05-29 19:49:45] - Creating shared instance of singleton bean 'mvcPatternParser'
+[2023-05-29 19:49:45] - Creating shared instance of singleton bean 'mvcUrlPathHelper'
+[2023-05-29 19:49:45] - Creating shared instance of singleton bean 'mvcPathMatcher'
+[2023-05-29 19:49:45] - Creating shared instance of singleton bean 'viewControllerHandlerMapping'
+[2023-05-29 19:49:45] - Autowiring by type from bean name 'viewControllerHandlerMapping' via factory method to bean named 'mvcConversionService'
+[2023-05-29 19:49:45] - Autowiring by type from bean name 'viewControllerHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
+[2023-05-29 19:49:45] - Creating shared instance of singleton bean 'beanNameHandlerMapping'
+[2023-05-29 19:49:45] - Autowiring by type from bean name 'beanNameHandlerMapping' via factory method to bean named 'mvcConversionService'
+[2023-05-29 19:49:45] - Autowiring by type from bean name 'beanNameHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
+[2023-05-29 19:49:45] - 'beanNameHandlerMapping' {}
+[2023-05-29 19:49:45] - Creating shared instance of singleton bean 'routerFunctionMapping'
+[2023-05-29 19:49:45] - Autowiring by type from bean name 'routerFunctionMapping' via factory method to bean named 'mvcConversionService'
+[2023-05-29 19:49:45] - Autowiring by type from bean name 'routerFunctionMapping' via factory method to bean named 'mvcResourceUrlProvider'
+[2023-05-29 19:49:45] - Creating shared instance of singleton bean 'resourceHandlerMapping'
+[2023-05-29 19:49:45] - Autowiring by type from bean name 'resourceHandlerMapping' via factory method to bean named 'mvcContentNegotiationManager'
+[2023-05-29 19:49:45] - Autowiring by type from bean name 'resourceHandlerMapping' via factory method to bean named 'mvcConversionService'
+[2023-05-29 19:49:45] - Autowiring by type from bean name 'resourceHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
+[2023-05-29 19:49:45] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+[2023-05-29 19:49:45] - Creating shared instance of singleton bean 'defaultServletHandlerMapping'
+[2023-05-29 19:49:45] - Creating shared instance of singleton bean 'handlerFunctionAdapter'
+[2023-05-29 19:49:45] - Creating shared instance of singleton bean 'mvcUriComponentsContributor'
+[2023-05-29 19:49:45] - Autowiring by type from bean name 'mvcUriComponentsContributor' via factory method to bean named 'mvcConversionService'
+[2023-05-29 19:49:45] - Autowiring by type from bean name 'mvcUriComponentsContributor' via factory method to bean named 'requestMappingHandlerAdapter'
+[2023-05-29 19:49:45] - Creating shared instance of singleton bean 'httpRequestHandlerAdapter'
+[2023-05-29 19:49:45] - Creating shared instance of singleton bean 'simpleControllerHandlerAdapter'
+[2023-05-29 19:49:45] - Creating shared instance of singleton bean 'handlerExceptionResolver'
+[2023-05-29 19:49:45] - Autowiring by type from bean name 'handlerExceptionResolver' via factory method to bean named 'mvcContentNegotiationManager'
+[2023-05-29 19:49:45] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+[2023-05-29 19:49:45] - Creating shared instance of singleton bean 'mvcViewResolver'
+[2023-05-29 19:49:45] - Autowiring by type from bean name 'mvcViewResolver' via factory method to bean named 'mvcContentNegotiationManager'
+[2023-05-29 19:49:45] - Creating shared instance of singleton bean 'viewNameTranslator'
+[2023-05-29 19:49:45] - Creating shared instance of singleton bean 'defaultViewResolver'
+[2023-05-29 19:49:45] - Creating shared instance of singleton bean 'viewResolver'
+[2023-05-29 19:49:45] - Autowiring by type from bean name 'viewResolver' via factory method to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@61a5b4ae'
+[2023-05-29 19:49:45] - Creating shared instance of singleton bean 'viewResolver'
+[2023-05-29 19:49:45] - Creating shared instance of singleton bean 'thymeleafViewResolver'
+[2023-05-29 19:49:45] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafWebMvcConfiguration$ThymeleafViewResolverConfiguration'
+[2023-05-29 19:49:45] - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[2023-05-29 19:49:45] - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+[2023-05-29 19:49:45] - Creating shared instance of singleton bean 'spring.thymeleaf-org.springframework.boot.autoconfigure.thymeleaf.ThymeleafProperties'
+[2023-05-29 19:49:45] - Creating shared instance of singleton bean 'templateEngine'
+[2023-05-29 19:49:45] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.thymeleaf.TemplateEngineConfigurations$DefaultTemplateEngineConfiguration'
+[2023-05-29 19:49:45] - Autowiring by type from bean name 'templateEngine' via factory method to bean named 'spring.thymeleaf-org.springframework.boot.autoconfigure.thymeleaf.ThymeleafProperties'
+[2023-05-29 19:49:45] - Creating shared instance of singleton bean 'defaultTemplateResolver'
+[2023-05-29 19:49:45] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration'
+[2023-05-29 19:49:45] - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration' via constructor to bean named 'spring.thymeleaf-org.springframework.boot.autoconfigure.thymeleaf.ThymeleafProperties'
+[2023-05-29 19:49:45] - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration' via constructor to bean named 'org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71e5f61d'
+[2023-05-29 19:49:46] - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2023-05-29 19:49:46] - Autowiring by type from bean name 'thymeleafViewResolver' via factory method to bean named 'spring.thymeleaf-org.springframework.boot.autoconfigure.thymeleaf.ThymeleafProperties'
+[2023-05-29 19:49:46] - Autowiring by type from bean name 'thymeleafViewResolver' via factory method to bean named 'templateEngine'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'applicationAvailability'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.availability.AvailabilityHealthContributorAutoConfiguration'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.beans.BeansEndpointAutoConfiguration'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'beansEndpoint'
+[2023-05-29 19:49:46] - Autowiring by type from bean name 'beansEndpoint' via factory method to bean named 'org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71e5f61d'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.transaction.jta.JtaAutoConfiguration'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceJmxConfiguration$Hikari'
+[2023-05-29 19:49:46] - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.jdbc.DataSourceJmxConfiguration$Hikari' via constructor to bean named 'dataSource'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceJmxConfiguration'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$PooledDataSourceConfiguration'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$PersistenceManagedTypesConfiguration'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.cache.CachesEndpointAutoConfiguration'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'cachesEndpoint'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.data.cassandra.CassandraReactiveDataAutoConfiguration'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'reactiveCassandraSession'
+[2023-05-29 19:49:46] - Autowiring by type from bean name 'reactiveCassandraSession' via factory method to bean named 'cassandraSession'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'reactiveCassandraSessionFactory'
+[2023-05-29 19:49:46] - Autowiring by type from bean name 'reactiveCassandraSessionFactory' via factory method to bean named 'reactiveCassandraSession'
+[2023-05-29 19:49:46] - Using Slf4j logging framework
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'reactiveCassandraTemplate'
+[2023-05-29 19:49:46] - Autowiring by type from bean name 'reactiveCassandraTemplate' via factory method to bean named 'reactiveCassandraSession'
+[2023-05-29 19:49:46] - Autowiring by type from bean name 'reactiveCassandraTemplate' via factory method to bean named 'cassandraConverter'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.cassandra.CassandraHealthContributorConfigurations$CassandraReactiveDriverConfiguration'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'cassandraHealthContributor'
+[2023-05-29 19:49:46] - Autowiring by type from bean name 'cassandraHealthContributor' via factory method to bean named 'cassandraSession'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.cassandra.CassandraReactiveHealthContributorAutoConfiguration'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.cassandra.CassandraHealthContributorConfigurations$CassandraDriverConfiguration'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.cassandra.CassandraHealthContributorAutoConfiguration'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.web.servlet.ServletManagementContextAutoConfiguration'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'servletWebChildContextFactory'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'managementServletContext'
+[2023-05-29 19:49:46] - Autowiring by type from bean name 'managementServletContext' via factory method to bean named 'management.endpoints.web-org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.health.HealthEndpointConfiguration'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'healthStatusAggregator'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'management.endpoint.health-org.springframework.boot.actuate.autoconfigure.health.HealthEndpointProperties'
+[2023-05-29 19:49:46] - Autowiring by type from bean name 'healthStatusAggregator' via factory method to bean named 'management.endpoint.health-org.springframework.boot.actuate.autoconfigure.health.HealthEndpointProperties'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'healthHttpCodeStatusMapper'
+[2023-05-29 19:49:46] - Autowiring by type from bean name 'healthHttpCodeStatusMapper' via factory method to bean named 'management.endpoint.health-org.springframework.boot.actuate.autoconfigure.health.HealthEndpointProperties'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'healthEndpointGroups'
+[2023-05-29 19:49:46] - Autowiring by type from bean name 'healthEndpointGroups' via factory method to bean named 'org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71e5f61d'
+[2023-05-29 19:49:46] - Autowiring by type from bean name 'healthEndpointGroups' via factory method to bean named 'management.endpoint.health-org.springframework.boot.actuate.autoconfigure.health.HealthEndpointProperties'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'healthContributorRegistry'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'diskSpaceHealthIndicator'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.system.DiskSpaceHealthContributorAutoConfiguration'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'management.health.diskspace-org.springframework.boot.actuate.autoconfigure.system.DiskSpaceHealthIndicatorProperties'
+[2023-05-29 19:49:46] - Autowiring by type from bean name 'diskSpaceHealthIndicator' via factory method to bean named 'management.health.diskspace-org.springframework.boot.actuate.autoconfigure.system.DiskSpaceHealthIndicatorProperties'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'pingHealthContributor'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.health.HealthContributorAutoConfiguration'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'dbHealthContributor'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.jdbc.DataSourceHealthContributorAutoConfiguration'
+[2023-05-29 19:49:46] - Creating shared instance of singleton bean 'management.health.db-org.springframework.boot.actuate.autoconfigure.jdbc.DataSourceHealthIndicatorProperties'
+[2023-05-29 19:49:46] - Autowiring by type from bean name 'dbHealthContributor' via factory method to bean named 'dataSource'
+[2023-05-29 19:49:46] - Autowiring by type from bean name 'dbHealthContributor' via factory method to bean named 'management.health.db-org.springframework.boot.actuate.autoconfigure.jdbc.DataSourceHealthIndicatorProperties'
+[2023-05-29 19:49:46] - Autowiring by type from bean name 'healthContributorRegistry' via factory method to bean named 'org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71e5f61d'
+[2023-05-29 19:49:46] - Autowiring by type from bean name 'healthContributorRegistry' via factory method to bean named 'healthEndpointGroups'
+[2023-05-29 19:49:46] - Autowiring by type from bean name 'healthContributorRegistry' via factory method to bean named 'diskSpaceHealthIndicator'
+[2023-05-29 19:49:46] - Autowiring by type from bean name 'healthContributorRegistry' via factory method to bean named 'pingHealthContributor'
+[2023-05-29 19:49:46] - Autowiring by type from bean name 'healthContributorRegistry' via factory method to bean named 'dbHealthContributor'
+[2023-05-29 19:49:46] - Autowiring by type from bean name 'healthContributorRegistry' via factory method to bean named 'cassandraHealthContributor'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'healthEndpoint'
+[2023-05-29 19:49:47] - Autowiring by type from bean name 'healthEndpoint' via factory method to bean named 'healthContributorRegistry'
+[2023-05-29 19:49:47] - Autowiring by type from bean name 'healthEndpoint' via factory method to bean named 'healthEndpointGroups'
+[2023-05-29 19:49:47] - Autowiring by type from bean name 'healthEndpoint' via factory method to bean named 'management.endpoint.health-org.springframework.boot.actuate.autoconfigure.health.HealthEndpointProperties'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.health.ReactiveHealthEndpointConfiguration'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'reactiveHealthContributorRegistry'
+[2023-05-29 19:49:47] - Autowiring by type from bean name 'reactiveHealthContributorRegistry' via factory method to bean named 'diskSpaceHealthIndicator'
+[2023-05-29 19:49:47] - Autowiring by type from bean name 'reactiveHealthContributorRegistry' via factory method to bean named 'pingHealthContributor'
+[2023-05-29 19:49:47] - Autowiring by type from bean name 'reactiveHealthContributorRegistry' via factory method to bean named 'dbHealthContributor'
+[2023-05-29 19:49:47] - Autowiring by type from bean name 'reactiveHealthContributorRegistry' via factory method to bean named 'cassandraHealthContributor'
+[2023-05-29 19:49:47] - Autowiring by type from bean name 'reactiveHealthContributorRegistry' via factory method to bean named 'healthEndpointGroups'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.health.HealthEndpointWebExtensionConfiguration$MvcAdditionalHealthEndpointPathsConfiguration'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'healthEndpointWebMvcHandlerMapping'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'webEndpointDiscoverer'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'endpointOperationParameterMapper'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'endpointMediaTypes'
+[2023-05-29 19:49:47] - Autowiring by type from bean name 'webEndpointDiscoverer' via factory method to bean named 'endpointOperationParameterMapper'
+[2023-05-29 19:49:47] - Autowiring by type from bean name 'webEndpointDiscoverer' via factory method to bean named 'endpointMediaTypes'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'endpointCachingOperationInvokerAdvisor'
+[2023-05-29 19:49:47] - Autowiring by type from bean name 'endpointCachingOperationInvokerAdvisor' via factory method to bean named 'environment'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'webExposeExcludePropertyEndpointFilter'
+[2023-05-29 19:49:47] - Autowiring by type from bean name 'healthEndpointWebMvcHandlerMapping' via factory method to bean named 'webEndpointDiscoverer'
+[2023-05-29 19:49:47] - Autowiring by type from bean name 'healthEndpointWebMvcHandlerMapping' via factory method to bean named 'healthEndpointGroups'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'healthEndpointWebExtension'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.health.HealthEndpointWebExtensionConfiguration'
+[2023-05-29 19:49:47] - Autowiring by type from bean name 'healthEndpointWebExtension' via factory method to bean named 'healthContributorRegistry'
+[2023-05-29 19:49:47] - Autowiring by type from bean name 'healthEndpointWebExtension' via factory method to bean named 'healthEndpointGroups'
+[2023-05-29 19:49:47] - Autowiring by type from bean name 'healthEndpointWebExtension' via factory method to bean named 'management.endpoint.health-org.springframework.boot.actuate.autoconfigure.health.HealthEndpointProperties'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'infoEndpoint'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.info.InfoEndpointAutoConfiguration'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'conditionsReportEndpoint'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.condition.ConditionsReportEndpointAutoConfiguration'
+[2023-05-29 19:49:47] - Autowiring by type from bean name 'conditionsReportEndpoint' via factory method to bean named 'org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71e5f61d'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'configurationPropertiesReportEndpoint'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.context.properties.ConfigurationPropertiesReportEndpointAutoConfiguration'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'management.endpoint.configprops-org.springframework.boot.actuate.autoconfigure.context.properties.ConfigurationPropertiesReportEndpointProperties'
+[2023-05-29 19:49:47] - Autowiring by type from bean name 'configurationPropertiesReportEndpoint' via factory method to bean named 'management.endpoint.configprops-org.springframework.boot.actuate.autoconfigure.context.properties.ConfigurationPropertiesReportEndpointProperties'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'environmentEndpoint'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.env.EnvironmentEndpointAutoConfiguration'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'management.endpoint.env-org.springframework.boot.actuate.autoconfigure.env.EnvironmentEndpointProperties'
+[2023-05-29 19:49:47] - Autowiring by type from bean name 'environmentEndpoint' via factory method to bean named 'environment'
+[2023-05-29 19:49:47] - Autowiring by type from bean name 'environmentEndpoint' via factory method to bean named 'management.endpoint.env-org.springframework.boot.actuate.autoconfigure.env.EnvironmentEndpointProperties'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'loggersEndpoint'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.logging.LoggersEndpointAutoConfiguration'
+[2023-05-29 19:49:47] - Autowiring by type from bean name 'loggersEndpoint' via factory method to bean named 'springBootLoggingSystem'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'heapDumpWebEndpoint'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.management.HeapDumpWebEndpointAutoConfiguration'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'dumpEndpoint'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.management.ThreadDumpEndpointAutoConfiguration'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'metricsEndpoint'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.metrics.MetricsEndpointAutoConfiguration'
+[2023-05-29 19:49:47] - Autowiring by type from bean name 'metricsEndpoint' via factory method to bean named 'simpleMeterRegistry'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'scheduledTasksEndpoint'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.scheduling.ScheduledTasksEndpointAutoConfiguration'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'mappingsEndpoint'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.web.mappings.MappingsEndpointAutoConfiguration'
+[2023-05-29 19:49:47] - Autowiring by type from bean name 'mappingsEndpoint' via factory method to bean named 'org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71e5f61d'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'dispatcherServletMappingDescriptionProvider'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.web.mappings.MappingsEndpointAutoConfiguration$ServletWebConfiguration$SpringMvcConfiguration'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'servletMappingDescriptionProvider'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.web.mappings.MappingsEndpointAutoConfiguration$ServletWebConfiguration'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'filterMappingDescriptionProvider'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.health.HealthEndpointAutoConfiguration'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties'
+[2023-05-29 19:49:47] - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration' via constructor to bean named 'spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.info.InfoContributorAutoConfiguration'
+[2023-05-29 19:49:47] - Creating shared instance of singleton bean 'management.info-org.springframework.boot.actuate.autoconfigure.info.InfoContributorProperties'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.endpoint.jmx.JmxEndpointAutoConfiguration'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'management.endpoints.jmx-org.springframework.boot.actuate.autoconfigure.endpoint.jmx.JmxEndpointProperties'
+[2023-05-29 19:49:48] - Autowiring by type from bean name 'org.springframework.boot.actuate.autoconfigure.endpoint.jmx.JmxEndpointAutoConfiguration' via constructor to bean named 'org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71e5f61d'
+[2023-05-29 19:49:48] - Autowiring by type from bean name 'org.springframework.boot.actuate.autoconfigure.endpoint.jmx.JmxEndpointAutoConfiguration' via constructor to bean named 'management.endpoints.jmx-org.springframework.boot.actuate.autoconfigure.endpoint.jmx.JmxEndpointProperties'
+[2023-05-29 19:49:48] - Autowiring by type from bean name 'org.springframework.boot.actuate.autoconfigure.endpoint.jmx.JmxEndpointAutoConfiguration' via constructor to bean named 'spring.jmx-org.springframework.boot.autoconfigure.jmx.JmxProperties'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'jmxAnnotationEndpointDiscoverer'
+[2023-05-29 19:49:48] - Autowiring by type from bean name 'jmxAnnotationEndpointDiscoverer' via factory method to bean named 'endpointOperationParameterMapper'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'jmxIncludeExcludePropertyEndpointFilter'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'endpointObjectNameFactory'
+[2023-05-29 19:49:48] - Autowiring by type from bean name 'endpointObjectNameFactory' via factory method to bean named 'mbeanServer'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'jmxMBeanExporter'
+[2023-05-29 19:49:48] - Autowiring by type from bean name 'jmxMBeanExporter' via factory method to bean named 'mbeanServer'
+[2023-05-29 19:49:48] - Autowiring by type from bean name 'jmxMBeanExporter' via factory method to bean named 'endpointObjectNameFactory'
+[2023-05-29 19:49:48] - Autowiring by type from bean name 'jmxMBeanExporter' via factory method to bean named 'jmxAnnotationEndpointDiscoverer'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'eagerlyInitializeJmxEndpointExporter'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'controllerEndpointDiscoverer'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'controllerExposeExcludePropertyEndpointFilter'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'pathMappedEndpoints'
+[2023-05-29 19:49:48] - Autowiring by type from bean name 'pathMappedEndpoints' via factory method to bean named 'jmxAnnotationEndpointDiscoverer'
+[2023-05-29 19:49:48] - Autowiring by type from bean name 'pathMappedEndpoints' via factory method to bean named 'servletEndpointDiscoverer'
+[2023-05-29 19:49:48] - Autowiring by type from bean name 'pathMappedEndpoints' via factory method to bean named 'webEndpointDiscoverer'
+[2023-05-29 19:49:48] - Autowiring by type from bean name 'pathMappedEndpoints' via factory method to bean named 'controllerEndpointDiscoverer'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.logging.LogFileWebEndpointAutoConfiguration'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'management.endpoint.logfile-org.springframework.boot.actuate.autoconfigure.logging.LogFileWebEndpointProperties'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.metrics.CompositeMeterRegistryAutoConfiguration'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.metrics.JvmMetricsAutoConfiguration'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'jvmGcMetrics'
+[2023-05-29 19:49:48] - Using SLF4J as the default logging framework
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'jvmHeapPressureMetrics'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'jvmMemoryMetrics'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'jvmThreadMetrics'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'classLoaderMetrics'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'jvmInfoMetrics'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'jvmCompilationMetrics'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.metrics.LogbackMetricsAutoConfiguration'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'logbackMetrics'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.metrics.SystemMetricsAutoConfiguration'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'uptimeMetrics'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'processorMetrics'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'fileDescriptorMetrics'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'diskSpaceMetrics'
+[2023-05-29 19:49:48] - Autowiring by type from bean name 'diskSpaceMetrics' via factory method to bean named 'management.metrics-org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.metrics.integration.IntegrationMetricsAutoConfiguration'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.metrics.jdbc.DataSourcePoolMetricsAutoConfiguration$HikariDataSourceMetricsConfiguration'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'hikariDataSourceMeterBinder'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.metrics.jdbc.DataSourcePoolMetricsAutoConfiguration$DataSourcePoolMetadataMetricsConfiguration'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'dataSourcePoolMetadataMeterBinder'
+[2023-05-29 19:49:48] - Autowiring by type from bean name 'dataSourcePoolMetadataMeterBinder' via factory method to bean named 'dataSource'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.metrics.jdbc.DataSourcePoolMetricsAutoConfiguration'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskSchedulingAutoConfiguration'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'taskSchedulerBuilder'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'spring.task.scheduling-org.springframework.boot.autoconfigure.task.TaskSchedulingProperties'
+[2023-05-29 19:49:48] - Autowiring by type from bean name 'taskSchedulerBuilder' via factory method to bean named 'spring.task.scheduling-org.springframework.boot.autoconfigure.task.TaskSchedulingProperties'
+[2023-05-29 19:49:48] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.metrics.task.TaskExecutorMetricsAutoConfiguration'
+[2023-05-29 19:49:49] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.metrics.web.tomcat.TomcatMetricsAutoConfiguration'
+[2023-05-29 19:49:49] - Creating shared instance of singleton bean 'tomcatMetricsBinder'
+[2023-05-29 19:49:49] - Autowiring by type from bean name 'tomcatMetricsBinder' via factory method to bean named 'simpleMeterRegistry'
+[2023-05-29 19:49:49] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.observation.ObservationAutoConfiguration$MeterObservationHandlerConfiguration'
+[2023-05-29 19:49:49] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration'
+[2023-05-29 19:49:49] - Creating shared instance of singleton bean 'gsonBuilder'
+[2023-05-29 19:49:49] - Creating shared instance of singleton bean 'standardGsonBuilderCustomizer'
+[2023-05-29 19:49:49] - Creating shared instance of singleton bean 'spring.gson-org.springframework.boot.autoconfigure.gson.GsonProperties'
+[2023-05-29 19:49:49] - Autowiring by type from bean name 'standardGsonBuilderCustomizer' via factory method to bean named 'spring.gson-org.springframework.boot.autoconfigure.gson.GsonProperties'
+[2023-05-29 19:49:49] - Autowiring by type from bean name 'gsonBuilder' via factory method to bean named 'standardGsonBuilderCustomizer'
+[2023-05-29 19:49:49] - Creating shared instance of singleton bean 'gson'
+[2023-05-29 19:49:49] - Autowiring by type from bean name 'gson' via factory method to bean named 'gsonBuilder'
+[2023-05-29 19:49:50] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration'
+[2023-05-29 19:49:50] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.GsonHttpMessageConvertersConfiguration'
+[2023-05-29 19:49:50] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.client.RestTemplateAutoConfiguration'
+[2023-05-29 19:49:50] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.observation.web.client.RestTemplateObservationConfiguration'
+[2023-05-29 19:49:50] - Creating shared instance of singleton bean 'observationRestTemplateCustomizer'
+[2023-05-29 19:49:50] - Autowiring by type from bean name 'observationRestTemplateCustomizer' via factory method to bean named 'observationRegistry'
+[2023-05-29 19:49:50] - Autowiring by type from bean name 'observationRestTemplateCustomizer' via factory method to bean named 'management.observations-org.springframework.boot.actuate.autoconfigure.observation.ObservationProperties'
+[2023-05-29 19:49:50] - Autowiring by type from bean name 'observationRestTemplateCustomizer' via factory method to bean named 'management.metrics-org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties'
+[2023-05-29 19:49:50] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.observation.web.client.HttpClientObservationsAutoConfiguration'
+[2023-05-29 19:49:50] - Creating shared instance of singleton bean 'org.springframework.boot.actuate.autoconfigure.web.exchanges.HttpExchangesEndpointAutoConfiguration'
+[2023-05-29 19:49:50] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$AspectJAutoProxyingConfiguration$CglibAutoProxyConfiguration'
+[2023-05-29 19:49:50] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$AspectJAutoProxyingConfiguration'
+[2023-05-29 19:49:50] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.aop.AopAutoConfiguration'
+[2023-05-29 19:49:50] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration'
+[2023-05-29 19:49:50] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration'
+[2023-05-29 19:49:50] - Creating shared instance of singleton bean 'lifecycleProcessor'
+[2023-05-29 19:49:50] - Creating shared instance of singleton bean 'spring.lifecycle-org.springframework.boot.autoconfigure.context.LifecycleProperties'
+[2023-05-29 19:49:50] - Autowiring by type from bean name 'lifecycleProcessor' via factory method to bean named 'spring.lifecycle-org.springframework.boot.autoconfigure.context.LifecycleProperties'
+[2023-05-29 19:49:50] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration'
+[2023-05-29 19:49:50] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.data.cassandra.CassandraReactiveRepositoriesAutoConfiguration'
+[2023-05-29 19:49:50] - Creating shared instance of singleton bean 'data-reactive-cassandra.repository-aot-processor#0'
+[2023-05-29 19:49:50] - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.data.cassandra.CassandraRepositoriesAutoConfiguration'

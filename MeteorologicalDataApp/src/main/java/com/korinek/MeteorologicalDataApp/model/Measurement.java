@@ -150,42 +150,4 @@ public class Measurement {
                 ", city=" + city +
                 '}';
     }
-
-    // ---------------------------
-/*
-    @PrimaryKey
-    private int id;
-
-    @Column("city")
-    @CassandraType(type = CassandraType.Name.TEXT)
-    private String City;
-
-    public Measurement() {}
-
-    public Measurement(int id) {
-        this.id = id;
-    }
-
-
-    public Measurement(int id, String city) {
-        this.id = id;
-        City = city;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getCity() {
-        return City;
-    }
-
-    public void setCity(String city) {
-        City = city;
-    }
-    */
 }

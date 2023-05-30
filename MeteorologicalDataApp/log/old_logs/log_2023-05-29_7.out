@@ -1,0 +1,687 @@
+[2023-05-29 19:51:27] - Creating new transaction with name [com.korinek.MeteorologicalDataApp.service.CityService.getAllCities]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+[2023-05-29 19:51:27] - Opened new EntityManager [SessionImpl(676380946<open>)] for JPA transaction
+[2023-05-29 19:51:27] - Setting JDBC Connection [HikariProxyConnection@1106935275 wrapping org.postgresql.jdbc.PgConnection@18a0721b] read-only
+[2023-05-29 19:51:27] - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+[2023-05-29 19:51:27] - begin
+[2023-05-29 19:51:27] - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@49a3b384]
+[2023-05-29 19:51:27] - Found thread-bound EntityManager [SessionImpl(676380946<open>)] for JPA transaction
+[2023-05-29 19:51:27] - Participating in existing transaction
+[2023-05-29 19:51:27] - Created new SQL alias : c1_0
+[2023-05-29 19:51:27] - Registration of TableGroup [StandardTableGroup(com.korinek.MeteorologicalDataApp.model.City(148935232005264))] with identifierForTableGroup [com.korinek.MeteorologicalDataApp.model.City] for NavigablePath [com.korinek.MeteorologicalDataApp.model.City] 
+[2023-05-29 19:51:27] - DomainResult Graph:
+ \-EntityResultImpl [com.korinek.MeteorologicalDataApp.model.City(148935232005264)]
+ |  +-BasicFetch [com.korinek.MeteorologicalDataApp.model.City(148935232005264).name]
+ |  \-CircularFetchImpl [com.korinek.MeteorologicalDataApp.model.City(148935232005264).state]
+
+[2023-05-29 19:51:27] - SQL AST Tree:
+    SelectStatement {
+      FromClause {
+        StandardTableGroup (c1 : com.korinek.MeteorologicalDataApp.model.City(148935232005264)) {
+          primaryTableReference : city as c1_0
+        }
+      }
+    }
+
+[2023-05-29 19:51:27] - Skipping reading Query result cache data: cache-enabled = false, cache-mode = NORMAL
+[2023-05-29 19:51:27] - Initializer list
+[2023-05-29 19:51:27] -     com.korinek.MeteorologicalDataApp.model.City(148935232005264).state -> EntitySelectFetchInitializer(com.korinek.MeteorologicalDataApp.model.City(148935232005264).state)@952163344 (ToOneAttributeMapping(NavigableRole[com.korinek.MeteorologicalDataApp.model.City.state])@1470900496)
+[2023-05-29 19:51:27] -     com.korinek.MeteorologicalDataApp.model.City(148935232005264) -> EntityResultInitializer(com.korinek.MeteorologicalDataApp.model.City(148935232005264))@817118992 (SingleTableEntityPersister(com.korinek.MeteorologicalDataApp.model.City))
+[2023-05-29 19:51:27] - 
+    select
+        c1_0.id_city,
+        c1_0.name,
+        c1_0.id_state 
+    from
+        city c1_0
+[2023-05-29 19:51:27] - Extracted JDBC value [0] - [1]
+[2023-05-29 19:51:27] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(148935232005264)): 1
+[2023-05-29 19:51:27] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(148935232005264)#1] : com.korinek.MeteorologicalDataApp.model.City@75212f0
+[2023-05-29 19:51:27] - Extracted JDBC value [2] - [1]
+[2023-05-29 19:51:27] - (EntitySelectFetchInitializer) Invoking session#internalLoad for entity (com.korinek.MeteorologicalDataApp.model.City(148935232005264).state#1) : 1
+[2023-05-29 19:51:27] - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
+[2023-05-29 19:51:27] - Initializer list
+[2023-05-29 19:51:27] -     com.korinek.MeteorologicalDataApp.model.State.cities -> DelayedCollectionInitializer(com.korinek.MeteorologicalDataApp.model.State.cities)@370143669 (PluralAttribute(com.korinek.MeteorologicalDataApp.model.State.cities))
+[2023-05-29 19:51:27] -     com.korinek.MeteorologicalDataApp.model.State -> EntityResultInitializer(com.korinek.MeteorologicalDataApp.model.State)@319139095 (SingleTableEntityPersister(com.korinek.MeteorologicalDataApp.model.State))
+[2023-05-29 19:51:27] - 
+    select
+        s1_0.id_state,
+        s1_0.name 
+    from
+        state s1_0 
+    where
+        s1_0.id_state=?
+[2023-05-29 19:51:27] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.State): 1
+[2023-05-29 19:51:27] - Extracted JDBC value [0] - [1]
+[2023-05-29 19:51:27] - (DelayedCollectionInitializer) Current row collection key : com.korinek.MeteorologicalDataApp.model.State.cities#1
+[2023-05-29 19:51:27] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.State#1] : com.korinek.MeteorologicalDataApp.model.State@3f2dc7da
+[2023-05-29 19:51:27] - Extracted JDBC value [1] - [USA]
+[2023-05-29 19:51:27] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.State#1
+[2023-05-29 19:51:27] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@c90ae25
+[2023-05-29 19:51:27] - (EntitySelectFetchInitializer) Entity [com.korinek.MeteorologicalDataApp.model.City(148935232005264).state#1] : 1 has being loaded by session.internalLoad.
+[2023-05-29 19:51:27] - Extracted JDBC value [1] - [Chicago]
+[2023-05-29 19:51:27] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(148935232005264)#1
+[2023-05-29 19:51:27] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@8f093b8
+[2023-05-29 19:51:27] - Extracted JDBC value [0] - [2]
+[2023-05-29 19:51:27] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(148935232005264)): 2
+[2023-05-29 19:51:27] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(148935232005264)#2] : com.korinek.MeteorologicalDataApp.model.City@299184d9
+[2023-05-29 19:51:27] - Extracted JDBC value [2] - [3]
+[2023-05-29 19:51:27] - (EntitySelectFetchInitializer) Invoking session#internalLoad for entity (com.korinek.MeteorologicalDataApp.model.City(148935232005264).state#3) : 3
+[2023-05-29 19:51:27] - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
+[2023-05-29 19:51:27] - Initializer list
+[2023-05-29 19:51:27] -     com.korinek.MeteorologicalDataApp.model.State.cities -> DelayedCollectionInitializer(com.korinek.MeteorologicalDataApp.model.State.cities)@2027128102 (PluralAttribute(com.korinek.MeteorologicalDataApp.model.State.cities))
+[2023-05-29 19:51:27] -     com.korinek.MeteorologicalDataApp.model.State -> EntityResultInitializer(com.korinek.MeteorologicalDataApp.model.State)@1899752863 (SingleTableEntityPersister(com.korinek.MeteorologicalDataApp.model.State))
+[2023-05-29 19:51:27] - 
+    select
+        s1_0.id_state,
+        s1_0.name 
+    from
+        state s1_0 
+    where
+        s1_0.id_state=?
+[2023-05-29 19:51:27] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.State): 3
+[2023-05-29 19:51:27] - Extracted JDBC value [0] - [3]
+[2023-05-29 19:51:27] - (DelayedCollectionInitializer) Current row collection key : com.korinek.MeteorologicalDataApp.model.State.cities#3
+[2023-05-29 19:51:27] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.State#3] : com.korinek.MeteorologicalDataApp.model.State@12af38f7
+[2023-05-29 19:51:27] - Extracted JDBC value [1] - [Czech Republic]
+[2023-05-29 19:51:27] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.State#3
+[2023-05-29 19:51:27] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@39b4dfb4
+[2023-05-29 19:51:27] - (EntitySelectFetchInitializer) Entity [com.korinek.MeteorologicalDataApp.model.City(148935232005264).state#3] : 3 has being loaded by session.internalLoad.
+[2023-05-29 19:51:27] - Extracted JDBC value [1] - [Prague]
+[2023-05-29 19:51:27] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(148935232005264)#2
+[2023-05-29 19:51:27] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@8f093b8
+[2023-05-29 19:51:27] - Extracted JDBC value [0] - [3]
+[2023-05-29 19:51:27] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(148935232005264)): 3
+[2023-05-29 19:51:27] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(148935232005264)#3] : com.korinek.MeteorologicalDataApp.model.City@202e9aae
+[2023-05-29 19:51:27] - Extracted JDBC value [2] - [1]
+[2023-05-29 19:51:27] - Extracted JDBC value [1] - [New York]
+[2023-05-29 19:51:27] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(148935232005264)#3
+[2023-05-29 19:51:27] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@8f093b8
+[2023-05-29 19:51:27] - Extracted JDBC value [0] - [4]
+[2023-05-29 19:51:27] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(148935232005264)): 4
+[2023-05-29 19:51:27] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(148935232005264)#4] : com.korinek.MeteorologicalDataApp.model.City@2f18f299
+[2023-05-29 19:51:27] - Extracted JDBC value [2] - [6]
+[2023-05-29 19:51:27] - (EntitySelectFetchInitializer) Invoking session#internalLoad for entity (com.korinek.MeteorologicalDataApp.model.City(148935232005264).state#6) : 6
+[2023-05-29 19:51:27] - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
+[2023-05-29 19:51:27] - Initializer list
+[2023-05-29 19:51:27] -     com.korinek.MeteorologicalDataApp.model.State.cities -> DelayedCollectionInitializer(com.korinek.MeteorologicalDataApp.model.State.cities)@1151016717 (PluralAttribute(com.korinek.MeteorologicalDataApp.model.State.cities))
+[2023-05-29 19:51:27] -     com.korinek.MeteorologicalDataApp.model.State -> EntityResultInitializer(com.korinek.MeteorologicalDataApp.model.State)@1531785557 (SingleTableEntityPersister(com.korinek.MeteorologicalDataApp.model.State))
+[2023-05-29 19:51:27] - 
+    select
+        s1_0.id_state,
+        s1_0.name 
+    from
+        state s1_0 
+    where
+        s1_0.id_state=?
+[2023-05-29 19:51:27] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.State): 6
+[2023-05-29 19:51:27] - Extracted JDBC value [0] - [6]
+[2023-05-29 19:51:27] - (DelayedCollectionInitializer) Current row collection key : com.korinek.MeteorologicalDataApp.model.State.cities#6
+[2023-05-29 19:51:27] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.State#6] : com.korinek.MeteorologicalDataApp.model.State@498cc50e
+[2023-05-29 19:51:27] - Extracted JDBC value [1] - [Australia]
+[2023-05-29 19:51:27] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.State#6
+[2023-05-29 19:51:27] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@572b1eac
+[2023-05-29 19:51:27] - (EntitySelectFetchInitializer) Entity [com.korinek.MeteorologicalDataApp.model.City(148935232005264).state#6] : 6 has being loaded by session.internalLoad.
+[2023-05-29 19:51:27] - Extracted JDBC value [1] - [Sydney]
+[2023-05-29 19:51:27] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(148935232005264)#4
+[2023-05-29 19:51:27] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@8f093b8
+[2023-05-29 19:51:27] - Extracted JDBC value [0] - [5]
+[2023-05-29 19:51:27] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(148935232005264)): 5
+[2023-05-29 19:51:27] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(148935232005264)#5] : com.korinek.MeteorologicalDataApp.model.City@41f574a
+[2023-05-29 19:51:27] - Extracted JDBC value [2] - [2]
+[2023-05-29 19:51:27] - (EntitySelectFetchInitializer) Invoking session#internalLoad for entity (com.korinek.MeteorologicalDataApp.model.City(148935232005264).state#2) : 2
+[2023-05-29 19:51:27] - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
+[2023-05-29 19:51:27] - Initializer list
+[2023-05-29 19:51:27] -     com.korinek.MeteorologicalDataApp.model.State.cities -> DelayedCollectionInitializer(com.korinek.MeteorologicalDataApp.model.State.cities)@863266712 (PluralAttribute(com.korinek.MeteorologicalDataApp.model.State.cities))
+[2023-05-29 19:51:27] -     com.korinek.MeteorologicalDataApp.model.State -> EntityResultInitializer(com.korinek.MeteorologicalDataApp.model.State)@486502477 (SingleTableEntityPersister(com.korinek.MeteorologicalDataApp.model.State))
+[2023-05-29 19:51:27] - 
+    select
+        s1_0.id_state,
+        s1_0.name 
+    from
+        state s1_0 
+    where
+        s1_0.id_state=?
+[2023-05-29 19:51:27] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.State): 2
+[2023-05-29 19:51:27] - Extracted JDBC value [0] - [2]
+[2023-05-29 19:51:27] - (DelayedCollectionInitializer) Current row collection key : com.korinek.MeteorologicalDataApp.model.State.cities#2
+[2023-05-29 19:51:27] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.State#2] : com.korinek.MeteorologicalDataApp.model.State@1a37fb49
+[2023-05-29 19:51:27] - Extracted JDBC value [1] - [Canada]
+[2023-05-29 19:51:27] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.State#2
+[2023-05-29 19:51:27] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@7fe40ddc
+[2023-05-29 19:51:27] - (EntitySelectFetchInitializer) Entity [com.korinek.MeteorologicalDataApp.model.City(148935232005264).state#2] : 2 has being loaded by session.internalLoad.
+[2023-05-29 19:51:27] - Extracted JDBC value [1] - [Toronto]
+[2023-05-29 19:51:27] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(148935232005264)#5
+[2023-05-29 19:51:27] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@8f093b8
+[2023-05-29 19:51:27] - Extracted JDBC value [0] - [6]
+[2023-05-29 19:51:27] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(148935232005264)): 6
+[2023-05-29 19:51:27] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(148935232005264)#6] : com.korinek.MeteorologicalDataApp.model.City@39cecdbb
+[2023-05-29 19:51:27] - Extracted JDBC value [2] - [1]
+[2023-05-29 19:51:27] - Extracted JDBC value [1] - [Los Angeles]
+[2023-05-29 19:51:27] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(148935232005264)#6
+[2023-05-29 19:51:27] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@8f093b8
+[2023-05-29 19:51:27] - Initiating transaction commit
+[2023-05-29 19:51:27] - Committing JPA transaction on EntityManager [SessionImpl(676380946<open>)]
+[2023-05-29 19:51:27] - committing
+[2023-05-29 19:51:27] - Resetting read-only flag of JDBC Connection [HikariProxyConnection@1106935275 wrapping org.postgresql.jdbc.PgConnection@18a0721b]
+[2023-05-29 19:51:27] - Closing JPA EntityManager [SessionImpl(676380946<open>)] after transaction
+[2023-05-29 19:51:37] - Creating new transaction with name [com.korinek.MeteorologicalDataApp.service.CityService.getAllCities]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+[2023-05-29 19:51:37] - Opened new EntityManager [SessionImpl(1390546560<open>)] for JPA transaction
+[2023-05-29 19:51:37] - Setting JDBC Connection [HikariProxyConnection@487502450 wrapping org.postgresql.jdbc.PgConnection@18a0721b] read-only
+[2023-05-29 19:51:37] - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+[2023-05-29 19:51:37] - begin
+[2023-05-29 19:51:37] - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@4cbf7282]
+[2023-05-29 19:51:37] - Found thread-bound EntityManager [SessionImpl(1390546560<open>)] for JPA transaction
+[2023-05-29 19:51:37] - Participating in existing transaction
+[2023-05-29 19:51:37] - Created new SQL alias : c1_0
+[2023-05-29 19:51:37] - Registration of TableGroup [StandardTableGroup(com.korinek.MeteorologicalDataApp.model.City(148945232152064))] with identifierForTableGroup [com.korinek.MeteorologicalDataApp.model.City] for NavigablePath [com.korinek.MeteorologicalDataApp.model.City] 
+[2023-05-29 19:51:37] - DomainResult Graph:
+ \-EntityResultImpl [com.korinek.MeteorologicalDataApp.model.City(148945232152064)]
+ |  +-BasicFetch [com.korinek.MeteorologicalDataApp.model.City(148945232152064).name]
+ |  \-CircularFetchImpl [com.korinek.MeteorologicalDataApp.model.City(148945232152064).state]
+
+[2023-05-29 19:51:37] - SQL AST Tree:
+    SelectStatement {
+      FromClause {
+        StandardTableGroup (c1 : com.korinek.MeteorologicalDataApp.model.City(148945232152064)) {
+          primaryTableReference : city as c1_0
+        }
+      }
+    }
+
+[2023-05-29 19:51:37] - Skipping reading Query result cache data: cache-enabled = false, cache-mode = NORMAL
+[2023-05-29 19:51:37] - Initializer list
+[2023-05-29 19:51:37] -     com.korinek.MeteorologicalDataApp.model.City(148945232152064).state -> EntitySelectFetchInitializer(com.korinek.MeteorologicalDataApp.model.City(148945232152064).state)@1809311963 (ToOneAttributeMapping(NavigableRole[com.korinek.MeteorologicalDataApp.model.City.state])@1470900496)
+[2023-05-29 19:51:37] -     com.korinek.MeteorologicalDataApp.model.City(148945232152064) -> EntityResultInitializer(com.korinek.MeteorologicalDataApp.model.City(148945232152064))@30360689 (SingleTableEntityPersister(com.korinek.MeteorologicalDataApp.model.City))
+[2023-05-29 19:51:37] - 
+    select
+        c1_0.id_city,
+        c1_0.name,
+        c1_0.id_state 
+    from
+        city c1_0
+[2023-05-29 19:51:37] - Extracted JDBC value [0] - [1]
+[2023-05-29 19:51:37] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(148945232152064)): 1
+[2023-05-29 19:51:37] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(148945232152064)#1] : com.korinek.MeteorologicalDataApp.model.City@dce214
+[2023-05-29 19:51:37] - Extracted JDBC value [2] - [1]
+[2023-05-29 19:51:37] - (EntitySelectFetchInitializer) Invoking session#internalLoad for entity (com.korinek.MeteorologicalDataApp.model.City(148945232152064).state#1) : 1
+[2023-05-29 19:51:37] - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
+[2023-05-29 19:51:37] - Initializer list
+[2023-05-29 19:51:37] -     com.korinek.MeteorologicalDataApp.model.State.cities -> DelayedCollectionInitializer(com.korinek.MeteorologicalDataApp.model.State.cities)@2076951218 (PluralAttribute(com.korinek.MeteorologicalDataApp.model.State.cities))
+[2023-05-29 19:51:37] -     com.korinek.MeteorologicalDataApp.model.State -> EntityResultInitializer(com.korinek.MeteorologicalDataApp.model.State)@2147008684 (SingleTableEntityPersister(com.korinek.MeteorologicalDataApp.model.State))
+[2023-05-29 19:51:37] - 
+    select
+        s1_0.id_state,
+        s1_0.name 
+    from
+        state s1_0 
+    where
+        s1_0.id_state=?
+[2023-05-29 19:51:37] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.State): 1
+[2023-05-29 19:51:37] - Extracted JDBC value [0] - [1]
+[2023-05-29 19:51:37] - (DelayedCollectionInitializer) Current row collection key : com.korinek.MeteorologicalDataApp.model.State.cities#1
+[2023-05-29 19:51:37] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.State#1] : com.korinek.MeteorologicalDataApp.model.State@1aa063b5
+[2023-05-29 19:51:37] - Extracted JDBC value [1] - [USA]
+[2023-05-29 19:51:37] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.State#1
+[2023-05-29 19:51:37] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@5a706473
+[2023-05-29 19:51:37] - (EntitySelectFetchInitializer) Entity [com.korinek.MeteorologicalDataApp.model.City(148945232152064).state#1] : 1 has being loaded by session.internalLoad.
+[2023-05-29 19:51:37] - Extracted JDBC value [1] - [Chicago]
+[2023-05-29 19:51:37] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(148945232152064)#1
+[2023-05-29 19:51:37] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@212341dd
+[2023-05-29 19:51:37] - Extracted JDBC value [0] - [2]
+[2023-05-29 19:51:37] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(148945232152064)): 2
+[2023-05-29 19:51:37] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(148945232152064)#2] : com.korinek.MeteorologicalDataApp.model.City@239375be
+[2023-05-29 19:51:37] - Extracted JDBC value [2] - [3]
+[2023-05-29 19:51:37] - (EntitySelectFetchInitializer) Invoking session#internalLoad for entity (com.korinek.MeteorologicalDataApp.model.City(148945232152064).state#3) : 3
+[2023-05-29 19:51:37] - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
+[2023-05-29 19:51:37] - Initializer list
+[2023-05-29 19:51:37] -     com.korinek.MeteorologicalDataApp.model.State.cities -> DelayedCollectionInitializer(com.korinek.MeteorologicalDataApp.model.State.cities)@976689074 (PluralAttribute(com.korinek.MeteorologicalDataApp.model.State.cities))
+[2023-05-29 19:51:37] -     com.korinek.MeteorologicalDataApp.model.State -> EntityResultInitializer(com.korinek.MeteorologicalDataApp.model.State)@1664987003 (SingleTableEntityPersister(com.korinek.MeteorologicalDataApp.model.State))
+[2023-05-29 19:51:37] - 
+    select
+        s1_0.id_state,
+        s1_0.name 
+    from
+        state s1_0 
+    where
+        s1_0.id_state=?
+[2023-05-29 19:51:37] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.State): 3
+[2023-05-29 19:51:37] - Extracted JDBC value [0] - [3]
+[2023-05-29 19:51:37] - (DelayedCollectionInitializer) Current row collection key : com.korinek.MeteorologicalDataApp.model.State.cities#3
+[2023-05-29 19:51:37] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.State#3] : com.korinek.MeteorologicalDataApp.model.State@6c6dbb2e
+[2023-05-29 19:51:37] - Extracted JDBC value [1] - [Czech Republic]
+[2023-05-29 19:51:37] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.State#3
+[2023-05-29 19:51:37] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@6d7cd1bc
+[2023-05-29 19:51:37] - (EntitySelectFetchInitializer) Entity [com.korinek.MeteorologicalDataApp.model.City(148945232152064).state#3] : 3 has being loaded by session.internalLoad.
+[2023-05-29 19:51:37] - Extracted JDBC value [1] - [Prague]
+[2023-05-29 19:51:37] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(148945232152064)#2
+[2023-05-29 19:51:37] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@212341dd
+[2023-05-29 19:51:37] - Extracted JDBC value [0] - [3]
+[2023-05-29 19:51:37] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(148945232152064)): 3
+[2023-05-29 19:51:37] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(148945232152064)#3] : com.korinek.MeteorologicalDataApp.model.City@61e7fce2
+[2023-05-29 19:51:37] - Extracted JDBC value [2] - [1]
+[2023-05-29 19:51:37] - Extracted JDBC value [1] - [New York]
+[2023-05-29 19:51:37] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(148945232152064)#3
+[2023-05-29 19:51:37] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@212341dd
+[2023-05-29 19:51:37] - Extracted JDBC value [0] - [4]
+[2023-05-29 19:51:37] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(148945232152064)): 4
+[2023-05-29 19:51:37] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(148945232152064)#4] : com.korinek.MeteorologicalDataApp.model.City@2fbf500e
+[2023-05-29 19:51:37] - Extracted JDBC value [2] - [6]
+[2023-05-29 19:51:37] - (EntitySelectFetchInitializer) Invoking session#internalLoad for entity (com.korinek.MeteorologicalDataApp.model.City(148945232152064).state#6) : 6
+[2023-05-29 19:51:37] - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
+[2023-05-29 19:51:37] - Initializer list
+[2023-05-29 19:51:37] -     com.korinek.MeteorologicalDataApp.model.State.cities -> DelayedCollectionInitializer(com.korinek.MeteorologicalDataApp.model.State.cities)@772418076 (PluralAttribute(com.korinek.MeteorologicalDataApp.model.State.cities))
+[2023-05-29 19:51:37] -     com.korinek.MeteorologicalDataApp.model.State -> EntityResultInitializer(com.korinek.MeteorologicalDataApp.model.State)@628158288 (SingleTableEntityPersister(com.korinek.MeteorologicalDataApp.model.State))
+[2023-05-29 19:51:37] - 
+    select
+        s1_0.id_state,
+        s1_0.name 
+    from
+        state s1_0 
+    where
+        s1_0.id_state=?
+[2023-05-29 19:51:37] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.State): 6
+[2023-05-29 19:51:37] - Extracted JDBC value [0] - [6]
+[2023-05-29 19:51:37] - (DelayedCollectionInitializer) Current row collection key : com.korinek.MeteorologicalDataApp.model.State.cities#6
+[2023-05-29 19:51:37] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.State#6] : com.korinek.MeteorologicalDataApp.model.State@73c9edb6
+[2023-05-29 19:51:37] - Extracted JDBC value [1] - [Australia]
+[2023-05-29 19:51:37] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.State#6
+[2023-05-29 19:51:37] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@78d3e5a8
+[2023-05-29 19:51:37] - (EntitySelectFetchInitializer) Entity [com.korinek.MeteorologicalDataApp.model.City(148945232152064).state#6] : 6 has being loaded by session.internalLoad.
+[2023-05-29 19:51:37] - Extracted JDBC value [1] - [Sydney]
+[2023-05-29 19:51:37] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(148945232152064)#4
+[2023-05-29 19:51:37] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@212341dd
+[2023-05-29 19:51:37] - Extracted JDBC value [0] - [5]
+[2023-05-29 19:51:37] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(148945232152064)): 5
+[2023-05-29 19:51:37] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(148945232152064)#5] : com.korinek.MeteorologicalDataApp.model.City@76a44cc6
+[2023-05-29 19:51:37] - Extracted JDBC value [2] - [2]
+[2023-05-29 19:51:37] - (EntitySelectFetchInitializer) Invoking session#internalLoad for entity (com.korinek.MeteorologicalDataApp.model.City(148945232152064).state#2) : 2
+[2023-05-29 19:51:37] - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
+[2023-05-29 19:51:37] - Initializer list
+[2023-05-29 19:51:37] -     com.korinek.MeteorologicalDataApp.model.State.cities -> DelayedCollectionInitializer(com.korinek.MeteorologicalDataApp.model.State.cities)@722308237 (PluralAttribute(com.korinek.MeteorologicalDataApp.model.State.cities))
+[2023-05-29 19:51:37] -     com.korinek.MeteorologicalDataApp.model.State -> EntityResultInitializer(com.korinek.MeteorologicalDataApp.model.State)@395665415 (SingleTableEntityPersister(com.korinek.MeteorologicalDataApp.model.State))
+[2023-05-29 19:51:37] - 
+    select
+        s1_0.id_state,
+        s1_0.name 
+    from
+        state s1_0 
+    where
+        s1_0.id_state=?
+[2023-05-29 19:51:37] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.State): 2
+[2023-05-29 19:51:37] - Extracted JDBC value [0] - [2]
+[2023-05-29 19:51:37] - (DelayedCollectionInitializer) Current row collection key : com.korinek.MeteorologicalDataApp.model.State.cities#2
+[2023-05-29 19:51:37] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.State#2] : com.korinek.MeteorologicalDataApp.model.State@5f1dd180
+[2023-05-29 19:51:37] - Extracted JDBC value [1] - [Canada]
+[2023-05-29 19:51:37] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.State#2
+[2023-05-29 19:51:37] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@4ecf6072
+[2023-05-29 19:51:37] - (EntitySelectFetchInitializer) Entity [com.korinek.MeteorologicalDataApp.model.City(148945232152064).state#2] : 2 has being loaded by session.internalLoad.
+[2023-05-29 19:51:37] - Extracted JDBC value [1] - [Toronto]
+[2023-05-29 19:51:37] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(148945232152064)#5
+[2023-05-29 19:51:37] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@212341dd
+[2023-05-29 19:51:37] - Extracted JDBC value [0] - [6]
+[2023-05-29 19:51:37] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(148945232152064)): 6
+[2023-05-29 19:51:37] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(148945232152064)#6] : com.korinek.MeteorologicalDataApp.model.City@3e6fa879
+[2023-05-29 19:51:37] - Extracted JDBC value [2] - [1]
+[2023-05-29 19:51:37] - Extracted JDBC value [1] - [Los Angeles]
+[2023-05-29 19:51:37] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(148945232152064)#6
+[2023-05-29 19:51:37] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@212341dd
+[2023-05-29 19:51:37] - Initiating transaction commit
+[2023-05-29 19:51:37] - Committing JPA transaction on EntityManager [SessionImpl(1390546560<open>)]
+[2023-05-29 19:51:37] - committing
+[2023-05-29 19:51:37] - Resetting read-only flag of JDBC Connection [HikariProxyConnection@487502450 wrapping org.postgresql.jdbc.PgConnection@18a0721b]
+[2023-05-29 19:51:37] - Closing JPA EntityManager [SessionImpl(1390546560<open>)] after transaction
+[2023-05-29 19:51:39] - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[2023-05-29 19:51:39] - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+[2023-05-29 19:51:46] - Connection was inactive for 30 seconds, sending heartbeat
+[2023-05-29 19:51:46] - Connection was inactive for 30 seconds, sending heartbeat
+[2023-05-29 19:51:46] - [s0|id: 0xfb8bdf79, L:/192.168.0.102:59610 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.79.132.94:29042] Got last response on in-flight stream id 0, completing and releasing
+[2023-05-29 19:51:46] - [id: 0xfb8bdf79, L:/192.168.0.102:59610 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.79.132.94:29042] Heartbeat query succeeded
+[2023-05-29 19:51:46] - [s0|id: 0xeda6f557, L:/192.168.0.102:59611 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.79.236.16:29042] Got last response on in-flight stream id 0, completing and releasing
+[2023-05-29 19:51:46] - [id: 0xeda6f557, L:/192.168.0.102:59611 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.79.236.16:29042] Heartbeat query succeeded
+[2023-05-29 19:51:47] - Connection was inactive for 30 seconds, sending heartbeat
+[2023-05-29 19:51:47] - [s0|id: 0x56d55382, L:/192.168.0.102:59609 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.79.236.16:29042] Got last response on in-flight stream id 0, completing and releasing
+[2023-05-29 19:51:47] - [id: 0x56d55382, L:/192.168.0.102:59609 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.79.236.16:29042] Heartbeat query succeeded
+[2023-05-29 19:51:47] - Connection was inactive for 30 seconds, sending heartbeat
+[2023-05-29 19:51:47] - [s0|control|id: 0x5d6fec5e, L:/192.168.0.102:59607 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.76.6.140:29042] Got last response on in-flight stream id 0, completing and releasing
+[2023-05-29 19:51:47] - [id: 0x5d6fec5e, L:/192.168.0.102:59607 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.76.6.140:29042] Heartbeat query succeeded
+[2023-05-29 19:51:47] - Creating new transaction with name [com.korinek.MeteorologicalDataApp.service.CityService.getAllCities]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+[2023-05-29 19:51:47] - Opened new EntityManager [SessionImpl(1279072695<open>)] for JPA transaction
+[2023-05-29 19:51:47] - Setting JDBC Connection [HikariProxyConnection@2042903730 wrapping org.postgresql.jdbc.PgConnection@18a0721b] read-only
+[2023-05-29 19:51:47] - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+[2023-05-29 19:51:47] - begin
+[2023-05-29 19:51:47] - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@3a2b6f93]
+[2023-05-29 19:51:47] - Found thread-bound EntityManager [SessionImpl(1279072695<open>)] for JPA transaction
+[2023-05-29 19:51:47] - Participating in existing transaction
+[2023-05-29 19:51:47] - Created new SQL alias : c1_0
+[2023-05-29 19:51:47] - Registration of TableGroup [StandardTableGroup(com.korinek.MeteorologicalDataApp.model.City(148955230205211))] with identifierForTableGroup [com.korinek.MeteorologicalDataApp.model.City] for NavigablePath [com.korinek.MeteorologicalDataApp.model.City] 
+[2023-05-29 19:51:47] - DomainResult Graph:
+ \-EntityResultImpl [com.korinek.MeteorologicalDataApp.model.City(148955230205211)]
+ |  +-BasicFetch [com.korinek.MeteorologicalDataApp.model.City(148955230205211).name]
+ |  \-CircularFetchImpl [com.korinek.MeteorologicalDataApp.model.City(148955230205211).state]
+
+[2023-05-29 19:51:47] - SQL AST Tree:
+    SelectStatement {
+      FromClause {
+        StandardTableGroup (c1 : com.korinek.MeteorologicalDataApp.model.City(148955230205211)) {
+          primaryTableReference : city as c1_0
+        }
+      }
+    }
+
+[2023-05-29 19:51:47] - Skipping reading Query result cache data: cache-enabled = false, cache-mode = NORMAL
+[2023-05-29 19:51:47] - Initializer list
+[2023-05-29 19:51:47] -     com.korinek.MeteorologicalDataApp.model.City(148955230205211).state -> EntitySelectFetchInitializer(com.korinek.MeteorologicalDataApp.model.City(148955230205211).state)@82101393 (ToOneAttributeMapping(NavigableRole[com.korinek.MeteorologicalDataApp.model.City.state])@1470900496)
+[2023-05-29 19:51:47] -     com.korinek.MeteorologicalDataApp.model.City(148955230205211) -> EntityResultInitializer(com.korinek.MeteorologicalDataApp.model.City(148955230205211))@914315505 (SingleTableEntityPersister(com.korinek.MeteorologicalDataApp.model.City))
+[2023-05-29 19:51:47] - 
+    select
+        c1_0.id_city,
+        c1_0.name,
+        c1_0.id_state 
+    from
+        city c1_0
+[2023-05-29 19:51:47] - Extracted JDBC value [0] - [1]
+[2023-05-29 19:51:47] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(148955230205211)): 1
+[2023-05-29 19:51:47] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(148955230205211)#1] : com.korinek.MeteorologicalDataApp.model.City@40ad0ad6
+[2023-05-29 19:51:47] - Extracted JDBC value [2] - [1]
+[2023-05-29 19:51:47] - (EntitySelectFetchInitializer) Invoking session#internalLoad for entity (com.korinek.MeteorologicalDataApp.model.City(148955230205211).state#1) : 1
+[2023-05-29 19:51:47] - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
+[2023-05-29 19:51:47] - Initializer list
+[2023-05-29 19:51:47] -     com.korinek.MeteorologicalDataApp.model.State.cities -> DelayedCollectionInitializer(com.korinek.MeteorologicalDataApp.model.State.cities)@215579362 (PluralAttribute(com.korinek.MeteorologicalDataApp.model.State.cities))
+[2023-05-29 19:51:47] -     com.korinek.MeteorologicalDataApp.model.State -> EntityResultInitializer(com.korinek.MeteorologicalDataApp.model.State)@1607730071 (SingleTableEntityPersister(com.korinek.MeteorologicalDataApp.model.State))
+[2023-05-29 19:51:47] - 
+    select
+        s1_0.id_state,
+        s1_0.name 
+    from
+        state s1_0 
+    where
+        s1_0.id_state=?
+[2023-05-29 19:51:47] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.State): 1
+[2023-05-29 19:51:47] - Extracted JDBC value [0] - [1]
+[2023-05-29 19:51:47] - (DelayedCollectionInitializer) Current row collection key : com.korinek.MeteorologicalDataApp.model.State.cities#1
+[2023-05-29 19:51:47] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.State#1] : com.korinek.MeteorologicalDataApp.model.State@517a49ae
+[2023-05-29 19:51:47] - Extracted JDBC value [1] - [USA]
+[2023-05-29 19:51:47] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.State#1
+[2023-05-29 19:51:47] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@28295e13
+[2023-05-29 19:51:47] - (EntitySelectFetchInitializer) Entity [com.korinek.MeteorologicalDataApp.model.City(148955230205211).state#1] : 1 has being loaded by session.internalLoad.
+[2023-05-29 19:51:47] - Extracted JDBC value [1] - [Chicago]
+[2023-05-29 19:51:47] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(148955230205211)#1
+[2023-05-29 19:51:47] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@63d1363b
+[2023-05-29 19:51:47] - Extracted JDBC value [0] - [2]
+[2023-05-29 19:51:47] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(148955230205211)): 2
+[2023-05-29 19:51:47] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(148955230205211)#2] : com.korinek.MeteorologicalDataApp.model.City@24217a7d
+[2023-05-29 19:51:47] - Extracted JDBC value [2] - [3]
+[2023-05-29 19:51:47] - (EntitySelectFetchInitializer) Invoking session#internalLoad for entity (com.korinek.MeteorologicalDataApp.model.City(148955230205211).state#3) : 3
+[2023-05-29 19:51:47] - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
+[2023-05-29 19:51:47] - Initializer list
+[2023-05-29 19:51:47] -     com.korinek.MeteorologicalDataApp.model.State.cities -> DelayedCollectionInitializer(com.korinek.MeteorologicalDataApp.model.State.cities)@664100974 (PluralAttribute(com.korinek.MeteorologicalDataApp.model.State.cities))
+[2023-05-29 19:51:47] -     com.korinek.MeteorologicalDataApp.model.State -> EntityResultInitializer(com.korinek.MeteorologicalDataApp.model.State)@1160674121 (SingleTableEntityPersister(com.korinek.MeteorologicalDataApp.model.State))
+[2023-05-29 19:51:47] - 
+    select
+        s1_0.id_state,
+        s1_0.name 
+    from
+        state s1_0 
+    where
+        s1_0.id_state=?
+[2023-05-29 19:51:47] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.State): 3
+[2023-05-29 19:51:47] - Extracted JDBC value [0] - [3]
+[2023-05-29 19:51:47] - (DelayedCollectionInitializer) Current row collection key : com.korinek.MeteorologicalDataApp.model.State.cities#3
+[2023-05-29 19:51:47] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.State#3] : com.korinek.MeteorologicalDataApp.model.State@3a21d8a5
+[2023-05-29 19:51:47] - Extracted JDBC value [1] - [Czech Republic]
+[2023-05-29 19:51:47] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.State#3
+[2023-05-29 19:51:47] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@32e4b7ed
+[2023-05-29 19:51:47] - (EntitySelectFetchInitializer) Entity [com.korinek.MeteorologicalDataApp.model.City(148955230205211).state#3] : 3 has being loaded by session.internalLoad.
+[2023-05-29 19:51:47] - Extracted JDBC value [1] - [Prague]
+[2023-05-29 19:51:47] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(148955230205211)#2
+[2023-05-29 19:51:47] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@63d1363b
+[2023-05-29 19:51:47] - Extracted JDBC value [0] - [3]
+[2023-05-29 19:51:47] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(148955230205211)): 3
+[2023-05-29 19:51:47] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(148955230205211)#3] : com.korinek.MeteorologicalDataApp.model.City@7e90910b
+[2023-05-29 19:51:47] - Extracted JDBC value [2] - [1]
+[2023-05-29 19:51:47] - Extracted JDBC value [1] - [New York]
+[2023-05-29 19:51:47] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(148955230205211)#3
+[2023-05-29 19:51:47] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@63d1363b
+[2023-05-29 19:51:47] - Extracted JDBC value [0] - [4]
+[2023-05-29 19:51:47] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(148955230205211)): 4
+[2023-05-29 19:51:47] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(148955230205211)#4] : com.korinek.MeteorologicalDataApp.model.City@6a95098c
+[2023-05-29 19:51:47] - Extracted JDBC value [2] - [6]
+[2023-05-29 19:51:47] - (EntitySelectFetchInitializer) Invoking session#internalLoad for entity (com.korinek.MeteorologicalDataApp.model.City(148955230205211).state#6) : 6
+[2023-05-29 19:51:47] - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
+[2023-05-29 19:51:47] - Initializer list
+[2023-05-29 19:51:47] -     com.korinek.MeteorologicalDataApp.model.State.cities -> DelayedCollectionInitializer(com.korinek.MeteorologicalDataApp.model.State.cities)@1589973131 (PluralAttribute(com.korinek.MeteorologicalDataApp.model.State.cities))
+[2023-05-29 19:51:47] -     com.korinek.MeteorologicalDataApp.model.State -> EntityResultInitializer(com.korinek.MeteorologicalDataApp.model.State)@1233751905 (SingleTableEntityPersister(com.korinek.MeteorologicalDataApp.model.State))
+[2023-05-29 19:51:47] - 
+    select
+        s1_0.id_state,
+        s1_0.name 
+    from
+        state s1_0 
+    where
+        s1_0.id_state=?
+[2023-05-29 19:51:47] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.State): 6
+[2023-05-29 19:51:47] - Extracted JDBC value [0] - [6]
+[2023-05-29 19:51:47] - (DelayedCollectionInitializer) Current row collection key : com.korinek.MeteorologicalDataApp.model.State.cities#6
+[2023-05-29 19:51:47] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.State#6] : com.korinek.MeteorologicalDataApp.model.State@23083f9
+[2023-05-29 19:51:47] - Extracted JDBC value [1] - [Australia]
+[2023-05-29 19:51:47] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.State#6
+[2023-05-29 19:51:47] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@6b0e83fa
+[2023-05-29 19:51:47] - (EntitySelectFetchInitializer) Entity [com.korinek.MeteorologicalDataApp.model.City(148955230205211).state#6] : 6 has being loaded by session.internalLoad.
+[2023-05-29 19:51:47] - Extracted JDBC value [1] - [Sydney]
+[2023-05-29 19:51:47] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(148955230205211)#4
+[2023-05-29 19:51:47] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@63d1363b
+[2023-05-29 19:51:47] - Extracted JDBC value [0] - [5]
+[2023-05-29 19:51:47] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(148955230205211)): 5
+[2023-05-29 19:51:47] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(148955230205211)#5] : com.korinek.MeteorologicalDataApp.model.City@1d00d720
+[2023-05-29 19:51:47] - Extracted JDBC value [2] - [2]
+[2023-05-29 19:51:47] - (EntitySelectFetchInitializer) Invoking session#internalLoad for entity (com.korinek.MeteorologicalDataApp.model.City(148955230205211).state#2) : 2
+[2023-05-29 19:51:47] - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
+[2023-05-29 19:51:47] - Initializer list
+[2023-05-29 19:51:47] -     com.korinek.MeteorologicalDataApp.model.State.cities -> DelayedCollectionInitializer(com.korinek.MeteorologicalDataApp.model.State.cities)@633928233 (PluralAttribute(com.korinek.MeteorologicalDataApp.model.State.cities))
+[2023-05-29 19:51:47] -     com.korinek.MeteorologicalDataApp.model.State -> EntityResultInitializer(com.korinek.MeteorologicalDataApp.model.State)@593594914 (SingleTableEntityPersister(com.korinek.MeteorologicalDataApp.model.State))
+[2023-05-29 19:51:47] - 
+    select
+        s1_0.id_state,
+        s1_0.name 
+    from
+        state s1_0 
+    where
+        s1_0.id_state=?
+[2023-05-29 19:51:47] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.State): 2
+[2023-05-29 19:51:47] - Extracted JDBC value [0] - [2]
+[2023-05-29 19:51:47] - (DelayedCollectionInitializer) Current row collection key : com.korinek.MeteorologicalDataApp.model.State.cities#2
+[2023-05-29 19:51:47] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.State#2] : com.korinek.MeteorologicalDataApp.model.State@6aa9a8f1
+[2023-05-29 19:51:47] - Extracted JDBC value [1] - [Canada]
+[2023-05-29 19:51:47] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.State#2
+[2023-05-29 19:51:47] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@28e3d9b7
+[2023-05-29 19:51:47] - (EntitySelectFetchInitializer) Entity [com.korinek.MeteorologicalDataApp.model.City(148955230205211).state#2] : 2 has being loaded by session.internalLoad.
+[2023-05-29 19:51:47] - Extracted JDBC value [1] - [Toronto]
+[2023-05-29 19:51:47] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(148955230205211)#5
+[2023-05-29 19:51:47] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@63d1363b
+[2023-05-29 19:51:47] - Extracted JDBC value [0] - [6]
+[2023-05-29 19:51:47] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(148955230205211)): 6
+[2023-05-29 19:51:47] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(148955230205211)#6] : com.korinek.MeteorologicalDataApp.model.City@62c8f0fb
+[2023-05-29 19:51:47] - Extracted JDBC value [2] - [1]
+[2023-05-29 19:51:47] - Extracted JDBC value [1] - [Los Angeles]
+[2023-05-29 19:51:47] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(148955230205211)#6
+[2023-05-29 19:51:47] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@63d1363b
+[2023-05-29 19:51:47] - Initiating transaction commit
+[2023-05-29 19:51:47] - Committing JPA transaction on EntityManager [SessionImpl(1279072695<open>)]
+[2023-05-29 19:51:47] - committing
+[2023-05-29 19:51:47] - Resetting read-only flag of JDBC Connection [HikariProxyConnection@2042903730 wrapping org.postgresql.jdbc.PgConnection@18a0721b]
+[2023-05-29 19:51:47] - Closing JPA EntityManager [SessionImpl(1279072695<open>)] after transaction
+[2023-05-29 19:51:57] - Creating new transaction with name [com.korinek.MeteorologicalDataApp.service.CityService.getAllCities]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+[2023-05-29 19:51:57] - Opened new EntityManager [SessionImpl(806695813<open>)] for JPA transaction
+[2023-05-29 19:51:57] - Setting JDBC Connection [HikariProxyConnection@109931089 wrapping org.postgresql.jdbc.PgConnection@18a0721b] read-only
+[2023-05-29 19:51:57] - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+[2023-05-29 19:51:57] - begin
+[2023-05-29 19:51:57] - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@23e70d53]
+[2023-05-29 19:51:57] - Found thread-bound EntityManager [SessionImpl(806695813<open>)] for JPA transaction
+[2023-05-29 19:51:57] - Participating in existing transaction
+[2023-05-29 19:51:57] - Created new SQL alias : c1_0
+[2023-05-29 19:51:57] - Registration of TableGroup [StandardTableGroup(com.korinek.MeteorologicalDataApp.model.City(148965233680290))] with identifierForTableGroup [com.korinek.MeteorologicalDataApp.model.City] for NavigablePath [com.korinek.MeteorologicalDataApp.model.City] 
+[2023-05-29 19:51:57] - DomainResult Graph:
+ \-EntityResultImpl [com.korinek.MeteorologicalDataApp.model.City(148965233680290)]
+ |  +-BasicFetch [com.korinek.MeteorologicalDataApp.model.City(148965233680290).name]
+ |  \-CircularFetchImpl [com.korinek.MeteorologicalDataApp.model.City(148965233680290).state]
+
+[2023-05-29 19:51:57] - SQL AST Tree:
+    SelectStatement {
+      FromClause {
+        StandardTableGroup (c1 : com.korinek.MeteorologicalDataApp.model.City(148965233680290)) {
+          primaryTableReference : city as c1_0
+        }
+      }
+    }
+
+[2023-05-29 19:51:57] - Skipping reading Query result cache data: cache-enabled = false, cache-mode = NORMAL
+[2023-05-29 19:51:57] - Initializer list
+[2023-05-29 19:51:57] -     com.korinek.MeteorologicalDataApp.model.City(148965233680290).state -> EntitySelectFetchInitializer(com.korinek.MeteorologicalDataApp.model.City(148965233680290).state)@1588511020 (ToOneAttributeMapping(NavigableRole[com.korinek.MeteorologicalDataApp.model.City.state])@1470900496)
+[2023-05-29 19:51:57] -     com.korinek.MeteorologicalDataApp.model.City(148965233680290) -> EntityResultInitializer(com.korinek.MeteorologicalDataApp.model.City(148965233680290))@558406857 (SingleTableEntityPersister(com.korinek.MeteorologicalDataApp.model.City))
+[2023-05-29 19:51:57] - 
+    select
+        c1_0.id_city,
+        c1_0.name,
+        c1_0.id_state 
+    from
+        city c1_0
+[2023-05-29 19:51:57] - Extracted JDBC value [0] - [1]
+[2023-05-29 19:51:57] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(148965233680290)): 1
+[2023-05-29 19:51:57] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(148965233680290)#1] : com.korinek.MeteorologicalDataApp.model.City@5b3257ef
+[2023-05-29 19:51:57] - Extracted JDBC value [2] - [1]
+[2023-05-29 19:51:57] - (EntitySelectFetchInitializer) Invoking session#internalLoad for entity (com.korinek.MeteorologicalDataApp.model.City(148965233680290).state#1) : 1
+[2023-05-29 19:51:57] - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
+[2023-05-29 19:51:57] - Initializer list
+[2023-05-29 19:51:57] -     com.korinek.MeteorologicalDataApp.model.State.cities -> DelayedCollectionInitializer(com.korinek.MeteorologicalDataApp.model.State.cities)@2000138878 (PluralAttribute(com.korinek.MeteorologicalDataApp.model.State.cities))
+[2023-05-29 19:51:57] -     com.korinek.MeteorologicalDataApp.model.State -> EntityResultInitializer(com.korinek.MeteorologicalDataApp.model.State)@198413391 (SingleTableEntityPersister(com.korinek.MeteorologicalDataApp.model.State))
+[2023-05-29 19:51:57] - 
+    select
+        s1_0.id_state,
+        s1_0.name 
+    from
+        state s1_0 
+    where
+        s1_0.id_state=?
+[2023-05-29 19:51:57] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.State): 1
+[2023-05-29 19:51:57] - Extracted JDBC value [0] - [1]
+[2023-05-29 19:51:57] - (DelayedCollectionInitializer) Current row collection key : com.korinek.MeteorologicalDataApp.model.State.cities#1
+[2023-05-29 19:51:57] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.State#1] : com.korinek.MeteorologicalDataApp.model.State@5dbc9b9e
+[2023-05-29 19:51:57] - Extracted JDBC value [1] - [USA]
+[2023-05-29 19:51:57] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.State#1
+[2023-05-29 19:51:57] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@1014ef91
+[2023-05-29 19:51:57] - (EntitySelectFetchInitializer) Entity [com.korinek.MeteorologicalDataApp.model.City(148965233680290).state#1] : 1 has being loaded by session.internalLoad.
+[2023-05-29 19:51:57] - Extracted JDBC value [1] - [Chicago]
+[2023-05-29 19:51:57] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(148965233680290)#1
+[2023-05-29 19:51:57] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@314b82c6
+[2023-05-29 19:51:57] - Extracted JDBC value [0] - [2]
+[2023-05-29 19:51:57] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(148965233680290)): 2
+[2023-05-29 19:51:57] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(148965233680290)#2] : com.korinek.MeteorologicalDataApp.model.City@2d76527e
+[2023-05-29 19:51:57] - Extracted JDBC value [2] - [3]
+[2023-05-29 19:51:57] - (EntitySelectFetchInitializer) Invoking session#internalLoad for entity (com.korinek.MeteorologicalDataApp.model.City(148965233680290).state#3) : 3
+[2023-05-29 19:51:57] - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
+[2023-05-29 19:51:57] - Initializer list
+[2023-05-29 19:51:57] -     com.korinek.MeteorologicalDataApp.model.State.cities -> DelayedCollectionInitializer(com.korinek.MeteorologicalDataApp.model.State.cities)@338648101 (PluralAttribute(com.korinek.MeteorologicalDataApp.model.State.cities))
+[2023-05-29 19:51:57] -     com.korinek.MeteorologicalDataApp.model.State -> EntityResultInitializer(com.korinek.MeteorologicalDataApp.model.State)@602952022 (SingleTableEntityPersister(com.korinek.MeteorologicalDataApp.model.State))
+[2023-05-29 19:51:57] - 
+    select
+        s1_0.id_state,
+        s1_0.name 
+    from
+        state s1_0 
+    where
+        s1_0.id_state=?
+[2023-05-29 19:51:57] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.State): 3
+[2023-05-29 19:51:57] - Extracted JDBC value [0] - [3]
+[2023-05-29 19:51:57] - (DelayedCollectionInitializer) Current row collection key : com.korinek.MeteorologicalDataApp.model.State.cities#3
+[2023-05-29 19:51:57] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.State#3] : com.korinek.MeteorologicalDataApp.model.State@1e41d86a
+[2023-05-29 19:51:57] - Extracted JDBC value [1] - [Czech Republic]
+[2023-05-29 19:51:57] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.State#3
+[2023-05-29 19:51:57] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@551803b4
+[2023-05-29 19:51:57] - (EntitySelectFetchInitializer) Entity [com.korinek.MeteorologicalDataApp.model.City(148965233680290).state#3] : 3 has being loaded by session.internalLoad.
+[2023-05-29 19:51:57] - Extracted JDBC value [1] - [Prague]
+[2023-05-29 19:51:57] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(148965233680290)#2
+[2023-05-29 19:51:57] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@314b82c6
+[2023-05-29 19:51:57] - Extracted JDBC value [0] - [3]
+[2023-05-29 19:51:57] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(148965233680290)): 3
+[2023-05-29 19:51:57] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(148965233680290)#3] : com.korinek.MeteorologicalDataApp.model.City@5386357b
+[2023-05-29 19:51:57] - Extracted JDBC value [2] - [1]
+[2023-05-29 19:51:57] - Extracted JDBC value [1] - [New York]
+[2023-05-29 19:51:57] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(148965233680290)#3
+[2023-05-29 19:51:57] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@314b82c6
+[2023-05-29 19:51:57] - Extracted JDBC value [0] - [4]
+[2023-05-29 19:51:57] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(148965233680290)): 4
+[2023-05-29 19:51:57] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(148965233680290)#4] : com.korinek.MeteorologicalDataApp.model.City@3e50b081
+[2023-05-29 19:51:57] - Extracted JDBC value [2] - [6]
+[2023-05-29 19:51:57] - (EntitySelectFetchInitializer) Invoking session#internalLoad for entity (com.korinek.MeteorologicalDataApp.model.City(148965233680290).state#6) : 6
+[2023-05-29 19:51:57] - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
+[2023-05-29 19:51:57] - Initializer list
+[2023-05-29 19:51:57] -     com.korinek.MeteorologicalDataApp.model.State.cities -> DelayedCollectionInitializer(com.korinek.MeteorologicalDataApp.model.State.cities)@784510377 (PluralAttribute(com.korinek.MeteorologicalDataApp.model.State.cities))
+[2023-05-29 19:51:57] -     com.korinek.MeteorologicalDataApp.model.State -> EntityResultInitializer(com.korinek.MeteorologicalDataApp.model.State)@1003626086 (SingleTableEntityPersister(com.korinek.MeteorologicalDataApp.model.State))
+[2023-05-29 19:51:57] - 
+    select
+        s1_0.id_state,
+        s1_0.name 
+    from
+        state s1_0 
+    where
+        s1_0.id_state=?
+[2023-05-29 19:51:57] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.State): 6
+[2023-05-29 19:51:57] - Extracted JDBC value [0] - [6]
+[2023-05-29 19:51:57] - (DelayedCollectionInitializer) Current row collection key : com.korinek.MeteorologicalDataApp.model.State.cities#6
+[2023-05-29 19:51:57] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.State#6] : com.korinek.MeteorologicalDataApp.model.State@726cece6
+[2023-05-29 19:51:57] - Extracted JDBC value [1] - [Australia]
+[2023-05-29 19:51:57] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.State#6
+[2023-05-29 19:51:57] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@458aaab8
+[2023-05-29 19:51:57] - (EntitySelectFetchInitializer) Entity [com.korinek.MeteorologicalDataApp.model.City(148965233680290).state#6] : 6 has being loaded by session.internalLoad.
+[2023-05-29 19:51:57] - Extracted JDBC value [1] - [Sydney]
+[2023-05-29 19:51:57] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(148965233680290)#4
+[2023-05-29 19:51:57] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@314b82c6
+[2023-05-29 19:51:57] - Extracted JDBC value [0] - [5]
+[2023-05-29 19:51:57] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(148965233680290)): 5
+[2023-05-29 19:51:57] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(148965233680290)#5] : com.korinek.MeteorologicalDataApp.model.City@327b9a37
+[2023-05-29 19:51:57] - Extracted JDBC value [2] - [2]
+[2023-05-29 19:51:57] - (EntitySelectFetchInitializer) Invoking session#internalLoad for entity (com.korinek.MeteorologicalDataApp.model.City(148965233680290).state#2) : 2
+[2023-05-29 19:51:57] - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
+[2023-05-29 19:51:57] - Initializer list
+[2023-05-29 19:51:57] -     com.korinek.MeteorologicalDataApp.model.State.cities -> DelayedCollectionInitializer(com.korinek.MeteorologicalDataApp.model.State.cities)@1547126274 (PluralAttribute(com.korinek.MeteorologicalDataApp.model.State.cities))
+[2023-05-29 19:51:57] -     com.korinek.MeteorologicalDataApp.model.State -> EntityResultInitializer(com.korinek.MeteorologicalDataApp.model.State)@1227463358 (SingleTableEntityPersister(com.korinek.MeteorologicalDataApp.model.State))
+[2023-05-29 19:51:57] - 
+    select
+        s1_0.id_state,
+        s1_0.name 
+    from
+        state s1_0 
+    where
+        s1_0.id_state=?
+[2023-05-29 19:51:57] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.State): 2
+[2023-05-29 19:51:57] - Extracted JDBC value [0] - [2]
+[2023-05-29 19:51:57] - (DelayedCollectionInitializer) Current row collection key : com.korinek.MeteorologicalDataApp.model.State.cities#2
+[2023-05-29 19:51:57] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.State#2] : com.korinek.MeteorologicalDataApp.model.State@54ba7e3c
+[2023-05-29 19:51:57] - Extracted JDBC value [1] - [Canada]
+[2023-05-29 19:51:57] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.State#2
+[2023-05-29 19:51:57] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@3c06ce8c
+[2023-05-29 19:51:57] - (EntitySelectFetchInitializer) Entity [com.korinek.MeteorologicalDataApp.model.City(148965233680290).state#2] : 2 has being loaded by session.internalLoad.
+[2023-05-29 19:51:57] - Extracted JDBC value [1] - [Toronto]
+[2023-05-29 19:51:57] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(148965233680290)#5
+[2023-05-29 19:51:57] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@314b82c6
+[2023-05-29 19:51:57] - Extracted JDBC value [0] - [6]
+[2023-05-29 19:51:57] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(148965233680290)): 6
+[2023-05-29 19:51:57] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(148965233680290)#6] : com.korinek.MeteorologicalDataApp.model.City@1e2de5c9
+[2023-05-29 19:51:57] - Extracted JDBC value [2] - [1]
+[2023-05-29 19:51:57] - Extracted JDBC value [1] - [Los Angeles]
+[2023-05-29 19:51:57] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(148965233680290)#6
+[2023-05-29 19:51:57] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@314b82c6
+[2023-05-29 19:51:57] - Initiating transaction commit
+[2023-05-29 19:51:57] - Committing JPA transaction on EntityManager [SessionImpl(806695813<open>)]
+[2023-05-29 19:51:57] - committing
+[2023-05-29 19:51:57] - Resetting read-only flag of JDBC Connection [HikariProxyConnection@109931089 wrapping org.postgresql.jdbc.PgConnection@18a0721b]
+[2023-05-29 19:51:57] - Closing JPA EntityManager [SessionImpl(806695813<open>)] after transaction
+[2023-05-29 19:52:07] - Creating new transaction with name [com.korinek.MeteorologicalDataApp.service.CityService.getAllCities]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+[2023-05-29 19:52:07] - Opened new EntityManager [SessionImpl(1072976272<open>)] for JPA transaction
+[2023-05-29 19:52:07] - Setting JDBC Connection [HikariProxyConnection@249704420 wrapping org.postgresql.jdbc.PgConnection@18a0721b] read-only
+[2023-05-29 19:52:07] - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+[2023-05-29 19:52:07] - begin
+[2023-05-29 19:52:07] - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@294515c9]
+[2023-05-29 19:52:07] - Found thread-bound EntityManager [SessionImpl(1072976272<open>)] for JPA transaction
+[2023-05-29 19:52:07] - Participating in existing transaction
+[2023-05-29 19:52:07] - Created new SQL alias : c1_0

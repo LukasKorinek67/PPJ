@@ -4,9 +4,10 @@ import com.korinek.MeteorologicalDataApp.configuration.DataSourceConfiguration;
 import com.korinek.MeteorologicalDataApp.model.City;
 import com.korinek.MeteorologicalDataApp.model.Measurement;
 import com.korinek.MeteorologicalDataApp.utils.JSONParser;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.util.Pair;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
 import org.springframework.stereotype.Service;
 
@@ -25,11 +26,15 @@ public class OpenWeatherService {
     private final static String LONGITUDE = "{lon}";
     private final static String CITY_NAME = "{city name}";
 
+    private final int CONN_TIMEOUT = 5000;
+    private final int READ_TIMEOUT = 5000;
 
     DataSourceConfiguration dataSourceConfiguration;
     private ThreadPoolTaskScheduler weatherThreadPoolTaskScheduler;
     private CityService cityService;
     private MeasurementService measurementService;
+
+    private static final Logger log = LoggerFactory.getLogger(OpenWeatherService.class);
 
     @Autowired
     public OpenWeatherService(DataSourceConfiguration dataSourceConfiguration, ThreadPoolTaskScheduler weatherThreadPoolTaskScheduler, CityService cityService, MeasurementService measurementService) {
@@ -51,7 +56,6 @@ public class OpenWeatherService {
         }
 
         for (City city:cities) {
-            System.out.println(city.getName());
             requestToApi(city);
         }
     }
@@ -69,10 +73,8 @@ public class OpenWeatherService {
         String responseWeather = getResponse(url);
         Measurement measurement = JSONParser.getMeasurementFromResponse(responseWeather);
         measurement.setCity(city.getName());
-        measurementService.addNewMeasurement(measurement);
-        //System.out.println(responseWeather);
-        //System.out.println(measurement.toString());
-        //System.out.println();
+
+        //measurementService.addNewMeasurement(measurement);
     }
 
     private String getGeocodingUrl(String cityName) {
@@ -90,9 +92,6 @@ public class OpenWeatherService {
 
     private String getResponse(String urlGeocodingString) {
         try {
-            final int CONN_TIMEOUT = 5000;
-            final int READ_TIMEOUT = 5000;
-
             URL urlGeocoding = new URL(urlGeocodingString);
             HttpURLConnection connection = (HttpURLConnection) urlGeocoding.openConnection();
             connection.setConnectTimeout(CONN_TIMEOUT);
@@ -105,14 +104,13 @@ public class OpenWeatherService {
                 builder.append(line);
             }
             reader.close();
-            //System.out.println(builder.toString());
             return builder.toString();
 
         } catch (MalformedURLException e) {
-            System.out.println(e.getMessage());
+            log.error(e.getMessage());
             throw new RuntimeException(e);
         } catch (IOException e) {
-            System.out.println(e.getMessage());
+            log.error(e.getMessage());
             throw new RuntimeException(e);
         }
     }

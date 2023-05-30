@@ -1,0 +1,388 @@
+[2023-05-29 19:53:47] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.State): 1
+[2023-05-29 19:53:47] - Extracted JDBC value [0] - [1]
+[2023-05-29 19:53:47] - (DelayedCollectionInitializer) Current row collection key : com.korinek.MeteorologicalDataApp.model.State.cities#1
+[2023-05-29 19:53:47] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.State#1] : com.korinek.MeteorologicalDataApp.model.State@7931efac
+[2023-05-29 19:53:47] - Extracted JDBC value [1] - [USA]
+[2023-05-29 19:53:47] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.State#1
+[2023-05-29 19:53:47] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@42c1c0cd
+[2023-05-29 19:53:47] - (EntitySelectFetchInitializer) Entity [com.korinek.MeteorologicalDataApp.model.City(149075231071165).state#1] : 1 has being loaded by session.internalLoad.
+[2023-05-29 19:53:47] - Extracted JDBC value [1] - [Chicago]
+[2023-05-29 19:53:47] - Connection was inactive for 30 seconds, sending heartbeat
+[2023-05-29 19:53:47] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(149075231071165)#1
+[2023-05-29 19:53:47] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@45e93d5a
+[2023-05-29 19:53:47] - Extracted JDBC value [0] - [2]
+[2023-05-29 19:53:47] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(149075231071165)): 2
+[2023-05-29 19:53:47] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(149075231071165)#2] : com.korinek.MeteorologicalDataApp.model.City@40dad750
+[2023-05-29 19:53:47] - Extracted JDBC value [2] - [3]
+[2023-05-29 19:53:47] - (EntitySelectFetchInitializer) Invoking session#internalLoad for entity (com.korinek.MeteorologicalDataApp.model.City(149075231071165).state#3) : 3
+[2023-05-29 19:53:47] - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
+[2023-05-29 19:53:47] - Initializer list
+[2023-05-29 19:53:47] -     com.korinek.MeteorologicalDataApp.model.State.cities -> DelayedCollectionInitializer(com.korinek.MeteorologicalDataApp.model.State.cities)@912268392 (PluralAttribute(com.korinek.MeteorologicalDataApp.model.State.cities))
+[2023-05-29 19:53:47] -     com.korinek.MeteorologicalDataApp.model.State -> EntityResultInitializer(com.korinek.MeteorologicalDataApp.model.State)@2053858753 (SingleTableEntityPersister(com.korinek.MeteorologicalDataApp.model.State))
+[2023-05-29 19:53:47] - 
+    select
+        s1_0.id_state,
+        s1_0.name 
+    from
+        state s1_0 
+    where
+        s1_0.id_state=?
+[2023-05-29 19:53:47] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.State): 3
+[2023-05-29 19:53:47] - Extracted JDBC value [0] - [3]
+[2023-05-29 19:53:47] - (DelayedCollectionInitializer) Current row collection key : com.korinek.MeteorologicalDataApp.model.State.cities#3
+[2023-05-29 19:53:47] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.State#3] : com.korinek.MeteorologicalDataApp.model.State@77c35cae
+[2023-05-29 19:53:47] - Extracted JDBC value [1] - [Czech Republic]
+[2023-05-29 19:53:47] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.State#3
+[2023-05-29 19:53:47] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@25d44b31
+[2023-05-29 19:53:47] - (EntitySelectFetchInitializer) Entity [com.korinek.MeteorologicalDataApp.model.City(149075231071165).state#3] : 3 has being loaded by session.internalLoad.
+[2023-05-29 19:53:47] - Extracted JDBC value [1] - [Prague]
+[2023-05-29 19:53:47] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(149075231071165)#2
+[2023-05-29 19:53:47] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@45e93d5a
+[2023-05-29 19:53:47] - Extracted JDBC value [0] - [3]
+[2023-05-29 19:53:47] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(149075231071165)): 3
+[2023-05-29 19:53:47] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(149075231071165)#3] : com.korinek.MeteorologicalDataApp.model.City@50dc0f46
+[2023-05-29 19:53:47] - Extracted JDBC value [2] - [1]
+[2023-05-29 19:53:47] - Extracted JDBC value [1] - [New York]
+[2023-05-29 19:53:47] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(149075231071165)#3
+[2023-05-29 19:53:47] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@45e93d5a
+[2023-05-29 19:53:47] - Extracted JDBC value [0] - [4]
+[2023-05-29 19:53:47] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(149075231071165)): 4
+[2023-05-29 19:53:47] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(149075231071165)#4] : com.korinek.MeteorologicalDataApp.model.City@3de09a45
+[2023-05-29 19:53:47] - Extracted JDBC value [2] - [6]
+[2023-05-29 19:53:47] - (EntitySelectFetchInitializer) Invoking session#internalLoad for entity (com.korinek.MeteorologicalDataApp.model.City(149075231071165).state#6) : 6
+[2023-05-29 19:53:47] - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
+[2023-05-29 19:53:47] - Initializer list
+[2023-05-29 19:53:47] -     com.korinek.MeteorologicalDataApp.model.State.cities -> DelayedCollectionInitializer(com.korinek.MeteorologicalDataApp.model.State.cities)@1353422715 (PluralAttribute(com.korinek.MeteorologicalDataApp.model.State.cities))
+[2023-05-29 19:53:47] -     com.korinek.MeteorologicalDataApp.model.State -> EntityResultInitializer(com.korinek.MeteorologicalDataApp.model.State)@1470223260 (SingleTableEntityPersister(com.korinek.MeteorologicalDataApp.model.State))
+[2023-05-29 19:53:47] - 
+    select
+        s1_0.id_state,
+        s1_0.name 
+    from
+        state s1_0 
+    where
+        s1_0.id_state=?
+[2023-05-29 19:53:47] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.State): 6
+[2023-05-29 19:53:47] - Extracted JDBC value [0] - [6]
+[2023-05-29 19:53:47] - (DelayedCollectionInitializer) Current row collection key : com.korinek.MeteorologicalDataApp.model.State.cities#6
+[2023-05-29 19:53:47] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.State#6] : com.korinek.MeteorologicalDataApp.model.State@b448c08
+[2023-05-29 19:53:47] - Extracted JDBC value [1] - [Australia]
+[2023-05-29 19:53:47] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.State#6
+[2023-05-29 19:53:47] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@56ae72a9
+[2023-05-29 19:53:47] - (EntitySelectFetchInitializer) Entity [com.korinek.MeteorologicalDataApp.model.City(149075231071165).state#6] : 6 has being loaded by session.internalLoad.
+[2023-05-29 19:53:47] - Extracted JDBC value [1] - [Sydney]
+[2023-05-29 19:53:47] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(149075231071165)#4
+[2023-05-29 19:53:47] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@45e93d5a
+[2023-05-29 19:53:47] - Extracted JDBC value [0] - [5]
+[2023-05-29 19:53:47] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(149075231071165)): 5
+[2023-05-29 19:53:47] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(149075231071165)#5] : com.korinek.MeteorologicalDataApp.model.City@6e4a7830
+[2023-05-29 19:53:47] - Extracted JDBC value [2] - [2]
+[2023-05-29 19:53:47] - (EntitySelectFetchInitializer) Invoking session#internalLoad for entity (com.korinek.MeteorologicalDataApp.model.City(149075231071165).state#2) : 2
+[2023-05-29 19:53:47] - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
+[2023-05-29 19:53:47] - Initializer list
+[2023-05-29 19:53:47] -     com.korinek.MeteorologicalDataApp.model.State.cities -> DelayedCollectionInitializer(com.korinek.MeteorologicalDataApp.model.State.cities)@956011034 (PluralAttribute(com.korinek.MeteorologicalDataApp.model.State.cities))
+[2023-05-29 19:53:47] -     com.korinek.MeteorologicalDataApp.model.State -> EntityResultInitializer(com.korinek.MeteorologicalDataApp.model.State)@393244097 (SingleTableEntityPersister(com.korinek.MeteorologicalDataApp.model.State))
+[2023-05-29 19:53:47] - 
+    select
+        s1_0.id_state,
+        s1_0.name 
+    from
+        state s1_0 
+    where
+        s1_0.id_state=?
+[2023-05-29 19:53:47] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.State): 2
+[2023-05-29 19:53:47] - Extracted JDBC value [0] - [2]
+[2023-05-29 19:53:47] - (DelayedCollectionInitializer) Current row collection key : com.korinek.MeteorologicalDataApp.model.State.cities#2
+[2023-05-29 19:53:47] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.State#2] : com.korinek.MeteorologicalDataApp.model.State@7fdd4544
+[2023-05-29 19:53:47] - Extracted JDBC value [1] - [Canada]
+[2023-05-29 19:53:47] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.State#2
+[2023-05-29 19:53:47] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@71498ab7
+[2023-05-29 19:53:47] - (EntitySelectFetchInitializer) Entity [com.korinek.MeteorologicalDataApp.model.City(149075231071165).state#2] : 2 has being loaded by session.internalLoad.
+[2023-05-29 19:53:47] - Extracted JDBC value [1] - [Toronto]
+[2023-05-29 19:53:47] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(149075231071165)#5
+[2023-05-29 19:53:47] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@45e93d5a
+[2023-05-29 19:53:47] - Extracted JDBC value [0] - [6]
+[2023-05-29 19:53:47] - (EntityResultInitializer) Hydrated EntityKey (com.korinek.MeteorologicalDataApp.model.City(149075231071165)): 6
+[2023-05-29 19:53:47] - (EntityResultInitializer) Created new entity instance [com.korinek.MeteorologicalDataApp.model.City(149075231071165)#6] : com.korinek.MeteorologicalDataApp.model.City@2350bc67
+[2023-05-29 19:53:47] - Extracted JDBC value [2] - [1]
+[2023-05-29 19:53:47] - Extracted JDBC value [1] - [Los Angeles]
+[2023-05-29 19:53:47] - (EntityResultInitializer) Done materializing entityInstance : com.korinek.MeteorologicalDataApp.model.City(149075231071165)#6
+[2023-05-29 19:53:47] - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@45e93d5a
+[2023-05-29 19:53:47] - Initiating transaction commit
+[2023-05-29 19:53:47] - Committing JPA transaction on EntityManager [SessionImpl(797436232<open>)]
+[2023-05-29 19:53:47] - committing
+[2023-05-29 19:53:47] - Resetting read-only flag of JDBC Connection [HikariProxyConnection@1388635951 wrapping org.postgresql.jdbc.PgConnection@18a0721b]
+[2023-05-29 19:53:47] - Closing JPA EntityManager [SessionImpl(797436232<open>)] after transaction
+[2023-05-29 19:53:47] - [s0|control|id: 0x5d6fec5e, L:/192.168.0.102:59607 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.76.6.140:29042] Got last response on in-flight stream id 0, completing and releasing
+[2023-05-29 19:53:47] - [id: 0x5d6fec5e, L:/192.168.0.102:59607 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.76.6.140:29042] Heartbeat query succeeded
+[2023-05-29 19:53:52] - Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+[2023-05-29 19:53:52] - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2d10e0b1, started on Mon May 29 19:51:04 CEST 2023
+[2023-05-29 19:53:52] - Stopping beans in phase 2147482623
+[2023-05-29 19:53:52] - Bean 'webServerGracefulShutdown' completed its stop procedure
+[2023-05-29 19:53:52] - Stopping beans in phase 2147481599
+[2023-05-29 19:53:53] - Bean 'webServerStartStop' completed its stop procedure
+[2023-05-29 19:53:53] - Stopping beans in phase -2147483647
+[2023-05-29 19:53:53] - Bean 'springBootLoggingLifecycle' completed its stop procedure
+[2023-05-29 19:53:53] - Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Beans' from the JMX domain
+[2023-05-29 19:53:53] - Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Caches' from the JMX domain
+[2023-05-29 19:53:53] - Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Health' from the JMX domain
+[2023-05-29 19:53:53] - Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Info' from the JMX domain
+[2023-05-29 19:53:53] - Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Conditions' from the JMX domain
+[2023-05-29 19:53:53] - Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Configprops' from the JMX domain
+[2023-05-29 19:53:53] - Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Env' from the JMX domain
+[2023-05-29 19:53:53] - Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Loggers' from the JMX domain
+[2023-05-29 19:53:53] - Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Threaddump' from the JMX domain
+[2023-05-29 19:53:53] - Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Metrics' from the JMX domain
+[2023-05-29 19:53:53] - Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Scheduledtasks' from the JMX domain
+[2023-05-29 19:53:53] - Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Mappings' from the JMX domain
+[2023-05-29 19:53:53] - [s0] Starting shutdown
+[2023-05-29 19:53:53] - [s0] Starting shutdown
+[2023-05-29 19:53:53] - [s0] Unregistering com.datastax.oss.driver.internal.core.util.concurrent.RunOrSchedule$$Lambda$1525/0x0000000801969228@384b718c for class com.datastax.oss.driver.internal.core.metadata.DistanceEvent
+[2023-05-29 19:53:53] - [s0] Unregistering com.datastax.oss.driver.internal.core.util.concurrent.RunOrSchedule$$Lambda$1525/0x0000000801969228@5a88ecb9 for class com.datastax.oss.driver.internal.core.metadata.NodeStateEvent
+[2023-05-29 19:53:53] - [s0] Unregistering com.datastax.oss.driver.internal.core.util.concurrent.RunOrSchedule$$Lambda$1525/0x0000000801969228@396a4dea for class com.datastax.oss.driver.internal.core.metadata.TopologyEvent
+[2023-05-29 19:53:53] - [s0] Unregistering com.datastax.oss.driver.internal.core.util.concurrent.RunOrSchedule$$Lambda$1525/0x0000000801969228@36bd4d84 for class com.datastax.oss.driver.internal.core.config.ConfigChangeEvent
+[2023-05-29 19:53:53] - [s0] Firing an instance of class com.datastax.oss.driver.internal.core.channel.ChannelEvent: ChannelEvent(CLOSED, Node(endPoint=4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/<unresolved>:29042:ff4a0d1a-1495-40bc-a763-7c54bc7b41a8, hostId=ff4a0d1a-1495-40bc-a763-7c54bc7b41a8, hashCode=66fc5512))
+[2023-05-29 19:53:53] - [s0] Notifying com.datastax.oss.driver.internal.core.util.concurrent.RunOrSchedule$$Lambda$1525/0x0000000801969228@4583a186 of ChannelEvent(CLOSED, Node(endPoint=4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/<unresolved>:29042:ff4a0d1a-1495-40bc-a763-7c54bc7b41a8, hostId=ff4a0d1a-1495-40bc-a763-7c54bc7b41a8, hashCode=66fc5512))
+[2023-05-29 19:53:53] - [s0] Processing ChannelEvent(CLOSED, Node(endPoint=4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/<unresolved>:29042:ff4a0d1a-1495-40bc-a763-7c54bc7b41a8, hostId=ff4a0d1a-1495-40bc-a763-7c54bc7b41a8, hashCode=66fc5512))
+[2023-05-29 19:53:53] - [s0|id: 0xeda6f557, L:/192.168.0.102:59611 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.79.236.16:29042] Received graceful close request
+[2023-05-29 19:53:53] - [s0|id: 0xeda6f557, L:/192.168.0.102:59611 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.79.236.16:29042] No pending queries, completing graceful shutdown now
+[2023-05-29 19:53:53] - [s0] Unregistering com.datastax.oss.driver.internal.core.util.concurrent.RunOrSchedule$$Lambda$1525/0x0000000801969228@cd84c5f for class com.datastax.oss.driver.internal.core.config.ConfigChangeEvent
+[2023-05-29 19:53:53] - [s0] Firing an instance of class com.datastax.oss.driver.internal.core.channel.ChannelEvent: ChannelEvent(CLOSED, Node(endPoint=4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/<unresolved>:29042:8f424cb2-6a76-4e2e-9945-818fad31471a, hostId=8f424cb2-6a76-4e2e-9945-818fad31471a, hashCode=a1a056))
+[2023-05-29 19:53:53] - [s0] Notifying com.datastax.oss.driver.internal.core.util.concurrent.RunOrSchedule$$Lambda$1525/0x0000000801969228@4583a186 of ChannelEvent(CLOSED, Node(endPoint=4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/<unresolved>:29042:8f424cb2-6a76-4e2e-9945-818fad31471a, hostId=8f424cb2-6a76-4e2e-9945-818fad31471a, hashCode=a1a056))
+[2023-05-29 19:53:53] - [s0] Processing ChannelEvent(CLOSED, Node(endPoint=4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/<unresolved>:29042:8f424cb2-6a76-4e2e-9945-818fad31471a, hostId=8f424cb2-6a76-4e2e-9945-818fad31471a, hashCode=a1a056))
+[2023-05-29 19:53:53] - [s0|id: 0x56d55382, L:/192.168.0.102:59609 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.79.236.16:29042] Received graceful close request
+[2023-05-29 19:53:53] - [s0|id: 0x56d55382, L:/192.168.0.102:59609 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.79.236.16:29042] No pending queries, completing graceful shutdown now
+[2023-05-29 19:53:53] - [s0] Unregistering com.datastax.oss.driver.internal.core.util.concurrent.RunOrSchedule$$Lambda$1525/0x0000000801969228@7df699aa for class com.datastax.oss.driver.internal.core.config.ConfigChangeEvent
+[2023-05-29 19:53:53] - [s0] Firing an instance of class com.datastax.oss.driver.internal.core.channel.ChannelEvent: ChannelEvent(CLOSED, Node(endPoint=4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/<unresolved>:29042:2eb0cf1c-2e92-4927-95b5-d4cec2a8d4a7, hostId=2eb0cf1c-2e92-4927-95b5-d4cec2a8d4a7, hashCode=3a2de414))
+[2023-05-29 19:53:53] - [s0] Notifying com.datastax.oss.driver.internal.core.util.concurrent.RunOrSchedule$$Lambda$1525/0x0000000801969228@4583a186 of ChannelEvent(CLOSED, Node(endPoint=4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/<unresolved>:29042:2eb0cf1c-2e92-4927-95b5-d4cec2a8d4a7, hostId=2eb0cf1c-2e92-4927-95b5-d4cec2a8d4a7, hashCode=3a2de414))
+[2023-05-29 19:53:53] - [s0] Processing ChannelEvent(CLOSED, Node(endPoint=4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/<unresolved>:29042:2eb0cf1c-2e92-4927-95b5-d4cec2a8d4a7, hostId=2eb0cf1c-2e92-4927-95b5-d4cec2a8d4a7, hashCode=3a2de414))
+[2023-05-29 19:53:53] - [s0|id: 0xfb8bdf79, L:/192.168.0.102:59610 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.79.132.94:29042] Received graceful close request
+[2023-05-29 19:53:53] - [s0|id: 0xfb8bdf79, L:/192.168.0.102:59610 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.79.132.94:29042] No pending queries, completing graceful shutdown now
+[2023-05-29 19:53:53] - [s0] Closing
+[2023-05-29 19:53:53] - [s0] Starting shutdown
+[2023-05-29 19:53:53] - [s0|control|id: 0x5d6fec5e, L:/192.168.0.102:59607 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.76.6.140:29042] Received graceful close request
+[2023-05-29 19:53:53] - [s0|control|id: 0x5d6fec5e, L:/192.168.0.102:59607 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.76.6.140:29042] No pending queries, completing graceful shutdown now
+[2023-05-29 19:53:53] - [s0] Shutdown complete
+[2023-05-29 19:53:53] - [s0] Shutdown complete
+[2023-05-29 19:53:53] - [s0|control|id: 0x5d6fec5e, L:/192.168.0.102:59607 - R:4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/34.76.6.140:29042] Received forceful close request, aborting pending queries
+[2023-05-29 19:53:53] - Freed 14 thread-local buffer(s) from thread: s0-io-1
+[2023-05-29 19:53:53] - Freed 17 thread-local buffer(s) from thread: s0-io-0
+[2023-05-29 19:53:53] - Freed 16 thread-local buffer(s) from thread: s0-io-2
+[2023-05-29 19:53:55] - Freed 21 thread-local buffer(s) from thread: s0-io-5
+[2023-05-29 19:53:55] - Freed 45 thread-local buffer(s) from thread: s0-io-3
+[2023-05-29 19:53:55] - Freed 22 thread-local buffer(s) from thread: s0-io-6
+[2023-05-29 19:53:55] - Freed 24 thread-local buffer(s) from thread: s0-io-4
+[2023-05-29 19:53:55] - Closing session s0 (0 live instances)
+[2023-05-29 19:53:55] - Shutting down ExecutorService 'weatherThreadPoolTaskScheduler'
+[2023-05-29 19:53:55] - Unregistering JMX-exposed beans on shutdown
+[2023-05-29 19:53:55] - Unregistering JMX-exposed beans
+[2023-05-29 19:53:55] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-05-29 19:53:55] - HHH000031: Closing
+[2023-05-29 19:53:55] - Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@28be7c26] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@6371c5ec]
+[2023-05-29 19:53:55] - Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries
+[2023-05-29 19:53:55] - Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries
+[2023-05-29 19:53:55] - HikariPool-1 - Shutdown initiated...
+[2023-05-29 19:53:55] - HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+[2023-05-29 19:53:55] - HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@18a0721b: (connection evicted)
+[2023-05-29 19:53:55] - HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@6538b4d2: (connection evicted)
+[2023-05-29 19:53:55] - HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@6bff4605: (connection evicted)
+[2023-05-29 19:53:55] - HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@6fc0dfa2: (connection evicted)
+[2023-05-29 19:53:55] - HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@2ac24c3e: (connection evicted)
+[2023-05-29 19:53:55] - HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@afce390: (connection evicted)
+[2023-05-29 19:53:55] - HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@1b2243a4: (connection evicted)
+[2023-05-29 19:53:55] - HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@72f6b2ad: (connection evicted)
+[2023-05-29 19:53:55] - HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@4aedb371: (connection evicted)
+[2023-05-29 19:53:55] - HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@27e039df: (connection evicted)
+[2023-05-29 19:53:55] - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+[2023-05-29 19:53:55] - HikariPool-1 - Shutdown completed.
+[2023-05-29 19:54:15] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-05-29 19:54:15] - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2023-05-29 20:13:00] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 20:13:00] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 20:13:03] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 20:13:03] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 20:20:42] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 20:20:42] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 20:47:44] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 20:47:44] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 20:47:47] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 20:47:47] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 20:49:41] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 20:49:41] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 20:49:44] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 20:49:44] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 20:49:57] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 20:49:57] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 21:23:30] - Connect timed out
+[2023-05-29 21:23:30] - Unexpected error occurred in scheduled task
+java.lang.RuntimeException: java.net.SocketTimeoutException: Connect timed out
+	at com.korinek.MeteorologicalDataApp.service.OpenWeatherService.getResponse(OpenWeatherService.java:114)
+	at com.korinek.MeteorologicalDataApp.service.OpenWeatherService.requestToApi(OpenWeatherService.java:73)
+	at com.korinek.MeteorologicalDataApp.service.OpenWeatherService.requestToOpenWeather(OpenWeatherService.java:59)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:539)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:585)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:666)
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:304)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:531)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:636)
+	at java.base/sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:264)
+	at java.base/sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:378)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:193)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1241)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1127)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:179)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1661)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1585)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:224)
+	at com.korinek.MeteorologicalDataApp.service.OpenWeatherService.getResponse(OpenWeatherService.java:100)
+	... 9 common frames omitted
+[2023-05-29 21:45:09] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m57s747ms).
+[2023-05-29 21:45:22] - [s0] Error while refreshing info for Node(endPoint=4c641c32-bb99-42b1-ab88-83de6181d0fa-europe-west1.db.astra.datastax.com/<unresolved>:29042:ff4a0d1a-1495-40bc-a763-7c54bc7b41a8, hostId=ff4a0d1a-1495-40bc-a763-7c54bc7b41a8, hashCode=6809e2c9) (CompletionException: com.datastax.oss.driver.api.core.connection.ClosedConnectionException: Unexpected error on channel)
+[2023-05-29 22:26:01] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-05-29 22:26:02] - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2023-05-29 22:28:01] - Unexpected error occurred in scheduled task
+org.springframework.data.cassandra.CassandraConnectionFailureException: Query; CQL [INSERT INTO measurements (city,timestamp,id,cloudiness,feels_like_temperature,humidity,pressure,temperature,visibility,weather,weather_description,wind_speed) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)]; No node was available to execute the query
+	at org.springframework.data.cassandra.core.cql.CassandraExceptionTranslator.translate(CassandraExceptionTranslator.java:154)
+	at org.springframework.data.cassandra.core.cql.CassandraAccessor.translate(CassandraAccessor.java:421)
+	at org.springframework.data.cassandra.core.cql.CqlTemplate.translateException(CqlTemplate.java:551)
+	at org.springframework.data.cassandra.core.cql.CqlTemplate.query(CqlTemplate.java:409)
+	at org.springframework.data.cassandra.core.CassandraTemplate.doExecute(CassandraTemplate.java:886)
+	at org.springframework.data.cassandra.core.CassandraTemplate.doExecute(CassandraTemplate.java:874)
+	at org.springframework.data.cassandra.core.CassandraTemplate.executeSave(CassandraTemplate.java:825)
+	at org.springframework.data.cassandra.core.CassandraTemplate.executeSave(CassandraTemplate.java:816)
+	at org.springframework.data.cassandra.core.CassandraTemplate.doInsert(CassandraTemplate.java:644)
+	at org.springframework.data.cassandra.core.CassandraTemplate.doInsert(CassandraTemplate.java:627)
+	at org.springframework.data.cassandra.core.CassandraTemplate.insert(CassandraTemplate.java:608)
+	at org.springframework.data.cassandra.core.CassandraTemplate.insert(CassandraTemplate.java:599)
+	at com.korinek.MeteorologicalDataApp.repository.MeasurementRepository.save(MeasurementRepository.java:47)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:702)
+	at com.korinek.MeteorologicalDataApp.repository.MeasurementRepository$$SpringCGLIB$$0.save(<generated>)
+	at com.korinek.MeteorologicalDataApp.service.MeasurementService.addNewMeasurement(MeasurementService.java:33)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.korinek.MeteorologicalDataApp.service.MeasurementService$$SpringCGLIB$$0.addNewMeasurement(<generated>)
+	at com.korinek.MeteorologicalDataApp.service.OpenWeatherService.requestToApi(OpenWeatherService.java:77)
+	at com.korinek.MeteorologicalDataApp.service.OpenWeatherService.requestToOpenWeather(OpenWeatherService.java:59)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: com.datastax.oss.driver.api.core.NoNodeAvailableException: No node was available to execute the query
+	at com.datastax.oss.driver.api.core.NoNodeAvailableException.copy(NoNodeAvailableException.java:40)
+	at com.datastax.oss.driver.internal.core.util.concurrent.CompletableFutures.getUninterruptibly(CompletableFutures.java:149)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:53)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:30)
+	at com.datastax.oss.driver.internal.core.session.DefaultSession.execute(DefaultSession.java:230)
+	at com.datastax.oss.driver.api.core.cql.SyncCqlSession.execute(SyncCqlSession.java:54)
+	at org.springframework.data.cassandra.core.cql.CqlTemplate.query(CqlTemplate.java:404)
+	... 35 common frames omitted
+[2023-05-29 22:28:39] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-05-29 22:28:41] - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2023-05-29 22:37:31] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 22:37:31] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 22:37:31] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 22:37:31] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 22:37:31] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 22:37:31] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 22:37:31] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 22:37:31] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 22:37:31] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 22:37:31] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 22:37:33] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 22:37:34] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 22:37:34] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 22:37:34] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 22:37:34] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 22:37:34] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 22:37:34] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 22:37:34] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 22:37:34] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 22:37:34] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:04:45] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:04:45] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:04:45] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:04:45] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:04:45] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:04:45] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:04:45] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:04:45] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:04:45] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:04:45] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:04:48] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:04:48] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:04:48] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:04:48] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:04:48] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:04:48] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:04:48] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:04:48] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:04:48] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:04:48] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:08:46] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-05-29 23:08:46] - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2023-05-29 23:19:13] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:13] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:13] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:13] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:13] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:13] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:13] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:13] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:13] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:13] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:26] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:26] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:26] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:26] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:26] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:26] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:26] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:26] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:26] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:26] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:44] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:44] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:44] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:44] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:44] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:44] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:44] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:44] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:44] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:44] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:59] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:59] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:59] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:59] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:59] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:59] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:59] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:59] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:59] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:19:59] - Chyba při získávání města z databáze - město není v databázi!
+[2023-05-29 23:29:09] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-05-29 23:29:10] - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)

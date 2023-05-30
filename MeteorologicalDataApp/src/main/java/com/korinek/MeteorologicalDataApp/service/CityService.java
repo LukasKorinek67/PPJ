@@ -3,6 +3,8 @@ package com.korinek.MeteorologicalDataApp.service;
 import com.korinek.MeteorologicalDataApp.model.City;
 import com.korinek.MeteorologicalDataApp.repository.CityRepository;
 import jakarta.persistence.EntityNotFoundException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
@@ -19,6 +21,8 @@ public class CityService {
 
     private final CityRepository cityRepository;
 
+    private static final Logger log = LoggerFactory.getLogger(CityService.class);
+
     @Autowired
     public CityService(CityRepository cityRepository) {
         this.cityRepository = cityRepository;
@@ -26,6 +30,7 @@ public class CityService {
 
     public void addNewCity(City city) {
         if(this.cityRepository.existsById(city.getId()) || this.cityRepository.existsByName(city.getName())){
+            log.error("Chyba při ukládání města do databáze - město již existuje!");
             throw new DuplicateKeyException("Already exists!");
         } else {
             this.cityRepository.save(city);
@@ -44,9 +49,11 @@ public class CityService {
             if (cityOptional.isPresent()) {
                 return cityOptional.get();
             } else {
+                log.error("Chyba při získávání města z databáze - město není v databázi!");
                 throw new EntityNotFoundException();
             }
         } else {
+            log.error("Chyba při získávání města z databáze - město není v databázi!");
             throw new EntityNotFoundException();
         }
     }
@@ -62,6 +69,7 @@ public class CityService {
             city.setId(id);
             this.cityRepository.save(city);
         } else {
+            log.error("Chyba při updatu města - město není v databázi!");
             throw new EntityNotFoundException();
         }
     }
@@ -70,6 +78,7 @@ public class CityService {
         if(this.cityRepository.existsById(id)){
             this.cityRepository.deleteById(id);
         } else {
+            log.error("Chyba při pokusu o smazání města z databáze - město není v databázi!");
             throw new EntityNotFoundException();
         }
     }

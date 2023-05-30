@@ -2,6 +2,7 @@ package com.korinek.MeteorologicalDataApp;
 
 import com.korinek.MeteorologicalDataApp.configuration.DataSourceConfiguration;
 import com.korinek.MeteorologicalDataApp.configuration.DataStaxAstraProperties;
+import com.korinek.MeteorologicalDataApp.configuration.ExpirationConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.cassandra.CqlSessionBuilderCustomizer;
@@ -15,7 +16,7 @@ import java.nio.file.Path;
 
 @SpringBootApplication
 @RestController
-@EnableConfigurationProperties({DataStaxAstraProperties.class, DataSourceConfiguration.class})
+@EnableConfigurationProperties({DataStaxAstraProperties.class, DataSourceConfiguration.class, ExpirationConfiguration.class})
 public class MeteorologicalDataAppApplication {
 
 	public static void main(String[] args) {

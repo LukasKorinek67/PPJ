@@ -5,7 +5,8 @@ V tomto repozitáři se nacházejí jednotlivé úkoly na PPJ a semestrální pr
 
 **Semestrální projekt -> složka MeteorologicalDataApp**
 
-
+  
+  
 ## MeteorologicalDataApp
 Spring Boot webová aplikace dle zadání s frontendem React.
 
@@ -42,12 +43,18 @@ Export měření do CSV:
 Import měření z CSV:
 
 /api/import/{id}
+  
 
 Jinak klasické REST API endpointy:
 
 /api/city/{id}
+
 /api/cities
+
 /api/state/{id}
+
 /api/states
+
 /api/measurement/{id}
+
 /api/measurements

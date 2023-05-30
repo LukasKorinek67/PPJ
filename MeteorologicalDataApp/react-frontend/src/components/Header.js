@@ -21,11 +21,11 @@ export default class Header extends React.Component {
               <Col>
                 <Container>
                 <div className="text-sm-center text-md-left">
-                  <Link to="/" class="text-decoration-none">
-                    <div id="main_h" class="text-white">
+                  <Link to="/" className="text-decoration-none">
+                    <div id="main_h" className="text-white">
                     <Stack direction="horizontal" gap={2}>
                             {BootstrapIcons.thermometerSun(60,60)}
-                            <h1 id="main_h" class="text-white fw-normal">MeteorologicalDataApp</h1>
+                            <h1 id="main_h" className="text-white fw-normal">MeteorologicalDataApp</h1>
                     </Stack>
                     </div>
 

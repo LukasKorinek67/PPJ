@@ -223,6 +223,9 @@ export default class CityPage extends React.Component {
                           </Tab>
                         </Tabs>
                         }
+                        {(this.state.cityLoaded && (!this.state.actualWeatherLoaded || !this.state.averageLastDayLoaded || !this.state.averageLastWeekLoaded || !this.state.averageLast14Days)) &&
+                          <p className="fw-lighter">Data nejsou k dispozici nebo ještě nebyla stažena!</p>
+                        }
                         <Button variant="outline-dark" size="sm" type="button" onClick={this.goBack}>Zpět</Button>
                     <div className="card_bottom"></div>
                     </div>

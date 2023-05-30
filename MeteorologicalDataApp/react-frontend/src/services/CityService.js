@@ -11,7 +11,8 @@ class CityService{
                 id: stateID,
                 name: stateName
             }
-          }
+        }
+        console.log(newCity)
         return fetch("/api/city", {
             method: 'POST',
             credentials: 'include',

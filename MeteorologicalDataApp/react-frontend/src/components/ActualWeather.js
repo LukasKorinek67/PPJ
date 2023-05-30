@@ -57,28 +57,28 @@ export default class ActualWeather extends React.Component {
     render() {
         return (
             <div className="actual_weather">
-                {(!this.state.actualWeather.temperature) && <p class="fw-lighter">Data nebyla stažena!</p>}
+                {(!this.state.actualWeather.temperature) && <p className="fw-lighter">Data nebyla stažena!</p>}
                 
                 {(this.state.actualWeather.cloudiness!== undefined && this.state.actualWeather.feelsLikeTemperature!== undefined && this.state.actualWeather.humidity!== undefined
                  && this.state.actualWeather.pressure!== undefined && this.state.actualWeather.temperature!== undefined && this.state.actualWeather.timestamp!== undefined 
                  && this.state.actualWeather.visibility!== undefined && this.state.actualWeather.weather!== undefined && this.state.actualWeather.weatherDescription!== undefined 
                  && this.state.actualWeather.windSpeed!== undefined) && 
                     <div className="actual_weather_data">
-                        <div class="border-bottom border-black p-3">
-                        <Stack direction="horizontal" gap={3} justifyContent="center">
+                        <div className="border-bottom border-black p-3">
+                        <Stack direction="horizontal" gap={3} justifycontent="center">
                             {this.getWeatherIcon(this.state.actualWeather.weather)}
                             <p className="temperature fs-1">{this.state.actualWeather.temperature}°C</p>
                         </Stack>
                         </div>
-                        <p class="fw-lighter"> </p>
-                        <p class="fw-lighter text-capitalize">Počasí: {this.state.actualWeather.weatherDescription}</p>
-                        <p class="fw-lighter">Pocitová teplota: {this.state.actualWeather.feelsLikeTemperature}°C</p>
-                        <p class="fw-lighter">Oblačnost: {this.state.actualWeather.cloudiness}%</p>
-                        <p class="fw-lighter">Rychlost větru: {this.state.actualWeather.windSpeed}m/s</p>
-                        <p class="fw-lighter">Tlak: {this.state.actualWeather.pressure}hPa</p>
-                        <p class="fw-lighter">Vlhkost vzduchu: {this.state.actualWeather.humidity}%</p>
-                        <p class="fw-lighter">Viditelnost: {this.state.actualWeather.visibility}m</p>
-                        <p class="fw-lighter">Zaznamenáno: {TimestampHandler.timestampToDate(this.state.actualWeather.timestamp)}</p>
+                        <p className="fw-lighter"> </p>
+                        <p className="fw-lighter text-capitalize">Počasí: {this.state.actualWeather.weatherDescription}</p>
+                        <p className="fw-lighter">Pocitová teplota: {this.state.actualWeather.feelsLikeTemperature}°C</p>
+                        <p className="fw-lighter">Oblačnost: {this.state.actualWeather.cloudiness}%</p>
+                        <p className="fw-lighter">Rychlost větru: {this.state.actualWeather.windSpeed}m/s</p>
+                        <p className="fw-lighter">Tlak: {this.state.actualWeather.pressure}hPa</p>
+                        <p className="fw-lighter">Vlhkost vzduchu: {this.state.actualWeather.humidity}%</p>
+                        <p className="fw-lighter">Viditelnost: {this.state.actualWeather.visibility}m</p>
+                        <p className="fw-lighter">Zaznamenáno: {TimestampHandler.timestampToDate(this.state.actualWeather.timestamp)}</p>
                     </div>}
             </div>
         )

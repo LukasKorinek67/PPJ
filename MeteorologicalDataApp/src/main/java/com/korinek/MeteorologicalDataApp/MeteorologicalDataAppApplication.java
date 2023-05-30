@@ -15,17 +15,11 @@ import java.nio.file.Path;
 
 
 @SpringBootApplication
-@RestController
 @EnableConfigurationProperties({DataStaxAstraProperties.class, DataSourceConfiguration.class, ExpirationConfiguration.class})
 public class MeteorologicalDataAppApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MeteorologicalDataAppApplication.class, args);
-	}
-
-	@GetMapping("/")
-	public String index() {
-		return "Meteorological Data App!";
 	}
 
 

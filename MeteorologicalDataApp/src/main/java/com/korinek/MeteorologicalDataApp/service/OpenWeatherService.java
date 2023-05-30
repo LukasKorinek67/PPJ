@@ -74,7 +74,7 @@ public class OpenWeatherService {
         Measurement measurement = JSONParser.getMeasurementFromResponse(responseWeather);
         measurement.setCity(city.getName());
 
-        //measurementService.addNewMeasurement(measurement);
+        measurementService.addNewMeasurement(measurement);
     }
 
     private String getGeocodingUrl(String cityName) {

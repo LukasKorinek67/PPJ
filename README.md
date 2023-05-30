@@ -6,13 +6,14 @@ V tomto repozitáři se nacházejí jednotlivé úkoly na PPJ a semestrální pr
 **Semestrální projekt -> složka MeteorologicalDataApp**
 
   
-  
+
 ## MeteorologicalDataApp
 Spring Boot webová aplikace dle zadání s frontendem React.
 
 
 ### Databáze:
 SQL - PostgreSQL - pro otestování prosím změnit datasource k PostrgeSQL v konfiguračním souboru application.yml
+
 NoSQL - Cassandra - použil jsem cloudové řešení DataStax Astra DB
 
 

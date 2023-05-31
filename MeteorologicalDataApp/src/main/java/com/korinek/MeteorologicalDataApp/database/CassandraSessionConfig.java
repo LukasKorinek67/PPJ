@@ -30,18 +30,5 @@ public class CassandraSessionConfig {
         } catch (IOException e) {
             throw new RuntimeException("Failed to load secure connect bundle", e);
         }
-        /*String bundlePath = astraProperties.getSecureConnectBundle();
-        Path bundle;
-        try {
-            Resource resource = new ClassPathResource(bundlePath);
-            File file = resource.getFile();
-            bundle = file.toPath();
-        } catch (IOException e) {
-            throw new RuntimeException("Failed to load secure connect bundle", e);
-        }
-        return builder -> builder.withCloudSecureConnectBundle(bundle);*/
-
-        //Path bundle = astraProperties.getSecureConnectBundle().toPath();
-        //return builder -> builder.withCloudSecureConnectBundle(bundle);
     }
 }

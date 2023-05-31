@@ -28,25 +28,12 @@ public class MeteorologicalDataAppApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MeteorologicalDataAppApplication.class, args);
+		System.out.println("APP RUNNING ON PORT 8080");
 	}
 
 
 	@Bean
 	public CqlSessionBuilderCustomizer sessionBuilderCustomizer(DataStaxAstraProperties astraProperties) {
-		//Path bundle = astraProperties.getSecureConnectBundle().toPath();
-		//return builder -> builder.withCloudSecureConnectBundle(bundle);
-
-		/*String bundlePath = astraProperties.getSecureConnectBundle();
-		Path bundle;
-		try {
-			Resource resource = new ClassPathResource(bundlePath);
-			File file = resource.getFile();
-			bundle = file.toPath();
-		} catch (IOException e) {
-			throw new RuntimeException("Failed to load secure connect bundle", e);
-		}
-		return builder -> builder.withCloudSecureConnectBundle(bundle);*/
-
 		String bundlePath = astraProperties.getSecureConnectBundle();
 		Resource resource = new ClassPathResource(bundlePath);
 		try (InputStream inputStream = resource.getInputStream()) {

@@ -12,9 +12,17 @@ Spring Boot webová aplikace dle zadání s frontendem React.
 
 
 ### Databáze:
-SQL - PostgreSQL - pro otestování prosím změnit datasource k PostrgeSQL v konfiguračním souboru application.yml
+NoSQL - Cassandra - použil jsem cloudové řešení DataStax Astra DB - připojí se samo k již existující databázi
 
-NoSQL - Cassandra - použil jsem cloudové řešení DataStax Astra DB
+SQL - PostgreSQL - před spuštěním JAR souboru je potřeba nejprve mít nainstalováno PostgreSQL a vytvořit novou databázi s názvem "meteo_app", tak aby se aplikace mohla připojit k databázi, která je takto definována v konfiguračním souboru:
+
+    spring:
+        # PostgreSQL
+        datasource:
+            url: jdbc:postgresql://localhost:5432/meteo_app
+            username:
+            password:
+
 
 
 ### API Endpointy:

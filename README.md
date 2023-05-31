@@ -26,7 +26,7 @@ SQL - PostgreSQL - před spuštěním JAR souboru je potřeba nejprve mít nains
 
 
 ### API Endpointy:
-React frontend pokrývá základní funkcionality jako přidání měst a států a zobrazení požadovaných informací. Pro další funkcionality jako import/export CSV nebo kompletní REST API lze využít následující endpointy:
+React frontend pokrývá základní funkcionality jako přidání měst a států a zobrazení požadovaných informací. Update-rate je defaultně nastavený na 15s (takže po přidání města může trvat až 15s než se zobrazí první stažená data). Pro další funkcionality jako import/export CSV nebo kompletní REST API lze využít následující endpointy:
 
 
 Zobrazení aktuálního počasí:

@@ -49,7 +49,7 @@ weather:
     url: https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}&units=metric&lang=cz
     url-geocoding: http://api.openweathermap.org/geo/1.0/direct?q={city name}&limit=1&appid={API key}
     api-key: 3c0d26cf6bca6d964c433c9a8dce85bd
-    update-rate: 30
+    update-rate: 15
     max-calls: 50
   data:
     #expiration 14 days - in seconds:
